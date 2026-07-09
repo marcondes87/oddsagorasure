@@ -1229,8 +1229,6 @@ setTimeout(async () => {
 startAutoRefresh();
 
 const server = http.createServer((req, res) => {
-
-const server = http.createServer((req, res) => {
   if (req.url.startsWith("/api/")) {
     handleApi(req, res).catch((error) => sendJson(res, 500, { error: error.message }));
   } else {
