@@ -1,0 +1,17 @@
+{
+  "name": "oddsagora-surebets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema web para monitorar e calcular surebets",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "optionalDependencies": {
+    "puppeteer": "^25.3.0",
+    "puppeteer-core": "^25.3.0"
+  }
+}

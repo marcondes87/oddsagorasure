@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbipower</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="stylesheet" href="/styles.css?v=4">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">S</span>
+          <div>
+            <strong>Arbipower</strong>
+            <small>Monitor de oportunidades</small>
+          </div>
+        </div>
+
+        <nav>
+          <button class="nav-item active" data-view="dashboard">Dashboard</button>
+          <button class="nav-item" data-view="import">Importar odds</button>
+          <button class="nav-item" data-view="calculator">Calculadora</button>
+        </nav>
+
+        <div class="banca-box">
+          <label class="banca-label">Banca (R$)</label>
+          <input type="number" id="bancaInput" class="banca-input" value="1000" min="100" step="100">
+        </div>
+
+        <div class="status-box">
+          <div class="status-row">
+            <span>Fonte</span>
+            <strong id="sourceLabel">...</strong>
+          </div>
+          <div class="status-row">
+            <span>Atualizado</span>
+            <small id="updatedLabel">Aguardando</small>
+          </div>
+          <div class="status-row">
+            <span>Auto-refresh</span>
+            <small id="countdownLabel">--</small>
+          </div>
+          <div class="status-row pinnacle-row">
+            <span>Pinnacle</span>
+            <small><span id="pinnacleCount">0</span> ev / <span id="pinnacleMatchCount">0</span> cruz</small>
+          </div>
+          <div class="status-row betesporte-row">
+            <span>BetEsporte</span>
+            <small><span id="betesporteCount">0</span> ev / <span id="betesporteMatchCount">0</span> cruz</small>
+          </div>
+          <div class="status-row pinbe-row">
+            <span>Pin x BE</span>
+            <small><span id="pinBeCross">0</span> comparacoes</small>
+          </div>
+          <div class="status-row scraper-row">
+            <span>Scraper</span>
+            <small><span id="scraperCount">0</span> sb / <span id="scraperMatchCount">0</span> part</small>
+          </div>
+        </aside>
+
+      <main>
+        <header class="topbar">
+          <div>
+            <h1>Monitor de surebets</h1>
+            <p id="syncStatus">Pronto para atualizar</p>
+          </div>
+          <div class="actions">
+            <button id="reloadData" title="Atualizar surebets em tempo real">
+              <span class="icon-sync">&#x21bb;</span> Atualizar
+            </button>
+          </div>
+        </header>
+
+        <section id="dashboardView" class="view active">
+          <div class="metrics">
+            <div>
+              <span>Surebets</span>
+              <strong id="metricSurebets">0</strong>
+            </div>
+            <div>
+              <span>Melhor margem</span>
+              <strong id="metricBest">0%</strong>
+            </div>
+            <div>
+              <span>Odd maxima</span>
+              <strong id="metricOdd">0.00</strong>
+            </div>
+            <div>
+              <span>Stake base</span>
+              <strong id="metricStake">R$ 1.000</strong>
+            </div>
+          </div>
+
+          <div class="filters">
+            <label>
+              Esporte
+              <select id="sportFilter">
+                <option value="">Todos</option>
+              </select>
+            </label>
+            <label>
+              Lucro minimo
+              <input id="profitFilter" type="number" min="0" step="0.1" value="0">
+            </label>
+          </div>
+
+          <div id="cards" class="cards"></div>
+        </section>
+
+        <section id="importView" class="view">
+          <div class="panel">
+            <h2>Importar dados</h2>
+            <p>CSV esperado: event,sport,league,market,outcome,bookmaker,odd. JSON pode ser um array de eventos com outcomes.</p>
+            <textarea id="importText" spellcheck="false" placeholder='[{"event":"Time A x Time B","sport":"Futebol","league":"Liga","market":"1X2","outcomes":[{"name":"Time A","bookmaker":"Casa A","odd":2.4},{"name":"Empate","bookmaker":"Casa B","odd":3.8},{"name":"Time B","bookmaker":"Casa C","odd":3.3}]}]'></textarea>
+            <div class="row-actions">
+              <button id="importJson">Importar JSON</button>
+              <button id="importCsv" class="ghost">Importar CSV</button>
+            </div>
+            <pre id="importResult"></pre>
+          </div>
+        </section>
+
+        <section id="calculatorView" class="view">
+          <div class="panel calc">
+            <h2>Calculadora rapida</h2>
+            <div class="calc-grid">
+              <label>Stake total <input id="calcStake" type="number" value="1000"></label>
+              <label>Odd 1 <input class="calcOdd" type="number" value="2.1" step="0.01"></label>
+              <label>Odd 2 <input class="calcOdd" type="number" value="2.05" step="0.01"></label>
+              <label>Odd 3 <input class="calcOdd" type="number" step="0.01" placeholder="opcional"></label>
+            </div>
+            <button id="calcButton">Calcular</button>
+            <div id="calcResult" class="calc-result"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js?v=4"></script>
+  </body>
+</html>

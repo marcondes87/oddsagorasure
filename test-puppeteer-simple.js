@@ -1,0 +1,20 @@
+const puppeteer = require('puppeteer');
+(async()=>{
+  console.log('Launching...');
+  const b=await puppeteer.launch({headless:true,args:['--no-sandbox','--disable-gpu','--disable-images']});
+  console.log('Launched OK');
+  const p=await b.newPage();
+  await p.setUserAgent('Mozilla/5.0');
+  await p.setRequestInterception(true);
+  p.on('request',req=>{if(['image','font','media'].includes(req.resourceType()))req.abort();else req.continue();});
+  console.log('Navigating...');
+  await p.goto('https://www.oddsagora.com.br/football/h2h/fluminense-EV9L3kU4/red-bull-bragantino-jwKvKhGa/',{waitUntil:'domcontentloaded',timeout:15000});
+  console.log('Page loaded');
+  await new Promise(r=>setTimeout(r,5000));
+  const cells = await p.evaluate(()=>document.querySelectorAll('.odds-cell').length);
+  console.log('odds-cell count:', cells);
+  const bmCount = await p.evaluate(()=>document.querySelectorAll('a[href*="/bookmakers/"][href*="/link/"]').length);
+  console.log('bookmaker links:', bmCount);
+  await b.close();
+  console.log('Done');
+})().catch(e=>console.log('ERROR:',e.message));

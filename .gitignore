@@ -1,0 +1,13 @@
+node_modules/
+data/imported-odds.json
+data/pinnacle-odds.json
+data/betesporte-odds.json
+data/scraped-odds.json
+data/sample-odds.json
+data/snapshot.json
+*.txt
+svr-err*
+svr-out*
+server-console.txt
+server-err.txt
+server-out.txt
