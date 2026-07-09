@@ -73,6 +73,15 @@ async function autoRefresh() {
       cache._rows = rows;
       writeJson(IMPORT_FILE, rows);
       cache.source = "oddsagora";
+      // Auto-push to Render
+      const renderUrl = process.env.RENDER_PUSH_URL || "";
+      if (renderUrl) {
+        fetch(`${renderUrl}/api/import`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(rows)
+        }).then(r => r.json()).then(r => console.error("  push render:", r.ok)).catch(e => console.error("  push render error:", e.message));
+      }
     }
   } catch (e) {
     console.error("  OA error:", e?.message || e);
@@ -1224,24 +1233,6 @@ async function handleApi(req, res) {
         detail: "O sistema continua funcionando com dados importados/manual. A integracao esta isolada para ajuste do decoder."
       });
     }
-  }
-
-  if (req.method === "GET" && url.pathname === "/api/test-oa") {
-    const results = { steps: [], ok: false };
-    try {
-      results.steps.push("Iniciando fetch (com cookies)...");
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 30000);
-      const start = Date.now();
-      const rows = await fetchOddsAgoraSurebets(controller.signal);
-      clearTimeout(timeout);
-      results.steps.push(`OK em ${Date.now()-start}ms, ${rows.length} rows`);
-      results.ok = true;
-    } catch (e) {
-      results.steps.push(`ERRO: ${e.message}`);
-    }
-    results.steps.push(`source atual: ${cache.source}`);
-    return sendJson(res, 200, results);
   }
 
   return sendJson(res, 404, { error: "Endpoint nao encontrado" });
