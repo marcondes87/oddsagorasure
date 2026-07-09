@@ -1246,6 +1246,21 @@ async function handleApi(req, res) {
     }
   }
 
+  if (req.method === "POST" && url.pathname === "/api/ingest-oa") {
+    try {
+      const body = await readBody(req);
+      const raw = JSON.parse(body);
+      const rows = Array.isArray(raw) ? raw : (raw?.d?.data || []);
+      if (!rows.length) throw new Error("Nenhum dado recebido");
+      const normalized = normalizeOddsAgoraPayload({ d: { data: rows } });
+      writeJson(IMPORT_FILE, normalized);
+      loadCurrentRows();
+      return sendJson(res, 200, { ok: true, imported: normalized.length });
+    } catch (error) {
+      return sendJson(res, 400, { ok: false, error: error.message });
+    }
+  }
+
   return sendJson(res, 404, { error: "Endpoint nao encontrado" });
 }
 

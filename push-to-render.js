@@ -59,9 +59,9 @@ async function main() {
     return;
   }
 
-  // Send to Render
-  console.log(`Enviando para ${RENDER_URL}/api/import ...`);
-  const push = await fetch(`${RENDER_URL}/api/import`, {
+  // Send to Render via ingest-oa (handles normalization server-side)
+  console.log(`Enviando para ${RENDER_URL}/api/ingest-oa ...`);
+  const push = await fetch(`${RENDER_URL}/api/ingest-oa`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(rows)
