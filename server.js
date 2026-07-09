@@ -1191,20 +1191,53 @@ async function handleApi(req, res) {
     try {
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 30000);
+      const start = Date.now();
       const rows = await fetchOddsAgoraSurebets(controller.signal);
       clearTimeout(timeout);
+      console.error(`  refresh-oddsagora OK: ${rows.length} rows em ${Date.now()-start}ms`);
       if (!rows.length) throw new Error("Nenhuma surebet retornada pelo endpoint.");
       cache._rows = rows;
       writeJson(IMPORT_FILE, rows);
       loadCurrentRows();
       return sendJson(res, 200, { ok: true, source: "oddsagora", imported: rows.length });
     } catch (error) {
+      console.error(`  refresh-oddsagora ERRO: ${error.message}`);
       return sendJson(res, 502, {
         ok: false,
         error: error.message,
         detail: "O sistema continua funcionando com dados importados/manual. A integracao esta isolada para ajuste do decoder."
       });
     }
+  }
+
+  if (req.method === "GET" && url.pathname === "/api/test-oa") {
+    const results = { steps: [], ok: false };
+    try {
+      results.steps.push("Iniciando fetch...");
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 30000);
+      const start = Date.now();
+      const response = await fetch(ODDSAGORA_SUREBETS_URL, {
+        signal: controller.signal,
+        headers: {
+          "Accept": "*/*",
+          "Referer": ODDSAGORA_PAGE_URL,
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+      });
+      clearTimeout(timeout);
+      results.steps.push(`Fetch OK em ${Date.now()-start}ms, status ${response.status}`);
+      const text = await response.text();
+      results.steps.push(`Resposta: ${text.length} chars, primeiros 50: "${text.slice(0,50)}"`);
+      if (text.length < 20) throw new Error(`Resposta curta: ${text.length} chars`);
+      const parsed = decryptOddsAgoraResponse(text);
+      results.steps.push(`Decrypt OK, rows: ${parsed?.d?.data?.length || 0}`);
+      results.ok = true;
+    } catch (e) {
+      results.steps.push(`ERRO: ${e.message}`);
+    }
+    results.steps.push(`source atual: ${cache.source}`);
+    return sendJson(res, 200, results);
   }
 
   return sendJson(res, 404, { error: "Endpoint nao encontrado" });
