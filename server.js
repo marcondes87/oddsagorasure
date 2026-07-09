@@ -76,6 +76,23 @@ async function autoRefresh() {
     }
   } catch (e) {
     console.error("  OA error:", e?.message || e);
+    // Retry once after 30s
+    setTimeout(async () => {
+      try {
+        const rows = await Promise.race([
+          fetchOddsAgoraSurebets(),
+          new Promise((_, reject) => setTimeout(() => reject(new Error("timeout retry")), 20000))
+        ]);
+        if (rows.length) {
+          cache._rows = rows;
+          writeJson(IMPORT_FILE, rows);
+          cache.source = "oddsagora";
+          loadCurrentRows();
+        }
+      } catch (e2) {
+        console.error("  OA retry error:", e2.message);
+      }
+    }, 30000);
   }
 
   try {

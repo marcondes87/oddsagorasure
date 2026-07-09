@@ -1,0 +1,564 @@
+[
+  {
+    "id": "9602103",
+    "sport": "Futebol",
+    "league": "Premier League Nacional - Queensland",
+    "country": "Austrália",
+    "event": "Queensland Lions - Eastern Suburbs",
+    "market": "1o Tempo - Acima/Abaixo 1.5 gols",
+    "rawMarket": "O/U 1.5, 1º Tempo",
+    "startsAt": "2026-07-12T07:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;3;1.50;0",
+    "bestOdd": 2.25,
+    "outcomes": [
+      {
+        "name": "Mais 1.5 gols",
+        "bookmaker": "Betnacional",
+        "odd": 2.25,
+        "url": "https://betnacional.bet.br/"
+      },
+      {
+        "name": "Menos 1.5 gols",
+        "bookmaker": "Betfair",
+        "odd": 2.1,
+        "url": "https://www.betfair.bet.br/apostas/"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 92.0635,
+      "profitPercent": 8.62,
+      "guaranteedReturn": 1086.21,
+      "guaranteedProfit": 86.21,
+      "stakes": [
+        {
+          "name": "Mais 1.5 gols",
+          "bookmaker": "Betnacional",
+          "odd": 2.25,
+          "url": "https://betnacional.bet.br/",
+          "stake": 482.76,
+          "returnAmount": 1086.21
+        },
+        {
+          "name": "Menos 1.5 gols",
+          "bookmaker": "Betfair",
+          "odd": 2.1,
+          "url": "https://www.betfair.bet.br/apostas/",
+          "stake": 517.24,
+          "returnAmount": 1086.21
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - 1o Tempo - Acima/Abaixo 1.5 gols"
+  },
+  {
+    "id": "10680743",
+    "sport": "Futebol",
+    "league": "Amistoso Interclubes",
+    "country": "Mundo",
+    "event": "Nordsjaelland (Den)  - Hradec Kralove (Cze) ",
+    "market": "Acima/Abaixo 1.5 gols",
+    "rawMarket": "O/U 1.5",
+    "startsAt": "2026-07-10T11:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/hradec-kralove-vFXjbHms/nordsjaelland-2wZHnGDH/#jcvadtaL:over-under;2;1.50;0",
+    "bestOdd": 5.5,
+    "outcomes": [
+      {
+        "name": "Mais 1.5 gols",
+        "bookmaker": "Goldebet",
+        "odd": 1.32,
+        "url": "https://goldebet.bet.br/sports"
+      },
+      {
+        "name": "Menos 1.5 gols",
+        "bookmaker": "Betnacional",
+        "odd": 5.5,
+        "url": "https://betnacional.bet.br/"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 93.9394,
+      "profitPercent": 6.45,
+      "guaranteedReturn": 1064.52,
+      "guaranteedProfit": 64.52,
+      "stakes": [
+        {
+          "name": "Mais 1.5 gols",
+          "bookmaker": "Goldebet",
+          "odd": 1.32,
+          "url": "https://goldebet.bet.br/sports",
+          "stake": 806.45,
+          "returnAmount": 1064.52
+        },
+        {
+          "name": "Menos 1.5 gols",
+          "bookmaker": "Betnacional",
+          "odd": 5.5,
+          "url": "https://betnacional.bet.br/",
+          "stake": 193.55,
+          "returnAmount": 1064.52
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - Acima/Abaixo 1.5 gols"
+  },
+  {
+    "id": "11023303",
+    "sport": "Tênis",
+    "league": "Newport Challenger Mulheres Duplas",
+    "country": "EUA",
+    "event": "Brantmeier R./Corley C. - Mandlik E./Smith A.",
+    "market": "Casa/Fora",
+    "rawMarket": "H/A",
+    "startsAt": "2026-07-10T15:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/tennis/h2h/brantmeier-corley-zLzL0ABD/mandlik-smith-pYMHXRN6/#MViy1rLh:home-away;2",
+    "bestOdd": 2.25,
+    "outcomes": [
+      {
+        "name": "Brantmeier R./Corley C.",
+        "bookmaker": "Betfair",
+        "odd": 2.25,
+        "url": "https://www.betfair.bet.br/apostas/"
+      },
+      {
+        "name": "Mandlik E./Smith A.",
+        "bookmaker": "Estrelabet",
+        "odd": 2,
+        "url": "https://www.estrelabet.bet.br/aposta-esportiva"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 94.4444,
+      "profitPercent": 5.88,
+      "guaranteedReturn": 1058.82,
+      "guaranteedProfit": 58.82,
+      "stakes": [
+        {
+          "name": "Brantmeier R./Corley C.",
+          "bookmaker": "Betfair",
+          "odd": 2.25,
+          "url": "https://www.betfair.bet.br/apostas/",
+          "stake": 470.59,
+          "returnAmount": 1058.82
+        },
+        {
+          "name": "Mandlik E./Smith A.",
+          "bookmaker": "Estrelabet",
+          "odd": 2,
+          "url": "https://www.estrelabet.bet.br/aposta-esportiva",
+          "stake": 529.41,
+          "returnAmount": 1058.82
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Tênis - Casa/Fora"
+  },
+  {
+    "id": "10680743",
+    "sport": "Futebol",
+    "league": "Amistoso Interclubes",
+    "country": "Mundo",
+    "event": "Nordsjaelland (Den)  - Hradec Kralove (Cze) ",
+    "market": "2o Tempo - Acima/Abaixo 1.5 gols",
+    "rawMarket": "O/U 1.5, 2º Tempo",
+    "startsAt": "2026-07-10T11:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/hradec-kralove-vFXjbHms/nordsjaelland-2wZHnGDH/#jcvadtaL:over-under;4;1.50;0",
+    "bestOdd": 2.2,
+    "outcomes": [
+      {
+        "name": "Mais 1.5 gols",
+        "bookmaker": "Esportivabet",
+        "odd": 2.2,
+        "url": "https://esportiva.bet.br/sports"
+      },
+      {
+        "name": "Menos 1.5 gols",
+        "bookmaker": "1xBet.br",
+        "odd": 2.04,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 94.4742,
+      "profitPercent": 5.85,
+      "guaranteedReturn": 1058.49,
+      "guaranteedProfit": 58.49,
+      "stakes": [
+        {
+          "name": "Mais 1.5 gols",
+          "bookmaker": "Esportivabet",
+          "odd": 2.2,
+          "url": "https://esportiva.bet.br/sports",
+          "stake": 481.13,
+          "returnAmount": 1058.49
+        },
+        {
+          "name": "Menos 1.5 gols",
+          "bookmaker": "1xBet.br",
+          "odd": 2.04,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 518.87,
+          "returnAmount": 1058.49
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - 2o Tempo - Acima/Abaixo 1.5 gols"
+  },
+  {
+    "id": "11023303",
+    "sport": "Tênis",
+    "league": "Newport Challenger Mulheres Duplas",
+    "country": "EUA",
+    "event": "Brantmeier R./Corley C. - Mandlik E./Smith A.",
+    "market": "1o Set - Casa/Fora",
+    "rawMarket": "H/A, 1º Set",
+    "startsAt": "2026-07-10T15:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/tennis/h2h/brantmeier-corley-zLzL0ABD/mandlik-smith-pYMHXRN6/#MViy1rLh:home-away;12",
+    "bestOdd": 2.2,
+    "outcomes": [
+      {
+        "name": "Brantmeier R./Corley C.",
+        "bookmaker": "Betfair",
+        "odd": 2.2,
+        "url": "https://www.betfair.bet.br/apostas/"
+      },
+      {
+        "name": "Mandlik E./Smith A.",
+        "bookmaker": "1xBet.br",
+        "odd": 2,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 95.4545,
+      "profitPercent": 4.76,
+      "guaranteedReturn": 1047.62,
+      "guaranteedProfit": 47.62,
+      "stakes": [
+        {
+          "name": "Brantmeier R./Corley C.",
+          "bookmaker": "Betfair",
+          "odd": 2.2,
+          "url": "https://www.betfair.bet.br/apostas/",
+          "stake": 476.19,
+          "returnAmount": 1047.62
+        },
+        {
+          "name": "Mandlik E./Smith A.",
+          "bookmaker": "1xBet.br",
+          "odd": 2,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 523.81,
+          "returnAmount": 1047.62
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Tênis - 1o Set - Casa/Fora"
+  },
+  {
+    "id": "9525013",
+    "sport": "Hóquei",
+    "league": "AIHL",
+    "country": "Austrália",
+    "event": "Sydney Ice Dogs - Brisbane Lightning",
+    "market": "1X2",
+    "rawMarket": "1X2",
+    "startsAt": "2026-07-11T07:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/hockey/h2h/brisbane-lightning-xCtrp8dQ/sydney-ice-dogs-MiqBWvN8/#6BMi7Tq4:1X2;2",
+    "bestOdd": 10,
+    "outcomes": [
+      {
+        "name": "Sydney Ice Dogs",
+        "bookmaker": "Betano.br",
+        "odd": 1.37,
+        "url": "https://www.betano.bet.br/"
+      },
+      {
+        "name": "Empate",
+        "bookmaker": "Goldebet",
+        "odd": 10,
+        "url": "https://goldebet.bet.br/sports"
+      },
+      {
+        "name": "Brisbane Lightning",
+        "bookmaker": "1xBet.br",
+        "odd": 7.38,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 96.5428,
+      "profitPercent": 3.58,
+      "guaranteedReturn": 1035.81,
+      "guaranteedProfit": 35.81,
+      "stakes": [
+        {
+          "name": "Sydney Ice Dogs",
+          "bookmaker": "Betano.br",
+          "odd": 1.37,
+          "url": "https://www.betano.bet.br/",
+          "stake": 756.07,
+          "returnAmount": 1035.81
+        },
+        {
+          "name": "Empate",
+          "bookmaker": "Goldebet",
+          "odd": 10,
+          "url": "https://goldebet.bet.br/sports",
+          "stake": 103.58,
+          "returnAmount": 1035.81
+        },
+        {
+          "name": "Brisbane Lightning",
+          "bookmaker": "1xBet.br",
+          "odd": 7.38,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 140.35,
+          "returnAmount": 1035.81
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Hóquei - 1X2"
+  },
+  {
+    "id": "10680743",
+    "sport": "Futebol",
+    "league": "Amistoso Interclubes",
+    "country": "Mundo",
+    "event": "Nordsjaelland (Den)  - Hradec Kralove (Cze) ",
+    "market": "2o Tempo - 1X2",
+    "rawMarket": "1X2, 2º Tempo",
+    "startsAt": "2026-07-10T11:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/hradec-kralove-vFXjbHms/nordsjaelland-2wZHnGDH/#jcvadtaL:1X2;4",
+    "bestOdd": 3.66,
+    "outcomes": [
+      {
+        "name": "Nordsjaelland",
+        "bookmaker": "1xBet.br",
+        "odd": 2.99,
+        "url": "https://1xbet.bet.br/en/lobby"
+      },
+      {
+        "name": "Empate",
+        "bookmaker": "1xBet.br",
+        "odd": 2.76,
+        "url": "https://1xbet.bet.br/en/lobby"
+      },
+      {
+        "name": "Hradec Kralove",
+        "bookmaker": "Goldebet",
+        "odd": 3.66,
+        "url": "https://goldebet.bet.br/sports"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 96.9991,
+      "profitPercent": 3.09,
+      "guaranteedReturn": 1030.94,
+      "guaranteedProfit": 30.94,
+      "stakes": [
+        {
+          "name": "Nordsjaelland",
+          "bookmaker": "1xBet.br",
+          "odd": 2.99,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 344.8,
+          "returnAmount": 1030.94
+        },
+        {
+          "name": "Empate",
+          "bookmaker": "1xBet.br",
+          "odd": 2.76,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 373.53,
+          "returnAmount": 1030.94
+        },
+        {
+          "name": "Hradec Kralove",
+          "bookmaker": "Goldebet",
+          "odd": 3.66,
+          "url": "https://goldebet.bet.br/sports",
+          "stake": 281.68,
+          "returnAmount": 1030.94
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - 2o Tempo - 1X2"
+  },
+  {
+    "id": "10680743",
+    "sport": "Futebol",
+    "league": "Amistoso Interclubes",
+    "country": "Mundo",
+    "event": "Nordsjaelland (Den)  - Hradec Kralove (Cze) ",
+    "market": "1o Tempo - 1X2",
+    "rawMarket": "1X2, 1º Tempo",
+    "startsAt": "2026-07-10T11:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/hradec-kralove-vFXjbHms/nordsjaelland-2wZHnGDH/#jcvadtaL:1X2;3",
+    "bestOdd": 4,
+    "outcomes": [
+      {
+        "name": "Nordsjaelland",
+        "bookmaker": "1xBet.br",
+        "odd": 3.27,
+        "url": "https://1xbet.bet.br/en/lobby"
+      },
+      {
+        "name": "Empate",
+        "bookmaker": "Betnacional",
+        "odd": 2.4,
+        "url": "https://betnacional.bet.br/"
+      },
+      {
+        "name": "Hradec Kralove",
+        "bookmaker": "Goldebet",
+        "odd": 4,
+        "url": "https://goldebet.bet.br/sports"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 97.2477,
+      "profitPercent": 2.83,
+      "guaranteedReturn": 1028.3,
+      "guaranteedProfit": 28.3,
+      "stakes": [
+        {
+          "name": "Nordsjaelland",
+          "bookmaker": "1xBet.br",
+          "odd": 3.27,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 314.47,
+          "returnAmount": 1028.3
+        },
+        {
+          "name": "Empate",
+          "bookmaker": "Betnacional",
+          "odd": 2.4,
+          "url": "https://betnacional.bet.br/",
+          "stake": 428.46,
+          "returnAmount": 1028.3
+        },
+        {
+          "name": "Hradec Kralove",
+          "bookmaker": "Goldebet",
+          "odd": 4,
+          "url": "https://goldebet.bet.br/sports",
+          "stake": 257.08,
+          "returnAmount": 1028.3
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - 1o Tempo - 1X2"
+  },
+  {
+    "id": "10804385",
+    "sport": "Futebol",
+    "league": "Liga Europa",
+    "country": "Europa",
+    "event": "Qarabag (Aze)  - Vestri (Isl) ",
+    "market": "2o Tempo - Acima/Abaixo 2.5 gols",
+    "rawMarket": "O/U 2.5, 2º Tempo",
+    "startsAt": "2026-07-09T16:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/qarabag-Qgd3eSin/vestri-Y9PMInnH/#6BubAnvH:over-under;4;2.50;0",
+    "bestOdd": 2.18,
+    "outcomes": [
+      {
+        "name": "Mais 2.5 gols",
+        "bookmaker": "KTO.br",
+        "odd": 2.18,
+        "url": "https://www.kto.bet.br/esportes"
+      },
+      {
+        "name": "Menos 2.5 gols",
+        "bookmaker": "1xBet.br",
+        "odd": 1.93,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 97.685,
+      "profitPercent": 2.37,
+      "guaranteedReturn": 1023.7,
+      "guaranteedProfit": 23.7,
+      "stakes": [
+        {
+          "name": "Mais 2.5 gols",
+          "bookmaker": "KTO.br",
+          "odd": 2.18,
+          "url": "https://www.kto.bet.br/esportes",
+          "stake": 469.59,
+          "returnAmount": 1023.7
+        },
+        {
+          "name": "Menos 2.5 gols",
+          "bookmaker": "1xBet.br",
+          "odd": 1.93,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 530.41,
+          "returnAmount": 1023.7
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - 2o Tempo - Acima/Abaixo 2.5 gols"
+  },
+  {
+    "id": "10117765",
+    "sport": "Basquete",
+    "league": "WNBA",
+    "country": "EUA",
+    "event": "Phoenix Mercury F - Indiana Fever F",
+    "market": "1o Tempo - Acima/Abaixo 87.5 pontos",
+    "rawMarket": "O/U 87.5, 1º Tempo",
+    "startsAt": "2026-07-10T02:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/basketball/h2h/indiana-fever-lzsyuNYf/phoenix-mercury-Mmuqw137/#IT7G0sAl:over-under;3;87.50;0",
+    "bestOdd": 2.15,
+    "outcomes": [
+      {
+        "name": "Mais 87.5 pontos",
+        "bookmaker": "KTO.br",
+        "odd": 1.9,
+        "url": "https://www.kto.bet.br/esportes"
+      },
+      {
+        "name": "Menos 87.5 pontos",
+        "bookmaker": "Estrelabet",
+        "odd": 2.15,
+        "url": "https://www.estrelabet.bet.br/aposta-esportiva"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 99.1432,
+      "profitPercent": 0.86,
+      "guaranteedReturn": 1008.64,
+      "guaranteedProfit": 8.64,
+      "stakes": [
+        {
+          "name": "Mais 87.5 pontos",
+          "bookmaker": "KTO.br",
+          "odd": 1.9,
+          "url": "https://www.kto.bet.br/esportes",
+          "stake": 530.86,
+          "returnAmount": 1008.64
+        },
+        {
+          "name": "Menos 87.5 pontos",
+          "bookmaker": "Estrelabet",
+          "odd": 2.15,
+          "url": "https://www.estrelabet.bet.br/aposta-esportiva",
+          "stake": 469.14,
+          "returnAmount": 1008.64
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Basquete - 1o Tempo - Acima/Abaixo 87.5 pontos"
+  }
+]
