@@ -70,6 +70,7 @@ async function autoRefresh() {
       new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 15000))
     ]);
     if (rows.length) {
+      cache._rows = rows;
       writeJson(IMPORT_FILE, rows);
       cache.source = "oddsagora";
     }
@@ -989,9 +990,8 @@ function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
 
 function loadCurrentRows() {
   const imported = readJson(IMPORT_FILE, null);
-  const sample = readJson(SAMPLE_FILE, []);
   const hasImport = Array.isArray(imported) && imported.length > 0;
-  const base = hasImport ? imported : sample;
+  const base = hasImport ? imported : (cache._rows || []);
   let rows = base.map(normalizeEvent);
 
   const pinnacleEvents = readJson(PINNACLE_FILE, []);
@@ -1190,6 +1190,7 @@ async function handleApi(req, res) {
     try {
       const rows = await fetchOddsAgoraSurebets();
       if (!rows.length) throw new Error("Nenhuma surebet retornada pelo endpoint.");
+      cache._rows = rows;
       writeJson(IMPORT_FILE, rows);
       loadCurrentRows();
       return sendJson(res, 200, { ok: true, source: "oddsagora", imported: rows.length });
@@ -1208,8 +1209,26 @@ async function handleApi(req, res) {
 ensureDataDir();
 loadCurrentRows();
 cache.scraped = getScrapedData();
+// Busca dados da OA direto na memoria (sem depender de cache em disco)
+setTimeout(async () => {
+  try {
+    const rows = await Promise.race([
+      fetchOddsAgoraSurebets(),
+      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 20000))
+    ]);
+    if (rows && rows.length) {
+      cache._rows = rows;
+      cache.source = "oddsagora";
+      cache.updatedAt = new Date().toISOString();
+      loadCurrentRows();
+    }
+  } catch (e) {
+    console.error("  OA inicial error:", e.message);
+  }
+}, 100);
 startAutoRefresh();
-setTimeout(autoRefresh, 100);
+
+const server = http.createServer((req, res) => {
 
 const server = http.createServer((req, res) => {
   if (req.url.startsWith("/api/")) {
