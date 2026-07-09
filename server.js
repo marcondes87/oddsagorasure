@@ -832,10 +832,15 @@ function decryptOddsAgoraResponse(encryptedBase64) {
 }
 
 async function fetchOddsAgoraSurebets(signal) {
-  // First get cookies from main page
-  const cookieResp = await fetch(ODDSAGORA_PAGE_URL, { signal });
-  const cookies = cookieResp.headers.get("set-cookie") || "";
-  const cookie = cookies.split(";")[0] || "";
+  const pageResp = await fetch(ODDSAGORA_PAGE_URL, { signal,
+    headers: {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8"
+    }
+  });
+  const setCookie = pageResp.headers.get("set-cookie") || "";
+  // Extract all cookie name=value pairs from set-cookie
+  const cookieParts = setCookie.split(",").map(s => s.split(";")[0].trim()).filter(Boolean).join("; ");
 
   const response = await fetch(ODDSAGORA_SUREBETS_URL, {
     signal,
@@ -843,7 +848,12 @@ async function fetchOddsAgoraSurebets(signal) {
       "Accept": "*/*",
       "Referer": ODDSAGORA_PAGE_URL,
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      ...(cookie ? { "Cookie": cookie } : {})
+      "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Sec-Fetch-Dest": "empty",
+      "Sec-Fetch-Mode": "cors",
+      "Sec-Fetch-Site": "same-origin",
+      ...(cookieParts ? { "Cookie": cookieParts } : {})
     }
   });
 
