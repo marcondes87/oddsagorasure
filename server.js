@@ -840,6 +840,12 @@ function decryptOddsAgoraResponse(encryptedBase64) {
   return JSON.parse(decrypted.toString("utf8"));
 }
 
+const OA_PROXIES = [
+  { name: "direct", url: (u) => u },
+  { name: "allorigins", url: (u) => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}` },
+  { name: "codetabs", url: (u) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}` }
+];
+
 async function fetchOddsAgoraSurebets(signal) {
   const pageResp = await fetch(ODDSAGORA_PAGE_URL, { signal,
     headers: {
@@ -848,33 +854,37 @@ async function fetchOddsAgoraSurebets(signal) {
     }
   });
   const setCookie = pageResp.headers.get("set-cookie") || "";
-  // Extract all cookie name=value pairs from set-cookie
   const cookieParts = setCookie.split(",").map(s => s.split(";")[0].trim()).filter(Boolean).join("; ");
 
-  const response = await fetch(ODDSAGORA_SUREBETS_URL, {
-    signal,
-    headers: {
-      "Accept": "*/*",
-      "Referer": ODDSAGORA_PAGE_URL,
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
-      "Accept-Encoding": "gzip, deflate, br",
-      "Sec-Fetch-Dest": "empty",
-      "Sec-Fetch-Mode": "cors",
-      "Sec-Fetch-Site": "same-origin",
-      ...(cookieParts ? { "Cookie": cookieParts } : {})
+  const headers = {
+    "Accept": "*/*",
+    "Referer": ODDSAGORA_PAGE_URL,
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
+    "Accept-Encoding": "gzip, deflate, br",
+    ...(cookieParts ? { "Cookie": cookieParts } : {})
+  };
+
+  let lastError;
+  for (const proxy of OA_PROXIES) {
+    const url = proxy.url(ODDSAGORA_SUREBETS_URL);
+    try {
+      const response = await fetch(url, { signal, headers });
+      if (!response.ok) { lastError = new Error(`${proxy.name}: HTTP ${response.status}`); continue; }
+      const text = await response.text();
+      if (!text || text.length < 20) { lastError = new Error(`${proxy.name}: curta (${text.length})`); continue; }
+      const parsed = decryptOddsAgoraResponse(text);
+      const rows = normalizeOddsAgoraPayload(parsed);
+      if (rows.length) {
+        console.error(`  OA ok via ${proxy.name}: ${rows.length} rows`);
+        return rows;
+      }
+      lastError = new Error(`${proxy.name}: 0 rows (${text.length} chars)`);
+    } catch (e) {
+      lastError = new Error(`${proxy.name}: ${e.message}`);
     }
-  });
-
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  const text = await response.text();
-
-  if (!text || text.length < 20) throw new Error(`resposta curta (${text?.length || 0} chars)`);
-
-  const parsed = decryptOddsAgoraResponse(text);
-  const rows = normalizeOddsAgoraPayload(parsed);
-  console.error(`  OA ok: ${rows.length} rows, raw ${text.length} chars`);
-  return rows;
+  }
+  throw lastError || new Error("Todas as tentativas OA falharam");
 }
 
 const BOOKMAKER_DIRECT_LINKS = {
