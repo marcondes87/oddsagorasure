@@ -87,7 +87,7 @@ async function deepRefresh() {
   };
 
   const results = await Promise.allSettled([
-    fetch("/api/refresh-oddsagora", { method: "POST", signal: signal(30000) }).then(r => r.json()),
+    fetch("/api/refresh-oddsagora", { method: "POST", signal: signal(60000) }).then(r => r.json()),
     fetch("/api/refresh-pinnacle", { method: "POST", signal: signal(50000) }).then(r => r.json()),
     fetch("/api/refresh-betesporte", { method: "POST", signal: signal(25000) }).then(r => r.json()),
     fetch("/api/refresh-scraper", { method: "POST", signal: signal(120000) }).then(r => r.json()),

@@ -66,7 +66,7 @@ const SCRAPER_INTERVAL_CYCLES = 10; // Run scraper every 10 cycles (10 min)
 async function autoRefresh() {
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 30000);
+    const timeout = setTimeout(() => controller.abort(), 45000);
     const rows = await fetchOddsAgoraSurebets(controller.signal);
     clearTimeout(timeout);
     if (rows.length) {
@@ -1225,7 +1225,7 @@ async function handleApi(req, res) {
   if (req.method === "POST" && url.pathname === "/api/refresh-oddsagora") {
     try {
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 30000);
+      const timeout = setTimeout(() => controller.abort(), 45000);
       const start = Date.now();
       const rows = await fetchOddsAgoraSurebets(controller.signal);
       clearTimeout(timeout);
@@ -1255,7 +1255,7 @@ cache.scraped = getScrapedData();
 setTimeout(async () => {
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 30000);
+    const timeout = setTimeout(() => controller.abort(), 45000);
     const rows = await fetchOddsAgoraSurebets(controller.signal);
     clearTimeout(timeout);
     if (rows && rows.length) {
