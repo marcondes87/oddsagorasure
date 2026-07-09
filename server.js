@@ -832,12 +832,18 @@ function decryptOddsAgoraResponse(encryptedBase64) {
 }
 
 async function fetchOddsAgoraSurebets(signal) {
+  // First get cookies from main page
+  const cookieResp = await fetch(ODDSAGORA_PAGE_URL, { signal });
+  const cookies = cookieResp.headers.get("set-cookie") || "";
+  const cookie = cookies.split(";")[0] || "";
+
   const response = await fetch(ODDSAGORA_SUREBETS_URL, {
     signal,
     headers: {
       "Accept": "*/*",
       "Referer": ODDSAGORA_PAGE_URL,
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      ...(cookie ? { "Cookie": cookie } : {})
     }
   });
 
@@ -1213,25 +1219,13 @@ async function handleApi(req, res) {
   if (req.method === "GET" && url.pathname === "/api/test-oa") {
     const results = { steps: [], ok: false };
     try {
-      results.steps.push("Iniciando fetch...");
+      results.steps.push("Iniciando fetch (com cookies)...");
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 30000);
       const start = Date.now();
-      const response = await fetch(ODDSAGORA_SUREBETS_URL, {
-        signal: controller.signal,
-        headers: {
-          "Accept": "*/*",
-          "Referer": ODDSAGORA_PAGE_URL,
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        }
-      });
+      const rows = await fetchOddsAgoraSurebets(controller.signal);
       clearTimeout(timeout);
-      results.steps.push(`Fetch OK em ${Date.now()-start}ms, status ${response.status}`);
-      const text = await response.text();
-      results.steps.push(`Resposta: ${text.length} chars, primeiros 50: "${text.slice(0,50)}"`);
-      if (text.length < 20) throw new Error(`Resposta curta: ${text.length} chars`);
-      const parsed = decryptOddsAgoraResponse(text);
-      results.steps.push(`Decrypt OK, rows: ${parsed?.d?.data?.length || 0}`);
+      results.steps.push(`OK em ${Date.now()-start}ms, ${rows.length} rows`);
       results.ok = true;
     } catch (e) {
       results.steps.push(`ERRO: ${e.message}`);
