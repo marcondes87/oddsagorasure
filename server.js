@@ -842,6 +842,7 @@ function decryptOddsAgoraResponse(encryptedBase64) {
 
 const OA_PROXIES = [
   { name: "direct", url: (u) => u },
+  ...(process.env.OA_WORKER_URL ? [{ name: "worker", url: (u) => `${process.env.OA_WORKER_URL}?url=${encodeURIComponent(u)}` }] : []),
   { name: "allorigins", url: (u) => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}` },
   { name: "codetabs", url: (u) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(u)}` }
 ];
