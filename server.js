@@ -65,10 +65,10 @@ const SCRAPER_INTERVAL_CYCLES = 10; // Run scraper every 10 cycles (10 min)
 
 async function autoRefresh() {
   try {
-    const rows = await Promise.race([
-      fetchOddsAgoraSurebets(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 15000))
-    ]);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30000);
+    const rows = await fetchOddsAgoraSurebets(controller.signal);
+    clearTimeout(timeout);
     if (rows.length) {
       cache._rows = rows;
       writeJson(IMPORT_FILE, rows);
@@ -76,23 +76,6 @@ async function autoRefresh() {
     }
   } catch (e) {
     console.error("  OA error:", e?.message || e);
-    // Retry once after 30s
-    setTimeout(async () => {
-      try {
-        const rows = await Promise.race([
-          fetchOddsAgoraSurebets(),
-          new Promise((_, reject) => setTimeout(() => reject(new Error("timeout retry")), 20000))
-        ]);
-        if (rows.length) {
-          cache._rows = rows;
-          writeJson(IMPORT_FILE, rows);
-          cache.source = "oddsagora";
-          loadCurrentRows();
-        }
-      } catch (e2) {
-        console.error("  OA retry error:", e2.message);
-      }
-    }, 30000);
   }
 
   try {
@@ -848,8 +831,9 @@ function decryptOddsAgoraResponse(encryptedBase64) {
   return JSON.parse(decrypted.toString("utf8"));
 }
 
-async function fetchOddsAgoraSurebets() {
+async function fetchOddsAgoraSurebets(signal) {
   const response = await fetch(ODDSAGORA_SUREBETS_URL, {
+    signal,
     headers: {
       "Accept": "*/*",
       "Referer": ODDSAGORA_PAGE_URL,
@@ -1205,7 +1189,10 @@ async function handleApi(req, res) {
 
   if (req.method === "POST" && url.pathname === "/api/refresh-oddsagora") {
     try {
-      const rows = await fetchOddsAgoraSurebets();
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 30000);
+      const rows = await fetchOddsAgoraSurebets(controller.signal);
+      clearTimeout(timeout);
       if (!rows.length) throw new Error("Nenhuma surebet retornada pelo endpoint.");
       cache._rows = rows;
       writeJson(IMPORT_FILE, rows);
@@ -1229,10 +1216,10 @@ cache.scraped = getScrapedData();
 // Busca dados da OA direto na memoria (sem depender de cache em disco)
 setTimeout(async () => {
   try {
-    const rows = await Promise.race([
-      fetchOddsAgoraSurebets(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 20000))
-    ]);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30000);
+    const rows = await fetchOddsAgoraSurebets(controller.signal);
+    clearTimeout(timeout);
     if (rows && rows.length) {
       cache._rows = rows;
       cache.source = "oddsagora";
