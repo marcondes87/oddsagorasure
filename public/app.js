@@ -51,9 +51,7 @@ document.querySelectorAll(".nav-item").forEach((button) => {
   el.addEventListener("input", loadData);
 });
 
-els.reloadData.addEventListener("click", () => {
-  if (state.rows.length === 0) deepRefresh(); else syncAndLoad();
-});
+els.reloadData.addEventListener("click", () => { deepRefresh(); });
 els.bancaInput.addEventListener("input", () => {
   state.stake = Number(els.bancaInput.value) || 1000;
   els.metricStake.textContent = currency.format(state.stake);
