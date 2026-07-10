@@ -1280,6 +1280,32 @@ async function handleApi(req, res) {
     }
   }
 
+  if (req.method === "POST" && url.pathname === "/api/ingest-pinnacle") {
+    try {
+      const body = await readBody(req);
+      const data = JSON.parse(body);
+      if (!Array.isArray(data) || !data.length) throw new Error("Dados invalidos");
+      writeJson(PINNACLE_FILE, data);
+      loadCurrentRows();
+      return sendJson(res, 200, { ok: true, imported: data.length });
+    } catch (error) {
+      return sendJson(res, 400, { ok: false, error: error.message });
+    }
+  }
+
+  if (req.method === "POST" && url.pathname === "/api/ingest-betesporte") {
+    try {
+      const body = await readBody(req);
+      const data = JSON.parse(body);
+      if (!Array.isArray(data) || !data.length) throw new Error("Dados invalidos");
+      writeJson(BETESPORTE_FILE, data);
+      loadCurrentRows();
+      return sendJson(res, 200, { ok: true, imported: data.length });
+    } catch (error) {
+      return sendJson(res, 400, { ok: false, error: error.message });
+    }
+  }
+
   return sendJson(res, 404, { error: "Endpoint nao encontrado" });
 }
 

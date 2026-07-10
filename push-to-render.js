@@ -54,20 +54,48 @@ async function main() {
   const rows = parsed?.d?.data || [];
   console.log(`  ${rows.length} surebets do OA`);
 
-  if (!rows.length) {
-    console.log("Nenhuma surebet encontrada no OA agora.");
-    return;
+  if (rows.length) {
+    console.log(`Enviando OA para ${RENDER_URL}/api/ingest-oa ...`);
+    const push = await fetch(`${RENDER_URL}/api/ingest-oa`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(rows)
+    });
+    const result = await push.json();
+    console.log("  OA:", JSON.stringify(result));
+  } else {
+    console.log("  OA: 0 surebets (pulado)");
   }
 
-  // Send to Render via ingest-oa (handles normalization server-side)
-  console.log(`Enviando para ${RENDER_URL}/api/ingest-oa ...`);
-  const push = await fetch(`${RENDER_URL}/api/ingest-oa`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(rows)
-  });
-  const result = await push.json();
-  console.log("  Resposta:", JSON.stringify(result));
+  // Push Pinnacle data
+  try {
+    const pinData = require("./data/pinnacle-odds.json");
+    if (Array.isArray(pinData) && pinData.length) {
+      console.log(`Enviando Pinnacle (${pinData.length} eventos)...`);
+      const push = await fetch(`${RENDER_URL}/api/ingest-pinnacle`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(pinData)
+      });
+      const result = await push.json();
+      console.log("  Pinnacle:", JSON.stringify(result));
+    }
+  } catch (e) { console.log("  Pinnacle error:", e.message); }
+
+  // Push BetEsporte data
+  try {
+    const beData = require("./data/betesporte-odds.json");
+    if (Array.isArray(beData) && beData.length) {
+      console.log(`Enviando BetEsporte (${beData.length} eventos)...`);
+      const push = await fetch(`${RENDER_URL}/api/ingest-betesporte`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(beData)
+      });
+      const result = await push.json();
+      console.log("  BetEsporte:", JSON.stringify(result));
+    }
+  } catch (e) { console.log("  BetEsporte error:", e.message); }
 }
 
 main().catch(e => console.error("Erro:", e.message));
