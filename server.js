@@ -1193,7 +1193,9 @@ async function handleApi(req, res) {
         fetchPinnacleEvents(),
         new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout Pinnacle (45s)")), 45000))
       ]);
-      writeJson(PINNACLE_FILE, events);
+      if (events.length) {
+        writeJson(PINNACLE_FILE, events);
+      }
       loadCurrentRows();
       return sendJson(res, 200, {
         ok: true,
@@ -1211,7 +1213,9 @@ async function handleApi(req, res) {
         fetchBetEsporteEvents(),
         new Promise((_, reject) => setTimeout(() => reject(new Error("Timeout BetEsporte (20s)")), 20000))
       ]);
-      writeJson(BETESPORTE_FILE, events);
+      if (events.length) {
+        writeJson(BETESPORTE_FILE, events);
+      }
       loadCurrentRows();
       return sendJson(res, 200, {
         ok: true,
