@@ -64,27 +64,29 @@ const AUTO_REFRESH_INTERVAL_MS = 30000;
 const SCRAPER_INTERVAL_CYCLES = 10; // Run scraper every 10 cycles (10 min)
 
 async function autoRefresh() {
-  try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 45000);
-    const rows = await fetchOddsAgoraSurebets(controller.signal);
-    clearTimeout(timeout);
-    if (rows.length) {
-      cache._rows = rows;
-      writeJson(IMPORT_FILE, rows);
-      cache.source = "oddsagora";
-      // Auto-push to Render
-      const renderUrl = process.env.RENDER_PUSH_URL || "";
-      if (renderUrl) {
-        fetch(`${renderUrl}/api/import`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(rows)
-        }).then(r => r.json()).then(r => console.error("  push render:", r.ok)).catch(e => console.error("  push render error:", e.message));
+  if (!process.env.RENDER) {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 45000);
+      const rows = await fetchOddsAgoraSurebets(controller.signal);
+      clearTimeout(timeout);
+      if (rows.length) {
+        cache._rows = rows;
+        writeJson(IMPORT_FILE, rows);
+        cache.source = "oddsagora";
+        // Auto-push to Render
+        const renderUrl = process.env.RENDER_PUSH_URL || "";
+        if (renderUrl) {
+          fetch(`${renderUrl}/api/import`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(rows)
+          }).then(r => r.json()).then(r => console.error("  push render:", r.ok)).catch(e => console.error("  push render error:", e.message));
+        }
       }
+    } catch (e) {
+      console.error("  OA error:", e?.message || e);
     }
-  } catch (e) {
-    console.error("  OA error:", e?.message || e);
   }
 
   if (!process.env.RENDER) {
@@ -1319,22 +1321,24 @@ ensureDataDir();
 loadCurrentRows();
 cache.scraped = getScrapedData();
 // Busca dados da OA direto na memoria (sem depender de cache em disco)
-setTimeout(async () => {
-  try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 45000);
-    const rows = await fetchOddsAgoraSurebets(controller.signal);
-    clearTimeout(timeout);
-    if (rows && rows.length) {
-      cache._rows = rows;
-      cache.source = "oddsagora";
-      cache.updatedAt = new Date().toISOString();
-      loadCurrentRows();
+if (!process.env.RENDER) {
+  setTimeout(async () => {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 45000);
+      const rows = await fetchOddsAgoraSurebets(controller.signal);
+      clearTimeout(timeout);
+      if (rows && rows.length) {
+        cache._rows = rows;
+        cache.source = "oddsagora";
+        cache.updatedAt = new Date().toISOString();
+        loadCurrentRows();
+      }
+    } catch (e) {
+      console.error("  OA inicial error:", e.message);
     }
-  } catch (e) {
-    console.error("  OA inicial error:", e.message);
-  }
-}, 100);
+  }, 100);
+}
 startAutoRefresh();
 
 const server = http.createServer((req, res) => {
