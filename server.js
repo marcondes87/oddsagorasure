@@ -670,7 +670,7 @@ function crossReferenceBetEsporte(oddsagoraRows, betesporteEvents) {
     matched++;
 
     const beFormatted = betOutcomes.map(o => ({
-      name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: match.url || "", betesporte: true
+      name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: getBookmakerDirectUrl("BetEsporte") || match.url || "", betesporte: true
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], beFormatted, team1, team2);
 
@@ -805,7 +805,7 @@ function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
     matched++;
 
     const pinFormatted = pinnacleOutcomes.map(o => ({
-      name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: match.url || "", pinnacle: true, marketType: o.marketType
+      name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: getBookmakerDirectUrl("Pinnacle") || match.url || "", pinnacle: true, marketType: o.marketType
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], pinFormatted, team1, team2);
 
@@ -914,7 +914,9 @@ const BOOKMAKER_DIRECT_LINKS = {
   "kto": "https://www.kto.bet.br/esportes",
   "luva": "https://luva.bet.br/sportsbook",
   "multi": "https://multi.bet.br/pb/sports#/overview",
-  "superbet": "https://superbet.bet.br/"
+  "superbet": "https://superbet.bet.br/",
+  "pinnacle": "https://pinnacle.bet.br/sportsbook",
+  "betesporte": "https://betesporte.bet.br/sports/desktop/main"
 };
 
 function getBookmakerDirectUrl(bookmakerName) {
@@ -1018,8 +1020,8 @@ function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
     const pinMoneylines = pinOutcomes.filter(o => o.marketType === "moneyline" && o.name && o.name !== "Selecao" && o.name !== "");
 
     if (beMoneylines.length >= 2 && pinMoneylines.length >= 2) {
-      const beUrl = be.url || "";
-      const pinUrl = match.url || "";
+      const beUrl = getBookmakerDirectUrl("BetEsporte") || be.url || "";
+      const pinUrl = getBookmakerDirectUrl("Pinnacle") || match.url || "";
       const beFormatted = beMoneylines.slice(0, Math.min(beMoneylines.length, 3)).map(o => ({
         name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
       }));
