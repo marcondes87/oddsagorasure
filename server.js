@@ -829,10 +829,11 @@ function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
 
 function decryptOddsAgoraResponse(encryptedBase64) {
   const decoded = Buffer.from(encryptedBase64, "base64").toString("utf8");
-  const [encB64, ivHex] = decoded.split(":");
-  if (!encB64 || !ivHex) throw new Error("Formato de resposta invalido");
+  const [encB64, ivStr] = decoded.split(":");
+  if (!encB64 || !ivStr) throw new Error("Formato de resposta invalido");
 
-  const iv = Buffer.from(ivHex, "hex");
+  // OA mudou o formato do IV de hex para base64
+  const iv = ivStr.length === 32 && /^[0-9a-f]+$/i.test(ivStr) ? Buffer.from(ivStr, "hex") : Buffer.from(ivStr, "base64");
   const encrypted = Buffer.from(encB64, "base64");
 
   const key = crypto.pbkdf2Sync(ODDSAGORA_AES_PASSPHRASE, Buffer.from(ODDSAGORA_AES_SALT, "utf8"), 1000, 32, "sha256");

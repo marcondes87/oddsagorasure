@@ -40,8 +40,8 @@ async function main() {
 
   // Decrypt
   const decoded = Buffer.from(text, "base64").toString("utf8");
-  const [encB64, ivHex] = decoded.split(":");
-  const iv = Buffer.from(ivHex, "hex");
+  const [encB64, ivStr] = decoded.split(":");
+  const iv = ivStr.length === 32 && /^[0-9a-f]+$/i.test(ivStr) ? Buffer.from(ivStr, "hex") : Buffer.from(ivStr, "base64");
   const encrypted = Buffer.from(encB64, "base64");
   const key = crypto.pbkdf2Sync(PASSPHRASE, Buffer.from(SALT, "utf8"), 1000, 32, "sha256");
   const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
