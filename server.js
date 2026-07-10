@@ -32,7 +32,7 @@ const PINNACLE_SPORT_NAMES = {
 };
 const PINNACLE_UNITS = {
   29: "gols", 3: "corridas", 4: "pontos", 33: "games",
-  15: "pontos", 22: "assaltos", 34: "pontos", 18: "gols", 19: "gols"
+  15: "pontos",   22: "lutas", 34: "pontos", 18: "gols", 19: "gols"
 };
 const PINNACLE_SPORT_SLUGS = {
   29: "soccer", 3: "baseball", 4: "basketball", 33: "tennis",
@@ -273,7 +273,7 @@ function rowsFromFlatCsv(rows) {
 const TYPE_WORDS = ["gol", "ponto", "escanteio", "cartao", "falta", "impedimento", "lance livre", "cesta", "rebote", "assistencia", "erro", "saque", "ace", "dupla falta"];
 const SPORT_UNITS = {
   "futebol": "gols", "baseball": "corridas", "basquete": "pontos", "basketball": "pontos",
-  "tenis": "games", "tennis": "games", "football americano": "pontos", "mma": "assaltos",
+  "tenis": "games", "tennis": "games", "football americano": "pontos", "mma": "lutas",
   "volei": "pontos", "handebol": "gols", "hockey": "gols"
 };
 // Match corrupted/normalized sport name substrings to units
@@ -287,7 +287,7 @@ const SPORT_FUZZY = [
   ["basket", "pontos"], // Basketball
   ["basqu", "pontos"],  // Basquete
   ["footb", "pontos"], // Football Americano
-  ["mma", "assaltos"], // MMA
+  ["mma", "lutas"], // MMA
 ];
 
 function extractMarketType(raw, sportRaw) {
