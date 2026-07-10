@@ -328,7 +328,7 @@ function resetCountdown() {
   countdownInterval = setInterval(() => {
     remaining--;
     if (remaining <= 0) {
-      deepRefresh();
+      syncAndLoad();
       return;
     }
     updateCountdown(remaining);
