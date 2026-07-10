@@ -87,28 +87,30 @@ async function autoRefresh() {
     console.error("  OA error:", e?.message || e);
   }
 
-  try {
-    const events = await Promise.race([
-      fetchPinnacleEvents(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 45000))
-    ]);
-    if (events.length) {
-      writeJson(PINNACLE_FILE, events);
+  if (!process.env.RENDER) {
+    try {
+      const events = await Promise.race([
+        fetchPinnacleEvents(),
+        new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 45000))
+      ]);
+      if (events.length) {
+        writeJson(PINNACLE_FILE, events);
+      }
+    } catch (e) {
+      console.error("  Pinnacle error:", e?.message || e);
     }
-  } catch (e) {
-    console.error("  Pinnacle error:", e?.message || e);
-  }
 
-  try {
-    const events = await Promise.race([
-      fetchBetEsporteEvents(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 20000))
-    ]);
-    if (events.length) {
-      writeJson(BETESPORTE_FILE, events);
+    try {
+      const events = await Promise.race([
+        fetchBetEsporteEvents(),
+        new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 20000))
+      ]);
+      if (events.length) {
+        writeJson(BETESPORTE_FILE, events);
+      }
+    } catch (e) {
+      console.error("  BetEsporte error:", e?.message || e);
     }
-  } catch (e) {
-    console.error("  BetEsporte error:", e?.message || e);
   }
 
   // Run scraper every N cycles
