@@ -4,5 +4,5 @@ cd /d "%~dp0"
 echo [%date% %time%] Buscando dados...
 node push-to-render.js
 echo [%date% %time%] Aguardando 5 minutos...
-timeout /t 300 /nobreak
+timeout /t 120 /nobreak
 goto loop

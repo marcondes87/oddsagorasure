@@ -1,4 +1,4 @@
-const REFRESH_INTERVAL = 120000; // 2 min - deep refresh
+const REFRESH_INTERVAL = 60000; // 1 min - deep refresh
 
 const state = {
   rows: [],

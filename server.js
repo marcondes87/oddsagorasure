@@ -60,7 +60,7 @@ let cache = {
 
 let autoRefreshTimer = null;
 let autoRefreshCounter = 0;
-const AUTO_REFRESH_INTERVAL_MS = 60000;
+const AUTO_REFRESH_INTERVAL_MS = 30000;
 const SCRAPER_INTERVAL_CYCLES = 10; // Run scraper every 10 cycles (10 min)
 
 async function autoRefresh() {
