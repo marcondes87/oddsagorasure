@@ -686,10 +686,10 @@ function crossReferenceBetEsporte(oddsagoraRows, betesporteEvents) {
 
 function marketTypeMatch(oddsagoraMarket, pinnacleMarketType) {
   const m = String(oddsagoraMarket || "").toLowerCase();
-  if (m.includes("1x2") || m.includes("casa/fora") || m.includes("vencedor")) return pinnacleMarketType === "moneyline";
+  if (m.includes("1x2") || m.includes("casa/fora") || m.includes("vencedor") || m.includes("moneyline")) return pinnacleMarketType === "moneyline";
   if (m.includes("handicap") || m.includes("spread")) return pinnacleMarketType === "spread";
-  if (m.includes("acima") || m.includes("abaixo") || m.includes("total") || m.includes("over") || m.includes("under")) return pinnacleMarketType === "total";
-  return true;
+  if (m.includes("acima") || m.includes("abaixo") || m.includes("total") || m.includes("over") || m.includes("under") || m.includes("assalto") || m.includes("round") || m.includes("assaltos")) return pinnacleMarketType === "total";
+  return false;
 }
 
 function classifyOutcomeSlot(outcomeName, homeTeam, awayTeam) {
