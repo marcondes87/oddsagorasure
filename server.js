@@ -692,6 +692,8 @@ function crossReferenceBetEsporte(oddsagoraRows, betesporteEvents) {
 
 function marketTypeMatch(oddsagoraMarket, pinnacleMarketType) {
   const m = String(oddsagoraMarket || "").toLowerCase();
+  // Period-specific markets (1o tempo, 2o tempo) nao existem nos dados da Pinnacle (só periodo 0)
+  if (/1[o°º]?\s*tempo|2[o°º]?\s*tempo|primeiro tempo|segundo tempo|first half|second half|1st half|2nd half/i.test(m)) return false;
   if (m.includes("1x2") || m.includes("casa/fora") || m.includes("vencedor") || m.includes("moneyline")) return pinnacleMarketType === "moneyline";
   if (m.includes("handicap") || m.includes("spread")) return pinnacleMarketType === "spread";
   if (m.includes("acima") || m.includes("abaixo") || m.includes("total") || m.includes("over") || m.includes("under") || m.includes("assalto") || m.includes("round") || m.includes("assaltos")) return pinnacleMarketType === "total";
