@@ -919,6 +919,25 @@ function getBookmakerDirectUrl(bookmakerName) {
   return null;
 }
 
+function isAllowedBookmaker(bookmakerName) {
+  const key = bookmakerName.toLowerCase().replace(/[^a-z0-9]/g, "");
+  for (const [pattern] of Object.entries(BOOKMAKER_DIRECT_LINKS)) {
+    if (key.includes(pattern)) return true;
+  }
+  if (key.includes("pinnacle") || key.includes("betesporte") || key.includes("sportmarket")) return true;
+  return false;
+}
+
+function filterBookmakers(rows) {
+  return rows.map(row => {
+    if (!row.outcomes) return row;
+    const filtered = row.outcomes.filter(o => isAllowedBookmaker(o.bookmaker));
+    if (filtered.length < 2) return { ...row, outcomes: filtered, isSurebet: false, surebet: null };
+    const recalc = calculateSurebet(filtered, row.surebet?.stakes?.reduce((s, st) => s + (st.stake || 0), 0) || 1000);
+    return { ...row, outcomes: filtered, surebet: recalc, isSurebet: Boolean(recalc && recalc.profitPercent > 0) };
+  }).filter(row => row.isSurebet);
+}
+
 function normalizeOddsAgoraPayload(payload) {
   const rows = payload?.d?.data || [];
   if (!Array.isArray(rows)) return [];
@@ -1136,7 +1155,7 @@ async function handleApi(req, res) {
 
   if (req.method === "GET" && url.pathname === "/api/surebets") {
     const current = cache;
-    const rows = filterRows(current.rows, Object.fromEntries(url.searchParams));
+    const rows = filterBookmakers(filterRows(current.rows, Object.fromEntries(url.searchParams)));
     return sendJson(res, 200, {
       ...current,
       count: rows.length,

@@ -156,56 +156,108 @@
     "risk": "Verifique odds em Tênis - 2o Set - Casa/Fora"
   },
   {
-    "id": "11054885",
+    "id": "11062171",
     "sport": "Tênis",
-    "league": "ITF M15 Rancho Santa Fe, CA Homens",
-    "country": "EUA",
-    "event": "Hayen A. - Falck R.",
-    "market": "1o Set - Casa/Fora",
-    "rawMarket": "H/A, 1º Set",
-    "startsAt": "2026-07-09T17:30:00.000Z",
-    "url": "https://www.oddsagora.com.br/tennis/h2h/falck-reece-8h0JLnjM/hayen-alejandro-vDETFM7I/#lCEWEYuH:home-away;12",
-    "bestOdd": 3.4,
+    "league": "ITF W50 Corroios-Seixal Mulheres",
+    "country": "Portugal",
+    "event": "Voloshchuk A. - Jorge F.",
+    "market": "Casa/Fora",
+    "rawMarket": "H/A",
+    "startsAt": "2026-07-10T09:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/tennis/h2h/jorge-francisca-vyOa8QgA/voloshchuk-angelina-df8MtV2r/#GORgVoaK:home-away;2",
+    "bestOdd": 2.95,
     "outcomes": [
       {
-        "name": "Hayen A.",
-        "bookmaker": "F12",
-        "odd": 3.4,
-        "url": "https://f12.bet.br/sports"
+        "name": "Voloshchuk A.",
+        "bookmaker": "KTO.br",
+        "odd": 2.95,
+        "url": "https://www.kto.bet.br/esportes"
       },
       {
-        "name": "Falck R.",
-        "bookmaker": "Multibet.br",
-        "odd": 1.5,
-        "url": "https://multi.bet.br/pb/sports#/overview"
+        "name": "Jorge F.",
+        "bookmaker": "Superbet.br",
+        "odd": 1.61,
+        "url": "https://superbet.bet.br/"
       }
     ],
     "surebet": {
-      "impliedProbability": 96.0784,
-      "profitPercent": 4.08,
-      "guaranteedReturn": 1040.82,
-      "guaranteedProfit": 40.82,
+      "impliedProbability": 96.0101,
+      "profitPercent": 4.16,
+      "guaranteedReturn": 1041.56,
+      "guaranteedProfit": 41.56,
       "stakes": [
         {
-          "name": "Hayen A.",
-          "bookmaker": "F12",
-          "odd": 3.4,
-          "url": "https://f12.bet.br/sports",
-          "stake": 306.12,
-          "returnAmount": 1040.82
+          "name": "Voloshchuk A.",
+          "bookmaker": "KTO.br",
+          "odd": 2.95,
+          "url": "https://www.kto.bet.br/esportes",
+          "stake": 353.07,
+          "returnAmount": 1041.56
         },
         {
-          "name": "Falck R.",
-          "bookmaker": "Multibet.br",
-          "odd": 1.5,
-          "url": "https://multi.bet.br/pb/sports#/overview",
-          "stake": 693.88,
-          "returnAmount": 1040.82
+          "name": "Jorge F.",
+          "bookmaker": "Superbet.br",
+          "odd": 1.61,
+          "url": "https://superbet.bet.br/",
+          "stake": 646.93,
+          "returnAmount": 1041.56
         }
       ]
     },
     "isSurebet": true,
-    "risk": "Verifique odds em Tênis - 1o Set - Casa/Fora"
+    "risk": "Verifique odds em Tênis - Casa/Fora"
+  },
+  {
+    "id": "10932129",
+    "sport": "Futebol",
+    "league": "Copa da Letônia",
+    "country": "Letônia",
+    "event": "Metta - Speks",
+    "market": "Acima/Abaixo 5.5 gols",
+    "rawMarket": "O/U 5.5",
+    "startsAt": "2026-07-10T15:30:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/fk-metta-MoRW1PVu/speks-6NEnyfeg/#xGiTJqZI:over-under;2;5.50;0",
+    "bestOdd": 2.71,
+    "outcomes": [
+      {
+        "name": "Mais 5.5 gols",
+        "bookmaker": "Multibet.br",
+        "odd": 2.71,
+        "url": "https://multi.bet.br/pb/sports#/overview"
+      },
+      {
+        "name": "Menos 5.5 gols",
+        "bookmaker": "1xBet.br",
+        "odd": 1.69,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 96.072,
+      "profitPercent": 4.09,
+      "guaranteedReturn": 1040.89,
+      "guaranteedProfit": 40.89,
+      "stakes": [
+        {
+          "name": "Mais 5.5 gols",
+          "bookmaker": "Multibet.br",
+          "odd": 2.71,
+          "url": "https://multi.bet.br/pb/sports#/overview",
+          "stake": 384.09,
+          "returnAmount": 1040.89
+        },
+        {
+          "name": "Menos 5.5 gols",
+          "bookmaker": "1xBet.br",
+          "odd": 1.69,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 615.91,
+          "returnAmount": 1040.89
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - Acima/Abaixo 5.5 gols"
   },
   {
     "id": "9777175",
@@ -274,6 +326,58 @@
     "risk": "Verifique odds em Futebol Americano - 1X2"
   },
   {
+    "id": "11061009",
+    "sport": "Tênis",
+    "league": "ITF W15 Astana Mulheres",
+    "country": "Cazaquistão",
+    "event": "Dyussebay I. - Sagandikova A.",
+    "market": "Casa/Fora",
+    "rawMarket": "H/A",
+    "startsAt": "2026-07-10T06:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/tennis/h2h/dyussebay-ingkar-tSsEdwpU/sagandikova-aruzhan-nHKY2PCh/#jg2j9JRI:home-away;2",
+    "bestOdd": 4.1,
+    "outcomes": [
+      {
+        "name": "Dyussebay I.",
+        "bookmaker": "Betboom.br",
+        "odd": 4.1,
+        "url": "https://betboom.bet.br/sport"
+      },
+      {
+        "name": "Sagandikova A.",
+        "bookmaker": "1xBet.br",
+        "odd": 1.37,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 97.3829,
+      "profitPercent": 2.69,
+      "guaranteedReturn": 1026.87,
+      "guaranteedProfit": 26.87,
+      "stakes": [
+        {
+          "name": "Dyussebay I.",
+          "bookmaker": "Betboom.br",
+          "odd": 4.1,
+          "url": "https://betboom.bet.br/sport",
+          "stake": 250.46,
+          "returnAmount": 1026.87
+        },
+        {
+          "name": "Sagandikova A.",
+          "bookmaker": "1xBet.br",
+          "odd": 1.37,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 749.54,
+          "returnAmount": 1026.87
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Tênis - Casa/Fora"
+  },
+  {
     "id": "9525013",
     "sport": "Hóquei",
     "league": "AIHL",
@@ -340,58 +444,6 @@
     "risk": "Verifique odds em Hóquei - 1X2"
   },
   {
-    "id": "10932129",
-    "sport": "Futebol",
-    "league": "Copa da Letônia",
-    "country": "Letônia",
-    "event": "Metta - Speks",
-    "market": "Acima/Abaixo 5.5 gols",
-    "rawMarket": "O/U 5.5",
-    "startsAt": "2026-07-10T15:30:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/fk-metta-MoRW1PVu/speks-6NEnyfeg/#xGiTJqZI:over-under;2;5.50;0",
-    "bestOdd": 2.52,
-    "outcomes": [
-      {
-        "name": "Mais 5.5 gols",
-        "bookmaker": "Betboom.br",
-        "odd": 2.52,
-        "url": "https://betboom.bet.br/sport"
-      },
-      {
-        "name": "Menos 5.5 gols",
-        "bookmaker": "1xBet.br",
-        "odd": 1.7,
-        "url": "https://1xbet.bet.br/en/lobby"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 98.5061,
-      "profitPercent": 1.52,
-      "guaranteedReturn": 1015.17,
-      "guaranteedProfit": 15.17,
-      "stakes": [
-        {
-          "name": "Mais 5.5 gols",
-          "bookmaker": "Betboom.br",
-          "odd": 2.52,
-          "url": "https://betboom.bet.br/sport",
-          "stake": 402.84,
-          "returnAmount": 1015.17
-        },
-        {
-          "name": "Menos 5.5 gols",
-          "bookmaker": "1xBet.br",
-          "odd": 1.7,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 597.16,
-          "returnAmount": 1015.17
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - Acima/Abaixo 5.5 gols"
-  },
-  {
     "id": "9775963",
     "sport": "Futebol",
     "league": "NPL - Tasmânia",
@@ -451,72 +503,6 @@
           "url": "https://www.kto.bet.br/esportes",
           "stake": 126.65,
           "returnAmount": 1013.19
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - 1o Tempo - 1X2"
-  },
-  {
-    "id": "10932129",
-    "sport": "Futebol",
-    "league": "Copa da Letônia",
-    "country": "Letônia",
-    "event": "Metta - Speks",
-    "market": "1o Tempo - 1X2",
-    "rawMarket": "1X2, 1º Tempo",
-    "startsAt": "2026-07-10T15:30:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/fk-metta-MoRW1PVu/speks-6NEnyfeg/#xGiTJqZI:1X2;3",
-    "bestOdd": 22,
-    "outcomes": [
-      {
-        "name": "Metta",
-        "bookmaker": "Betano.br",
-        "odd": 1.28,
-        "url": "https://www.betano.bet.br/"
-      },
-      {
-        "name": "Empate",
-        "bookmaker": "1xBet.br",
-        "odd": 5.8,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Speks",
-        "bookmaker": "1xBet.br",
-        "odd": 22,
-        "url": "https://1xbet.bet.br/en/lobby"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 99.9118,
-      "profitPercent": 0.09,
-      "guaranteedReturn": 1000.88,
-      "guaranteedProfit": 0.88,
-      "stakes": [
-        {
-          "name": "Metta",
-          "bookmaker": "Betano.br",
-          "odd": 1.28,
-          "url": "https://www.betano.bet.br/",
-          "stake": 781.94,
-          "returnAmount": 1000.88
-        },
-        {
-          "name": "Empate",
-          "bookmaker": "1xBet.br",
-          "odd": 5.8,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 172.57,
-          "returnAmount": 1000.88
-        },
-        {
-          "name": "Speks",
-          "bookmaker": "1xBet.br",
-          "odd": 22,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 45.49,
-          "returnAmount": 1000.88
         }
       ]
     },
