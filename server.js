@@ -117,12 +117,14 @@ async function autoRefresh() {
 
   // Run scraper every N cycles
   autoRefreshCounter++;
-  if (autoRefreshCounter % SCRAPER_INTERVAL_CYCLES === 0) {
+  if (autoRefreshCounter % SCRAPER_INTERVAL_CYCLES === 0 && !process.env.RENDER) {
     runScraper().catch(e => console.error("  Scraper error:", e?.message || e));
   }
 
-  loadCurrentRows();
-  cache.scraped = getScrapedData();
+  if (!process.env.RENDER) {
+    loadCurrentRows();
+    cache.scraped = getScrapedData();
+  }
 }
 
 function startAutoRefresh() {
@@ -1318,8 +1320,26 @@ async function handleApi(req, res) {
 }
 
 ensureDataDir();
-loadCurrentRows();
-cache.scraped = getScrapedData();
+startAutoRefresh();
+
+const server = http.createServer((req, res) => {
+  if (req.url.startsWith("/api/")) {
+    handleApi(req, res).catch((error) => sendJson(res, 500, { error: error.message }));
+  } else {
+    serveStatic(req, res);
+  }
+});
+
+server.listen(PORT, () => {
+  console.log(`Surebets rodando em http://localhost:${PORT}`);
+});
+
+// Processamento pesado depois do servidor no ar
+setImmediate(() => {
+  loadCurrentRows();
+  cache.scraped = getScrapedData();
+});
+
 // Busca dados da OA direto na memoria (sem depender de cache em disco)
 if (!process.env.RENDER) {
   setTimeout(async () => {
@@ -1339,16 +1359,3 @@ if (!process.env.RENDER) {
     }
   }, 100);
 }
-startAutoRefresh();
-
-const server = http.createServer((req, res) => {
-  if (req.url.startsWith("/api/")) {
-    handleApi(req, res).catch((error) => sendJson(res, 500, { error: error.message }));
-  } else {
-    serveStatic(req, res);
-  }
-});
-
-server.listen(PORT, () => {
-  console.log(`Surebets rodando em http://localhost:${PORT}`);
-});
