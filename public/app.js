@@ -224,7 +224,7 @@ function renderCards(rows) {
               ${isPinnacle ? '<div class="pinnacle-badge">Pinnacle</div>' : ""}
               ${isBetEsporte ? '<div class="betesporte-badge">BetEsporte</div>' : ""}
               <strong class="outcome-name">${escapeHtml(outcome.name || "Selecao")}</strong>
-              ${outcome.url && !isExtra ? `
+              ${outcome.url ? `
                 <a href="${escapeHtml(outcome.url)}" target="_blank" rel="noopener" class="book-btn" title="Apostar na ${escapeHtml(outcome.bookmaker)}">
                   <span class="book-btn-bookmaker">${escapeHtml(outcome.bookmaker || "Casa")}</span>
                   <span class="book-btn-go">IR</span>

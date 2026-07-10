@@ -1192,6 +1192,9 @@ async function handleApi(req, res) {
   }
 
   if (req.method === "POST" && url.pathname === "/api/refresh-pinnacle") {
+    if (process.env.RENDER) {
+      return sendJson(res, 200, { ok: true, pinnacleEvents: cache.pinnacle?.length || 0, pinnacleMatched: cache.pinnacleMatched || 0 });
+    }
     try {
       const events = await Promise.race([
         fetchPinnacleEvents(),
@@ -1212,6 +1215,9 @@ async function handleApi(req, res) {
   }
 
   if (req.method === "POST" && url.pathname === "/api/refresh-betesporte") {
+    if (process.env.RENDER) {
+      return sendJson(res, 200, { ok: true, betesporteEvents: cache.betesporte?.length || 0, betesporteMatched: cache.betesporteMatched || 0 });
+    }
     try {
       const events = await Promise.race([
         fetchBetEsporteEvents(),
@@ -1239,6 +1245,9 @@ async function handleApi(req, res) {
   }
 
   if (req.method === "POST" && url.pathname === "/api/refresh-scraper") {
+    if (process.env.RENDER) {
+      return sendJson(res, 200, { ok: true, scrapedMatches: 0, positiveSurebets: 0 });
+    }
     try {
       const result = await runScraper();
       cache.scraped = result;
@@ -1253,6 +1262,9 @@ async function handleApi(req, res) {
   }
 
   if (req.method === "POST" && url.pathname === "/api/refresh-oddsagora") {
+    if (process.env.RENDER) {
+      return sendJson(res, 200, { ok: true, source: cache.source, imported: cache.rows?.length || 0 });
+    }
     try {
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 45000);
