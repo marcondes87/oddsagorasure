@@ -1,4 +1,4 @@
-const RENDER_URL = process.env.RENDER_URL || "https://oddsagorasure.onrender.com";
+const RENDER_URL = process.env.RENDER_URL || "https://arbpower.onrender.com";
 
 async function main() {
   console.log("Buscando dados do OA...");
