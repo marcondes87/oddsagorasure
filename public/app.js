@@ -29,13 +29,18 @@ const els = {
   scraperMatchCount: document.getElementById("scraperMatchCount"),
   reloadData: document.getElementById("reloadData"),
   bancaInput: document.getElementById("bancaInput"),
-  importText: document.getElementById("importText"),
-  importJson: document.getElementById("importJson"),
-  importCsv: document.getElementById("importCsv"),
-  importResult: document.getElementById("importResult"),
   calcStake: document.getElementById("calcStake"),
-  calcButton: document.getElementById("calcButton"),
-  calcResult: document.getElementById("calcResult")
+  calcOddsList: document.getElementById("calcOddsList"),
+  calcAddOutcome: document.getElementById("calcAddOutcome"),
+  calcImplied: document.getElementById("calcImplied"),
+  calcProfit: document.getElementById("calcProfit"),
+  calcPayout: document.getElementById("calcPayout"),
+  calcTotalStake: document.getElementById("calcTotalStake"),
+  calcProfitBar: document.getElementById("calcProfitBar"),
+  calcBreakEven: document.getElementById("calcBreakEven"),
+  calcBarMax: document.getElementById("calcBarMax"),
+  calcBreakdown: document.getElementById("calcBreakdown"),
+  calcStatus: document.getElementById("calcStatus")
 };
 
 document.querySelectorAll(".nav-item").forEach((button) => {
@@ -57,9 +62,8 @@ els.bancaInput.addEventListener("input", () => {
   els.metricStake.textContent = currency.format(state.stake);
   renderCards(state.rows);
 });
-els.importJson.addEventListener("click", () => importData("application/json"));
-els.importCsv.addEventListener("click", () => importData("text/csv"));
-els.calcButton.addEventListener("click", runCalculator);
+els.calcStake.addEventListener("input", runCalculator);
+els.calcAddOutcome.addEventListener("click", addCalcOutcome);
 
 async function syncAndLoad() {
   try {
@@ -281,31 +285,136 @@ function toggleCalc(btn) {
   btn.textContent = isOpen ? "Calculadora" : "Ocultar";
 }
 
-async function importData(contentType) {
-  const response = await fetch("/api/import", {
-    method: "POST",
-    headers: { "Content-Type": contentType },
-    body: els.importText.value
-  });
-  const data = await response.json();
-  els.importResult.textContent = JSON.stringify(data, null, 2);
-  if (data.ok) await loadData();
+function addCalcOutcome() {
+  const items = els.calcOddsList.querySelectorAll(".calc-pro-row");
+  const idx = items.length + 1;
+  const row = document.createElement("div");
+  row.className = "calc-pro-row";
+  row.innerHTML = `
+    <input class="calc-pro-name" type="text" value="Resultado ${idx}" placeholder="Nome">
+    <input class="calc-pro-odd" type="number" step="0.01" min="1.01" value="${idx <= 2 ? (idx === 1 ? 2.1 : 2.05) : ""}" placeholder="Odd">
+    ${items.length >= 2 ? '<button class="calc-pro-remove" title="Remover">&times;</button>' : ""}
+  `;
+  els.calcOddsList.appendChild(row);
+  if (items.length >= 2) els.calcOddsList.querySelectorAll(".calc-pro-remove").forEach(b => b.remove());
+  if (items.length >= 1) {
+    const firstRemove = els.calcOddsList.querySelector(".calc-pro-row:first-child .calc-pro-remove");
+    if (!firstRemove) {
+      const firstRow = els.calcOddsList.querySelector(".calc-pro-row:first-child");
+      const rm = document.createElement("button");
+      rm.className = "calc-pro-remove";
+      rm.title = "Remover";
+      rm.textContent = "\u00D7";
+      firstRow.appendChild(rm);
+    }
+  }
+  row.querySelector(".calc-pro-odd").focus();
+  runCalculator();
 }
 
+let calcOutcomeCount = 0;
+function initCalculator() {
+  calcOutcomeCount = 0;
+  els.calcOddsList.innerHTML = "";
+  addCalcOutcome();
+  addCalcOutcome();
+}
+els.calcOddsList.addEventListener("input", (e) => {
+  if (e.target.classList.contains("calc-pro-odd") || e.target.classList.contains("calc-pro-name")) {
+    runCalculator();
+  }
+});
+els.calcOddsList.addEventListener("click", (e) => {
+  if (e.target.classList.contains("calc-pro-remove")) {
+    const row = e.target.closest(".calc-pro-row");
+    if (els.calcOddsList.querySelectorAll(".calc-pro-row").length <= 2) return;
+    row.remove();
+    runCalculator();
+  }
+});
+
 function runCalculator() {
-  const stake = Number(els.calcStake.value || 0);
-  const odds = [...document.querySelectorAll(".calcOdd")]
-    .map((input, index) => ({ name: `Resultado ${index + 1}`, bookmaker: "Manual", odd: Number(input.value) }))
-    .filter((item) => item.odd > 1);
-  const implied = odds.reduce((sum, item) => sum + 1 / item.odd, 0);
+  const stake = Number(els.calcStake.value) || 0;
+  const rows = [...els.calcOddsList.querySelectorAll(".calc-pro-row")];
+  const odds = rows.map((row, i) => {
+    const name = row.querySelector(".calc-pro-name").value.trim() || `Resultado ${i+1}`;
+    const odd = Number(row.querySelector(".calc-pro-odd").value);
+    return { name, odd };
+  }).filter(o => o.odd > 1);
+
+  if (odds.length < 2 || stake <= 0) {
+    els.calcImplied.textContent = "--";
+    els.calcProfit.textContent = "--";
+    els.calcPayout.textContent = "--";
+    els.calcTotalStake.textContent = "--";
+    els.calcProfitBar.style.width = "0%";
+    els.calcBreakdown.innerHTML = "";
+    els.calcStatus.textContent = odds.length < 2 ? "Adicione pelo menos 2 odds" : "Defina um stake valido";
+    els.calcStatus.className = "calc-pro-status";
+    return;
+  }
+
+  const implied = odds.reduce((s, o) => s + 1 / o.odd, 0);
   const payout = stake / implied;
   const profit = payout - stake;
-  els.calcResult.innerHTML = `
-    <div class="calc-line"><span>Probabilidade implicita</span><strong>${(implied * 100).toFixed(4)}%</strong></div>
-    <div class="calc-line"><span>Lucro esperado</span><strong>${currency.format(profit)} (${((1 / implied - 1) * 100).toFixed(2)}%)</strong></div>
-    ${odds.map((item) => `<div class="calc-line"><span>${escapeHtml(item.name)} @ ${item.odd.toFixed(2)}</span><strong>${currency.format(payout / item.odd)}</strong></div>`).join("")}
+  const profitPct = (1 / implied - 1) * 100;
+  const isProfitable = profitPct > 0;
+
+  els.calcImplied.textContent = (implied * 100).toFixed(4) + "%";
+  els.calcTotalStake.textContent = currency.format(stake);
+  els.calcPayout.textContent = currency.format(payout);
+
+  const profitEl = els.calcProfit;
+  profitEl.textContent = isProfitable ? `${profitPct.toFixed(2)}% (${currency.format(profit)})` : `${profitPct.toFixed(2)}% (${currency.format(profit)})`;
+  profitEl.style.color = isProfitable ? "var(--accent)" : "var(--danger)";
+
+  const barPct = Math.min(Math.max(profitPct + 2, 0), 12);
+  els.calcProfitBar.style.width = (barPct / 12 * 100) + "%";
+  els.calcProfitBar.style.background = isProfitable ? "var(--accent)" : "var(--danger)";
+  els.calcBreakEven.textContent = "0%";
+  els.calcBarMax.textContent = `+10%`;
+  if (profitPct < -1) els.calcBarMax.textContent = `${profitPct.toFixed(1)}%`;
+
+  const breakdown = odds.map(o => ({
+    ...o,
+    stake: Math.round((payout / o.odd) * 100) / 100,
+    ret: Math.round((payout / o.odd) * o.odd * 100) / 100
+  }));
+
+  els.calcBreakdown.innerHTML = `
+    <div class="calc-pro-bd-header">
+      <span>Resultado</span>
+      <span>Odd</span>
+      <span>Stake</span>
+      <span>Retorno</span>
+    </div>
+    ${breakdown.map(o => `
+      <div class="calc-pro-bd-row">
+        <span class="calc-pro-bd-name">${escapeHtml(o.name)}</span>
+        <span class="calc-pro-bd-odd">${o.odd.toFixed(2)}</span>
+        <span class="calc-pro-bd-stake">${currency.format(o.stake)}</span>
+        <span class="calc-pro-bd-return">${currency.format(o.ret)}</span>
+      </div>
+    `).join("")}
+    <div class="calc-pro-bd-total">
+      <span>Total</span>
+      <span></span>
+      <span>${currency.format(breakdown.reduce((s, o) => s + o.stake, 0))}</span>
+      <span>${currency.format(breakdown.reduce((s, o) => s + o.ret, 0))}</span>
+    </div>
   `;
+
+  if (isProfitable) {
+    els.calcStatus.innerHTML = `<span class="calc-pro-status-yes">Surebet encontrada! Lucro garantido de ${profitPct.toFixed(2)}%</span>`;
+  } else if (profitPct > -1) {
+    els.calcStatus.innerHTML = `<span class="calc-pro-status-warn">Quase la! Margem de ${Math.abs(profitPct).toFixed(2)}% abaixo do break-even</span>`;
+  } else {
+    els.calcStatus.innerHTML = `<span class="calc-pro-status-no">Margem negativa de ${Math.abs(profitPct).toFixed(2)}% — nao e surebet</span>`;
+  }
+  els.calcStatus.className = "calc-pro-status" + (isProfitable ? " profit" : "");
 }
+
+initCalculator();
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({

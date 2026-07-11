@@ -1336,9 +1336,6 @@ async function handleApi(req, res) {
   return sendJson(res, 404, { error: "Endpoint nao encontrado" });
 }
 
-ensureDataDir();
-startAutoRefresh();
-
 const server = http.createServer((req, res) => {
   if (req.url.startsWith("/api/")) {
     handleApi(req, res).catch((error) => sendJson(res, 500, { error: error.message }));
@@ -1347,32 +1344,36 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`Surebets rodando em http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  ensureDataDir();
+  startAutoRefresh();
+  server.listen(PORT, () => {
+    console.log(`Surebets rodando em http://localhost:${PORT}`);
+  });
 
-// Processamento pesado depois do servidor no ar
-setImmediate(() => {
-  loadCurrentRows();
-  cache.scraped = getScrapedData();
-});
+  setImmediate(() => {
+    loadCurrentRows();
+    cache.scraped = getScrapedData();
+  });
 
-// Busca dados da OA direto na memoria (sem depender de cache em disco)
-if (!process.env.RENDER) {
-  setTimeout(async () => {
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 45000);
-      const rows = await fetchOddsAgoraSurebets(controller.signal);
-      clearTimeout(timeout);
-      if (rows && rows.length) {
-        cache._rows = rows;
-        cache.source = "oddsagora";
-        cache.updatedAt = new Date().toISOString();
-        loadCurrentRows();
+  if (!process.env.RENDER) {
+    setTimeout(async () => {
+      try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 45000);
+        const rows = await fetchOddsAgoraSurebets(controller.signal);
+        clearTimeout(timeout);
+        if (rows && rows.length) {
+          cache._rows = rows;
+          cache.source = "oddsagora";
+          cache.updatedAt = new Date().toISOString();
+          loadCurrentRows();
+        }
+      } catch (e) {
+        console.error("  OA inicial error:", e.message);
       }
-    } catch (e) {
-      console.error("  OA inicial error:", e.message);
-    }
-  }, 100);
+    }, 100);
+  }
 }
+
+module.exports = { fetchPinnacleEvents, fetchBetEsporteEvents, writeJson, ensureDataDir, PINNACLE_FILE, BETESPORTE_FILE, DATA_DIR };

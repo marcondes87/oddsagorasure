@@ -67,35 +67,74 @@ async function main() {
     console.log("  OA: 0 surebets (pulado)");
   }
 
-  // Push Pinnacle data
+  // Fetch fresh Pinnacle data
+  let pinData;
   try {
-    const pinData = require("./data/pinnacle-odds.json");
-    if (Array.isArray(pinData) && pinData.length) {
-      console.log(`Enviando Pinnacle (${pinData.length} eventos)...`);
-      const push = await fetch(`${RENDER_URL}/api/ingest-pinnacle`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(pinData)
-      });
-      const result = await push.json();
-      console.log("  Pinnacle:", JSON.stringify(result));
+    const server = require("./server.js");
+    console.log("Buscando dados frescos da Pinnacle...");
+    const events = await Promise.race([
+      server.fetchPinnacleEvents(),
+      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 45000))
+    ]);
+    if (events.length) {
+      pinData = events;
+      server.ensureDataDir();
+      require("fs").writeFileSync(server.PINNACLE_FILE, JSON.stringify(pinData, null, 2));
+      console.log(`  ${pinData.length} eventos da Pinnacle (fresco)`);
     }
-  } catch (e) { console.log("  Pinnacle error:", e.message); }
+  } catch (e) {
+    console.log("  Pinnacle fetch error:", e.message);
+    try {
+      pinData = require("./data/pinnacle-odds.json");
+      if (Array.isArray(pinData) && pinData.length) console.log(`  ${pinData.length} eventos (cache)`);
+    } catch {}
+  }
+  if (Array.isArray(pinData) && pinData.length) {
+    console.log(`Enviando Pinnacle (${pinData.length} eventos)...`);
+    const push = await fetch(`${RENDER_URL}/api/ingest-pinnacle`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(pinData)
+    });
+    const result = await push.json();
+    console.log("  Pinnacle:", JSON.stringify(result));
+  } else {
+    console.log("  Pinnacle: 0 eventos (pulado)");
+  }
 
-  // Push BetEsporte data
+  // Fetch fresh BetEsporte data
+  let beData;
   try {
-    const beData = require("./data/betesporte-odds.json");
-    if (Array.isArray(beData) && beData.length) {
-      console.log(`Enviando BetEsporte (${beData.length} eventos)...`);
-      const push = await fetch(`${RENDER_URL}/api/ingest-betesporte`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(beData)
-      });
-      const result = await push.json();
-      console.log("  BetEsporte:", JSON.stringify(result));
+    const server = require("./server.js");
+    console.log("Buscando dados frescos da BetEsporte...");
+    const events = await Promise.race([
+      server.fetchBetEsporteEvents(),
+      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 25000))
+    ]);
+    if (events.length) {
+      beData = events;
+      require("fs").writeFileSync(server.BETESPORTE_FILE, JSON.stringify(beData, null, 2));
+      console.log(`  ${beData.length} eventos da BetEsporte (fresco)`);
     }
-  } catch (e) { console.log("  BetEsporte error:", e.message); }
+  } catch (e) {
+    console.log("  BetEsporte fetch error:", e.message);
+    try {
+      beData = require("./data/betesporte-odds.json");
+      if (Array.isArray(beData) && beData.length) console.log(`  ${beData.length} eventos (cache)`);
+    } catch {}
+  }
+  if (Array.isArray(beData) && beData.length) {
+    console.log(`Enviando BetEsporte (${beData.length} eventos)...`);
+    const push = await fetch(`${RENDER_URL}/api/ingest-betesporte`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(beData)
+    });
+    const result = await push.json();
+    console.log("  BetEsporte:", JSON.stringify(result));
+  } else {
+    console.log("  BetEsporte: 0 eventos (pulado)");
+  }
 }
 
 main().catch(e => console.error("Erro:", e.message));

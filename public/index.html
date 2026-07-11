@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arbipower</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <link rel="stylesheet" href="/styles.css?v=4">
+    <link rel="stylesheet" href="/styles.css?v=5">
   </head>
   <body>
     <div class="app">
@@ -20,7 +20,6 @@
 
         <nav>
           <button class="nav-item active" data-view="dashboard">Dashboard</button>
-          <button class="nav-item" data-view="import">Importar odds</button>
           <button class="nav-item" data-view="calculator">Calculadora</button>
         </nav>
 
@@ -109,35 +108,64 @@
           <div id="cards" class="cards"></div>
         </section>
 
-        <section id="importView" class="view">
-          <div class="panel">
-            <h2>Importar dados</h2>
-            <p>CSV esperado: event,sport,league,market,outcome,bookmaker,odd. JSON pode ser um array de eventos com outcomes.</p>
-            <textarea id="importText" spellcheck="false" placeholder='[{"event":"Time A x Time B","sport":"Futebol","league":"Liga","market":"1X2","outcomes":[{"name":"Time A","bookmaker":"Casa A","odd":2.4},{"name":"Empate","bookmaker":"Casa B","odd":3.8},{"name":"Time B","bookmaker":"Casa C","odd":3.3}]}]'></textarea>
-            <div class="row-actions">
-              <button id="importJson">Importar JSON</button>
-              <button id="importCsv" class="ghost">Importar CSV</button>
-            </div>
-            <pre id="importResult"></pre>
-          </div>
-        </section>
-
         <section id="calculatorView" class="view">
-          <div class="panel calc">
-            <h2>Calculadora rapida</h2>
-            <div class="calc-grid">
-              <label>Stake total <input id="calcStake" type="number" value="1000"></label>
-              <label>Odd 1 <input class="calcOdd" type="number" value="2.1" step="0.01"></label>
-              <label>Odd 2 <input class="calcOdd" type="number" value="2.05" step="0.01"></label>
-              <label>Odd 3 <input class="calcOdd" type="number" step="0.01" placeholder="opcional"></label>
+          <div class="calc-pro">
+            <div class="calc-pro-header">
+              <h2>Calculadora de Surebets</h2>
+              <p>Insira as odds e o stake total para calcular a distribuicao otima dos valores</p>
             </div>
-            <button id="calcButton">Calcular</button>
-            <div id="calcResult" class="calc-result"></div>
+            <div class="calc-pro-body">
+              <div class="calc-pro-inputs">
+                <div class="calc-pro-stake">
+                  <label>Stake total (R$)</label>
+                  <input id="calcStake" type="number" value="1000" min="100" step="100">
+                </div>
+                <div class="calc-pro-odds">
+                  <div class="calc-pro-odds-header">
+                    <span>Resultados</span>
+                    <button id="calcAddOutcome" title="Adicionar resultado">+</button>
+                  </div>
+                  <div id="calcOddsList"></div>
+                </div>
+              </div>
+              <div class="calc-pro-results">
+                <div class="calc-pro-summary">
+                  <div class="calc-stat-large">
+                    <span class="calc-stat-label">Probabilidade Implicita</span>
+                    <strong id="calcImplied" class="calc-stat-value">--</strong>
+                  </div>
+                  <div class="calc-stat-large">
+                    <span class="calc-stat-label">Lucro</span>
+                    <strong id="calcProfit" class="calc-stat-value">--</strong>
+                  </div>
+                  <div class="calc-stat-large">
+                    <span class="calc-stat-label">Retorno Garantido</span>
+                    <strong id="calcPayout" class="calc-stat-value">--</strong>
+                  </div>
+                  <div class="calc-stat-large">
+                    <span class="calc-stat-label">Stake Total</span>
+                    <strong id="calcTotalStake" class="calc-stat-value">--</strong>
+                  </div>
+                </div>
+                <div class="calc-pro-bar">
+                  <div class="calc-pro-bar-track">
+                    <div id="calcProfitBar" class="calc-pro-bar-fill"></div>
+                  </div>
+                  <div class="calc-pro-bar-labels">
+                    <span>0%</span>
+                    <span id="calcBreakEven">Break-even</span>
+                    <span id="calcBarMax">+10%</span>
+                  </div>
+                </div>
+                <div id="calcBreakdown" class="calc-pro-breakdown"></div>
+                <div class="calc-pro-status" id="calcStatus"></div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
     </div>
 
-    <script src="/app.js?v=4"></script>
+    <script src="/app.js?v=5"></script>
   </body>
 </html>
