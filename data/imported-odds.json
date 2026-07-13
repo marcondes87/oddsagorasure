@@ -1,550 +1,394 @@
 [
   {
-    "id": "11069303",
-    "sport": "Tênis",
-    "league": "Newport Challenger Homens",
-    "country": "EUA",
-    "event": "L. Broady - Michelsen A.",
-    "market": "2o Set - Acima/Abaixo 9.5 games",
-    "rawMarket": "O/U 9.5 Games, 2º Set",
-    "startsAt": "2026-07-10T16:30:00.000Z",
-    "url": "https://www.oddsagora.com.br/tennis/h2h/liam-broady-UTu7grNI/michelsen-alex-nDIhfm9l/#QcHK5kum:over-under;13;9.50;2",
-    "bestOdd": 2.12,
-    "outcomes": [
-      {
-        "name": "Mais 9.5 games",
-        "bookmaker": "Betnacional",
-        "odd": 2.1,
-        "url": "https://betnacional.bet.br/"
-      },
-      {
-        "name": "Menos 9.5 games",
-        "bookmaker": "Betano.br",
-        "odd": 2.12,
-        "url": "https://www.betano.bet.br/"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 94.7889,
-      "profitPercent": 5.5,
-      "guaranteedReturn": 1054.98,
-      "guaranteedProfit": 54.98,
-      "stakes": [
-        {
-          "name": "Mais 9.5 games",
-          "bookmaker": "Betnacional",
-          "odd": 2.1,
-          "url": "https://betnacional.bet.br/",
-          "stake": 502.37,
-          "returnAmount": 1054.98
-        },
-        {
-          "name": "Menos 9.5 games",
-          "bookmaker": "Betano.br",
-          "odd": 2.12,
-          "url": "https://www.betano.bet.br/",
-          "stake": 497.63,
-          "returnAmount": 1054.98
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em Tênis - 2o Set - Acima/Abaixo 9.5 games"
-  },
-  {
-    "id": "11027639",
-    "sport": "MMA",
-    "league": "Flyweight - PFL MENA Homens",
-    "country": "Mundo",
-    "event": "Basahel M. - El Azami I.",
-    "market": "Acima/Abaixo 1.5 assaltos",
-    "rawMarket": "O/U 1.5",
-    "startsAt": "2026-07-10T17:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/mma/h2h/basahel-malik-8zZDhaBN/el-azami-imad-vL4AxdxK/#4x8LUcI7:over-under;2;1.50;0",
-    "bestOdd": 2.26,
-    "outcomes": [
-      {
-        "name": "Mais 1.5 assaltos",
-        "bookmaker": "1xBet.br",
-        "odd": 2.26,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Menos 1.5 assaltos",
-        "bookmaker": "Betboom.br",
-        "odd": 1.97,
-        "url": "https://betboom.bet.br/sport"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 95.0092,
-      "profitPercent": 5.25,
-      "guaranteedReturn": 1052.53,
-      "guaranteedProfit": 52.53,
-      "stakes": [
-        {
-          "name": "Mais 1.5 assaltos",
-          "bookmaker": "1xBet.br",
-          "odd": 2.26,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 465.72,
-          "returnAmount": 1052.53
-        },
-        {
-          "name": "Menos 1.5 assaltos",
-          "bookmaker": "Betboom.br",
-          "odd": 1.97,
-          "url": "https://betboom.bet.br/sport",
-          "stake": 534.28,
-          "returnAmount": 1052.53
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em MMA - Acima/Abaixo 1.5 assaltos"
-  },
-  {
-    "id": "11027657",
-    "sport": "MMA",
-    "league": "Welterweight - PFL MENA Homens",
-    "country": "Mundo",
-    "event": "Diani B. - Adel Y.",
-    "market": "Acima/Abaixo 1.5 assaltos",
-    "rawMarket": "O/U 1.5",
-    "startsAt": "2026-07-10T15:30:00.000Z",
-    "url": "https://www.oddsagora.com.br/mma/h2h/adel-yousef-8zetXZas/diani-badreddine-tYW8Dqq9/#6P6zqlwI:over-under;2;1.50;0",
-    "bestOdd": 2.57,
-    "outcomes": [
-      {
-        "name": "Mais 1.5 assaltos",
-        "bookmaker": "1xBet.br",
-        "odd": 1.76,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Menos 1.5 assaltos",
-        "bookmaker": "SeguroBet",
-        "odd": 2.57,
-        "url": "https://www.seguro.bet.br/esportes/match/Soccer/World/2969/30217890"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 95.7287,
-      "profitPercent": 4.46,
-      "guaranteedReturn": 1044.62,
-      "guaranteedProfit": 44.62,
-      "stakes": [
-        {
-          "name": "Mais 1.5 assaltos",
-          "bookmaker": "1xBet.br",
-          "odd": 1.76,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 593.53,
-          "returnAmount": 1044.62
-        },
-        {
-          "name": "Menos 1.5 assaltos",
-          "bookmaker": "SeguroBet",
-          "odd": 2.57,
-          "url": "https://www.seguro.bet.br/esportes/match/Soccer/World/2969/30217890",
-          "stake": 406.47,
-          "returnAmount": 1044.62
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em MMA - Acima/Abaixo 1.5 assaltos"
-  },
-  {
-    "id": "11027705",
-    "sport": "MMA",
-    "league": "Featherweight - PFL MENA Homens",
-    "country": "Mundo",
-    "event": "Almolhem S. - Elhoufy A.",
-    "market": "Acima/Abaixo 1.5 assaltos",
-    "rawMarket": "O/U 1.5",
-    "startsAt": "2026-07-10T16:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/mma/h2h/almolhem-saud-x4vSXbhm/elhoufy-abdelhalim-rH9SVxNa/#WnEAFtVg:over-under;2;1.50;0",
-    "bestOdd": 2.43,
-    "outcomes": [
-      {
-        "name": "Mais 1.5 assaltos",
-        "bookmaker": "1xBet.br",
-        "odd": 2.43,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Menos 1.5 assaltos",
-        "bookmaker": "Betano.br",
-        "odd": 1.83,
-        "url": "https://www.betano.bet.br/"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 95.7971,
-      "profitPercent": 4.39,
-      "guaranteedReturn": 1043.87,
-      "guaranteedProfit": 43.87,
-      "stakes": [
-        {
-          "name": "Mais 1.5 assaltos",
-          "bookmaker": "1xBet.br",
-          "odd": 2.43,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 429.58,
-          "returnAmount": 1043.87
-        },
-        {
-          "name": "Menos 1.5 assaltos",
-          "bookmaker": "Betano.br",
-          "odd": 1.83,
-          "url": "https://www.betano.bet.br/",
-          "stake": 570.42,
-          "returnAmount": 1043.87
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em MMA - Acima/Abaixo 1.5 assaltos"
-  },
-  {
-    "id": "11027635",
-    "sport": "MMA",
-    "league": "Welterweight - PFL MENA Homens",
-    "country": "Mundo",
-    "event": "Shaaban H. - Kayyali H.",
-    "market": "Acima/Abaixo 1.5 assaltos",
-    "rawMarket": "O/U 1.5",
-    "startsAt": "2026-07-10T14:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/mma/h2h/kayyali-hazem-MqzQUqJD/shaaban-hassan-fq9ULD5F/#vHi6YuJr:over-under;2;1.50;0",
-    "bestOdd": 2.62,
-    "outcomes": [
-      {
-        "name": "Mais 1.5 assaltos",
-        "bookmaker": "1xBet.br",
-        "odd": 1.71,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Menos 1.5 assaltos",
-        "bookmaker": "SeguroBet",
-        "odd": 2.62,
-        "url": "https://www.seguro.bet.br/esportes/match/Soccer/World/2969/30217890"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 96.6475,
-      "profitPercent": 3.47,
-      "guaranteedReturn": 1034.69,
-      "guaranteedProfit": 34.69,
-      "stakes": [
-        {
-          "name": "Mais 1.5 assaltos",
-          "bookmaker": "1xBet.br",
-          "odd": 1.71,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 605.08,
-          "returnAmount": 1034.69
-        },
-        {
-          "name": "Menos 1.5 assaltos",
-          "bookmaker": "SeguroBet",
-          "odd": 2.62,
-          "url": "https://www.seguro.bet.br/esportes/match/Soccer/World/2969/30217890",
-          "stake": 394.92,
-          "returnAmount": 1034.69
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em MMA - Acima/Abaixo 1.5 assaltos"
-  },
-  {
-    "id": "10496151",
-    "sport": "MMA",
-    "league": "Welterweight - Oktagon Homens",
-    "country": "Europa",
-    "event": "Akipa C. - Kertesz M.",
-    "market": "Casa/Fora",
-    "rawMarket": "H/A",
-    "startsAt": "2026-07-11T20:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/mma/h2h/akipa-cihad-KI4TEhy2/kertesz-mate-Sxfotmed/#dMgiZvW8:home-away;2",
-    "bestOdd": 4.04,
-    "outcomes": [
-      {
-        "name": "Akipa C.",
-        "bookmaker": "Superbet.br",
-        "odd": 1.38,
-        "url": "https://superbet.bet.br/"
-      },
-      {
-        "name": "Kertesz M.",
-        "bookmaker": "1xBet.br",
-        "odd": 4.04,
-        "url": "https://1xbet.bet.br/en/lobby"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 97.2162,
-      "profitPercent": 2.86,
-      "guaranteedReturn": 1028.63,
-      "guaranteedProfit": 28.63,
-      "stakes": [
-        {
-          "name": "Akipa C.",
-          "bookmaker": "Superbet.br",
-          "odd": 1.38,
-          "url": "https://superbet.bet.br/",
-          "stake": 745.39,
-          "returnAmount": 1028.63
-        },
-        {
-          "name": "Kertesz M.",
-          "bookmaker": "1xBet.br",
-          "odd": 4.04,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 254.61,
-          "returnAmount": 1028.63
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em MMA - Casa/Fora"
-  },
-  {
-    "id": "11061365",
-    "sport": "Tênis",
-    "league": "Braunschweig Challenger Homens Duplas",
-    "country": "Alemanha",
-    "event": "Orlando/R. Matos - Pieczonka F./Vrbensky M.",
-    "market": "1o Set - Casa/Fora",
-    "rawMarket": "H/A, 1º Set",
-    "startsAt": "2026-07-10T12:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/tennis/h2h/orlando-rafael-vTTQuqa9/pieczonka-vrbensky-SvTpFLCr/#Wfn4YClf:home-away;12",
-    "bestOdd": 3.8,
-    "outcomes": [
-      {
-        "name": "Orlando/R. Matos",
-        "bookmaker": "1xBet.br",
-        "odd": 1.41,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Pieczonka F./Vrbensky M.",
-        "bookmaker": "F12",
-        "odd": 3.8,
-        "url": "https://f12.bet.br/sports"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 97.2378,
-      "profitPercent": 2.84,
-      "guaranteedReturn": 1028.41,
-      "guaranteedProfit": 28.41,
-      "stakes": [
-        {
-          "name": "Orlando/R. Matos",
-          "bookmaker": "1xBet.br",
-          "odd": 1.41,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 729.37,
-          "returnAmount": 1028.41
-        },
-        {
-          "name": "Pieczonka F./Vrbensky M.",
-          "bookmaker": "F12",
-          "odd": 3.8,
-          "url": "https://f12.bet.br/sports",
-          "stake": 270.63,
-          "returnAmount": 1028.41
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em Tênis - 1o Set - Casa/Fora"
-  },
-  {
-    "id": "11027677",
-    "sport": "MMA",
-    "league": "Featherweight - PFL MENA Homens",
-    "country": "Mundo",
-    "event": "Kabbani S. - Tarek A.",
-    "market": "Acima/Abaixo 1.5 assaltos",
-    "rawMarket": "O/U 1.5",
-    "startsAt": "2026-07-10T16:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/mma/h2h/kabbani-shadi-UkqkVDUg/tarek-ahmed-OnJL2PYo/#SWne846T:over-under;2;1.50;0",
-    "bestOdd": 2.43,
-    "outcomes": [
-      {
-        "name": "Mais 1.5 assaltos",
-        "bookmaker": "1xBet.br",
-        "odd": 1.76,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Menos 1.5 assaltos",
-        "bookmaker": "Betboom.br",
-        "odd": 2.43,
-        "url": "https://betboom.bet.br/sport"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 97.9704,
-      "profitPercent": 2.07,
-      "guaranteedReturn": 1020.72,
-      "guaranteedProfit": 20.72,
-      "stakes": [
-        {
-          "name": "Mais 1.5 assaltos",
-          "bookmaker": "1xBet.br",
-          "odd": 1.76,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 579.95,
-          "returnAmount": 1020.72
-        },
-        {
-          "name": "Menos 1.5 assaltos",
-          "bookmaker": "Betboom.br",
-          "odd": 2.43,
-          "url": "https://betboom.bet.br/sport",
-          "stake": 420.05,
-          "returnAmount": 1020.72
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em MMA - Acima/Abaixo 1.5 assaltos"
-  },
-  {
-    "id": "10916899",
-    "sport": "Futebol",
-    "league": "Liga de Elite",
-    "country": "Macau",
-    "event": "Benfica - Shao Jiang",
-    "market": "1X2",
-    "rawMarket": "1X2",
-    "startsAt": "2026-07-10T13:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/benfica-macau-hGZMB1yP/shao-jiang-8n9krCD4/#ELS0U5tP:1X2;2",
-    "bestOdd": 14.5,
-    "outcomes": [
-      {
-        "name": "Benfica",
-        "bookmaker": "1xBet.br",
-        "odd": 14.5,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Empate",
-        "bookmaker": "1xBet.br",
-        "odd": 8.7,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Shao Jiang",
-        "bookmaker": "KTO.br",
-        "odd": 1.24,
-        "url": "https://www.kto.bet.br/esportes"
-      }
-    ],
-    "surebet": {
-      "impliedProbability": 99.036,
-      "profitPercent": 0.97,
-      "guaranteedReturn": 1009.73,
-      "guaranteedProfit": 9.73,
-      "stakes": [
-        {
-          "name": "Benfica",
-          "bookmaker": "1xBet.br",
-          "odd": 14.5,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 69.64,
-          "returnAmount": 1009.73
-        },
-        {
-          "name": "Empate",
-          "bookmaker": "1xBet.br",
-          "odd": 8.7,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 116.06,
-          "returnAmount": 1009.73
-        },
-        {
-          "name": "Shao Jiang",
-          "bookmaker": "KTO.br",
-          "odd": 1.24,
-          "url": "https://www.kto.bet.br/esportes",
-          "stake": 814.3,
-          "returnAmount": 1009.73
-        }
-      ]
-    },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - 1X2"
-  },
-  {
-    "id": "11030037",
+    "id": "10680857",
     "sport": "Futebol",
     "league": "Amistoso Interclubes",
     "country": "Mundo",
-    "event": "Merthyr Town (Wal)  - Cambrian United (Wal) ",
+    "event": "Concarneau (Fra)  - Lorient (Fra) ",
     "market": "1X2",
     "rawMarket": "1X2",
-    "startsAt": "2026-07-10T18:30:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/cambrian-united-fw6LT2dr/merthyr-town-tds6RnkN/#SKUrN4R0:1X2;2",
-    "bestOdd": 6.8,
+    "startsAt": "2026-07-11T09:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/concarneau-Uo57pG95/lorient-jgNAYRGi/#t2Ln4qFk:1X2;2",
+    "bestOdd": 7.37,
     "outcomes": [
       {
-        "name": "Merthyr Town",
-        "bookmaker": "BR4Bet",
-        "odd": 1.54,
-        "url": "https://br4.bet.br/sports"
+        "name": "Concarneau",
+        "bookmaker": "1xBet.br",
+        "odd": 7.37,
+        "url": "https://1xbet.bet.br/en/lobby"
       },
       {
         "name": "Empate",
-        "bookmaker": "BR4Bet",
-        "odd": 5,
-        "url": "https://br4.bet.br/sports"
+        "bookmaker": "1xBet.br",
+        "odd": 4.9,
+        "url": "https://1xbet.bet.br/en/lobby"
       },
       {
-        "name": "Cambrian United",
-        "bookmaker": "BrasilBet",
-        "odd": 6.8,
-        "url": "https://www.brasil.bet.br/sportsbook/"
+        "name": "Lorient",
+        "bookmaker": "BR4Bet",
+        "odd": 1.69,
+        "url": "https://br4.bet.br/sports"
       }
     ],
     "surebet": {
-      "impliedProbability": 99.6409,
-      "profitPercent": 0.36,
-      "guaranteedReturn": 1003.6,
-      "guaranteedProfit": 3.6,
+      "impliedProbability": 93.1483,
+      "profitPercent": 7.36,
+      "guaranteedReturn": 1073.56,
+      "guaranteedProfit": 73.56,
       "stakes": [
         {
-          "name": "Merthyr Town",
-          "bookmaker": "BR4Bet",
-          "odd": 1.54,
-          "url": "https://br4.bet.br/sports",
-          "stake": 651.69,
-          "returnAmount": 1003.6
+          "name": "Concarneau",
+          "bookmaker": "1xBet.br",
+          "odd": 7.37,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 145.67,
+          "returnAmount": 1073.56
         },
         {
           "name": "Empate",
-          "bookmaker": "BR4Bet",
-          "odd": 5,
-          "url": "https://br4.bet.br/sports",
-          "stake": 200.72,
-          "returnAmount": 1003.6
+          "bookmaker": "1xBet.br",
+          "odd": 4.9,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 219.09,
+          "returnAmount": 1073.56
         },
         {
-          "name": "Cambrian United",
-          "bookmaker": "BrasilBet",
-          "odd": 6.8,
-          "url": "https://www.brasil.bet.br/sportsbook/",
-          "stake": 147.59,
-          "returnAmount": 1003.6
+          "name": "Lorient",
+          "bookmaker": "BR4Bet",
+          "odd": 1.69,
+          "url": "https://br4.bet.br/sports",
+          "stake": 635.24,
+          "returnAmount": 1073.56
         }
       ]
     },
     "isSurebet": true,
     "risk": "Verifique odds em Futebol - 1X2"
+  },
+  {
+    "id": "10952209",
+    "sport": "Basquete",
+    "league": "NBA - Liga de Verão de Las Vegas",
+    "country": "EUA",
+    "event": "Los Angeles Lakers - Oklahoma City Thunder",
+    "market": "Casa/Fora",
+    "rawMarket": "H/A, PR",
+    "startsAt": "2026-07-11T02:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/basketball/h2h/los-angeles-lakers-ngegZ8bg/oklahoma-city-thunder-0fHFHEWD/#xGiE4dnD:home-away;1",
+    "bestOdd": 2.4,
+    "outcomes": [
+      {
+        "name": "Los Angeles Lakers",
+        "bookmaker": "Jogo de Ouro",
+        "odd": 2.4,
+        "url": "https://jogodeouro.bet.br/pt/sports"
+      },
+      {
+        "name": "Oklahoma City Thunder",
+        "bookmaker": "1xBet.br",
+        "odd": 1.94,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 93.2131,
+      "profitPercent": 7.28,
+      "guaranteedReturn": 1072.81,
+      "guaranteedProfit": 72.81,
+      "stakes": [
+        {
+          "name": "Los Angeles Lakers",
+          "bookmaker": "Jogo de Ouro",
+          "odd": 2.4,
+          "url": "https://jogodeouro.bet.br/pt/sports",
+          "stake": 447,
+          "returnAmount": 1072.81
+        },
+        {
+          "name": "Oklahoma City Thunder",
+          "bookmaker": "1xBet.br",
+          "odd": 1.94,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 553,
+          "returnAmount": 1072.81
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Basquete - Casa/Fora"
+  },
+  {
+    "id": "9602103",
+    "sport": "Futebol",
+    "league": "Premier League Nacional - Queensland",
+    "country": "Austrália",
+    "event": "Queensland Lions - Eastern Suburbs",
+    "market": "Acima/Abaixo 5.5 gols",
+    "rawMarket": "O/U 5.5",
+    "startsAt": "2026-07-12T07:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;2;5.50;0",
+    "bestOdd": 9,
+    "outcomes": [
+      {
+        "name": "Mais 5.5 gols",
+        "bookmaker": "Betnacional",
+        "odd": 9,
+        "url": "https://betnacional.bet.br/"
+      },
+      {
+        "name": "Menos 5.5 gols",
+        "bookmaker": "Betfair",
+        "odd": 1.2,
+        "url": "https://www.betfair.bet.br/apostas/"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 94.4444,
+      "profitPercent": 5.88,
+      "guaranteedReturn": 1058.82,
+      "guaranteedProfit": 58.82,
+      "stakes": [
+        {
+          "name": "Mais 5.5 gols",
+          "bookmaker": "Betnacional",
+          "odd": 9,
+          "url": "https://betnacional.bet.br/",
+          "stake": 117.65,
+          "returnAmount": 1058.82
+        },
+        {
+          "name": "Menos 5.5 gols",
+          "bookmaker": "Betfair",
+          "odd": 1.2,
+          "url": "https://www.betfair.bet.br/apostas/",
+          "stake": 882.35,
+          "returnAmount": 1058.82
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - Acima/Abaixo 5.5 gols"
+  },
+  {
+    "id": "9602103",
+    "sport": "Futebol",
+    "league": "Premier League Nacional - Queensland",
+    "country": "Austrália",
+    "event": "Queensland Lions - Eastern Suburbs",
+    "market": "Acima/Abaixo 1.5 gols",
+    "rawMarket": "O/U 1.5",
+    "startsAt": "2026-07-12T07:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;2;1.50;0",
+    "bestOdd": 8.5,
+    "outcomes": [
+      {
+        "name": "Mais 1.5 gols",
+        "bookmaker": "Betnacional",
+        "odd": 1.2,
+        "url": "https://betnacional.bet.br/"
+      },
+      {
+        "name": "Menos 1.5 gols",
+        "bookmaker": "Betfair",
+        "odd": 8.5,
+        "url": "https://www.betfair.bet.br/apostas/"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 95.098,
+      "profitPercent": 5.15,
+      "guaranteedReturn": 1051.55,
+      "guaranteedProfit": 51.55,
+      "stakes": [
+        {
+          "name": "Mais 1.5 gols",
+          "bookmaker": "Betnacional",
+          "odd": 1.2,
+          "url": "https://betnacional.bet.br/",
+          "stake": 876.29,
+          "returnAmount": 1051.55
+        },
+        {
+          "name": "Menos 1.5 gols",
+          "bookmaker": "Betfair",
+          "odd": 8.5,
+          "url": "https://www.betfair.bet.br/apostas/",
+          "stake": 123.71,
+          "returnAmount": 1051.55
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - Acima/Abaixo 1.5 gols"
+  },
+  {
+    "id": "9602103",
+    "sport": "Futebol",
+    "league": "Premier League Nacional - Queensland",
+    "country": "Austrália",
+    "event": "Queensland Lions - Eastern Suburbs",
+    "market": "1o Tempo - Acima/Abaixo 2.5 gols",
+    "rawMarket": "O/U 2.5, 1º Tempo",
+    "startsAt": "2026-07-12T07:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;3;2.50;0",
+    "bestOdd": 6.5,
+    "outcomes": [
+      {
+        "name": "Mais 2.5 gols",
+        "bookmaker": "Betnacional",
+        "odd": 6.5,
+        "url": "https://betnacional.bet.br/"
+      },
+      {
+        "name": "Menos 2.5 gols",
+        "bookmaker": "Betfair",
+        "odd": 1.25,
+        "url": "https://www.betfair.bet.br/apostas/"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 95.3846,
+      "profitPercent": 4.84,
+      "guaranteedReturn": 1048.39,
+      "guaranteedProfit": 48.39,
+      "stakes": [
+        {
+          "name": "Mais 2.5 gols",
+          "bookmaker": "Betnacional",
+          "odd": 6.5,
+          "url": "https://betnacional.bet.br/",
+          "stake": 161.29,
+          "returnAmount": 1048.39
+        },
+        {
+          "name": "Menos 2.5 gols",
+          "bookmaker": "Betfair",
+          "odd": 1.25,
+          "url": "https://www.betfair.bet.br/apostas/",
+          "stake": 838.71,
+          "returnAmount": 1048.39
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - 1o Tempo - Acima/Abaixo 2.5 gols"
+  },
+  {
+    "id": "10952209",
+    "sport": "Basquete",
+    "league": "NBA - Liga de Verão de Las Vegas",
+    "country": "EUA",
+    "event": "Los Angeles Lakers - Oklahoma City Thunder",
+    "market": "1X2",
+    "rawMarket": "1X2",
+    "startsAt": "2026-07-11T02:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/basketball/h2h/los-angeles-lakers-ngegZ8bg/oklahoma-city-thunder-0fHFHEWD/#xGiE4dnD:1X2;2",
+    "bestOdd": 15,
+    "outcomes": [
+      {
+        "name": "Los Angeles Lakers",
+        "bookmaker": "Betboom.br",
+        "odd": 2.4,
+        "url": "https://betboom.bet.br/sport"
+      },
+      {
+        "name": "Empate",
+        "bookmaker": "BrasilBet",
+        "odd": 15,
+        "url": "https://www.brasil.bet.br/sportsbook/"
+      },
+      {
+        "name": "Oklahoma City Thunder",
+        "bookmaker": "1xBet.br",
+        "odd": 2.12,
+        "url": "https://1xbet.bet.br/en/lobby"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 95.5031,
+      "profitPercent": 4.71,
+      "guaranteedReturn": 1047.09,
+      "guaranteedProfit": 47.09,
+      "stakes": [
+        {
+          "name": "Los Angeles Lakers",
+          "bookmaker": "Betboom.br",
+          "odd": 2.4,
+          "url": "https://betboom.bet.br/sport",
+          "stake": 436.29,
+          "returnAmount": 1047.09
+        },
+        {
+          "name": "Empate",
+          "bookmaker": "BrasilBet",
+          "odd": 15,
+          "url": "https://www.brasil.bet.br/sportsbook/",
+          "stake": 69.81,
+          "returnAmount": 1047.09
+        },
+        {
+          "name": "Oklahoma City Thunder",
+          "bookmaker": "1xBet.br",
+          "odd": 2.12,
+          "url": "https://1xbet.bet.br/en/lobby",
+          "stake": 493.91,
+          "returnAmount": 1047.09
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Basquete - 1X2"
+  },
+  {
+    "id": "9602103",
+    "sport": "Futebol",
+    "league": "Premier League Nacional - Queensland",
+    "country": "Austrália",
+    "event": "Queensland Lions - Eastern Suburbs",
+    "market": "1o Tempo - Acima/Abaixo 0.5 gols",
+    "rawMarket": "O/U 0.5, 1º Tempo",
+    "startsAt": "2026-07-12T07:00:00.000Z",
+    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;3;0.50;0",
+    "bestOdd": 5,
+    "outcomes": [
+      {
+        "name": "Mais 0.5 gols",
+        "bookmaker": "Betnacional",
+        "odd": 1.29,
+        "url": "https://betnacional.bet.br/"
+      },
+      {
+        "name": "Menos 0.5 gols",
+        "bookmaker": "Betfair",
+        "odd": 5,
+        "url": "https://www.betfair.bet.br/apostas/"
+      }
+    ],
+    "surebet": {
+      "impliedProbability": 97.5194,
+      "profitPercent": 2.54,
+      "guaranteedReturn": 1025.44,
+      "guaranteedProfit": 25.44,
+      "stakes": [
+        {
+          "name": "Mais 0.5 gols",
+          "bookmaker": "Betnacional",
+          "odd": 1.29,
+          "url": "https://betnacional.bet.br/",
+          "stake": 794.91,
+          "returnAmount": 1025.44
+        },
+        {
+          "name": "Menos 0.5 gols",
+          "bookmaker": "Betfair",
+          "odd": 5,
+          "url": "https://www.betfair.bet.br/apostas/",
+          "stake": 205.09,
+          "returnAmount": 1025.44
+        }
+      ]
+    },
+    "isSurebet": true,
+    "risk": "Verifique odds em Futebol - 1o Tempo - Acima/Abaixo 0.5 gols"
   }
 ]

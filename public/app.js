@@ -144,10 +144,19 @@ async function loadData() {
   renderCards(data.rows || []);
 }
 
+const ALL_SPORTS = [
+  "Futebol", "Basquete", "Baseball", "Tenis", "Tênis",
+  "Futebol Americano", "MMA", "Volei", "Vôlei", "Handebol",
+  "Hoquei", "Hóquei", "Boxe", "Rugby", "Futsal",
+  "Tenis de Mesa", "Tênis de Mesa", "Dardos", "Cricket", "Formula 1",
+  "Automobilismo", "Ciclismo", "Golfe", "Sinuca"
+];
+
 function hydrateSports(rows) {
   const current = els.sportFilter.value;
-  const sports = [...new Set(rows.map((row) => row.sport).filter(Boolean))].sort();
-  els.sportFilter.innerHTML = '<option value="">Todos</option>' + sports.map((sport) => `<option>${escapeHtml(sport)}</option>`).join("");
+  const fromData = new Set(rows.map((r) => r.sport).filter(Boolean));
+  const merged = [...new Set([...ALL_SPORTS, ...fromData])].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  els.sportFilter.innerHTML = '<option value="">Todos</option>' + merged.map((s) => `<option>${escapeHtml(s)}</option>`).join("");
   els.sportFilter.value = current;
 }
 
