@@ -1298,7 +1298,9 @@ async function handleApi(req, res) {
       const raw = JSON.parse(body);
       const rows = Array.isArray(raw) ? raw : (raw?.d?.data || []);
       if (!rows.length) throw new Error("Nenhum dado recebido");
-      const normalized = normalizeOddsAgoraPayload({ d: { data: rows } });
+      // Detect if rows are raw OA (has home-name) or already normalized (has event/home/outcomes)
+      const needsNormalize = rows[0] && (rows[0]["home-name"] !== undefined || rows[0]["bookmakers-logos-urls"] !== undefined);
+      const normalized = needsNormalize ? normalizeOddsAgoraPayload({ d: { data: rows } }) : rows;
       writeJson(IMPORT_FILE, normalized);
       loadCurrentRows();
       return sendJson(res, 200, { ok: true, imported: normalized.length });
