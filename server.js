@@ -356,9 +356,17 @@ function deriveOutcomeNames(bettingTypeId, bettingTypeName, homeName, awayName, 
   const val = num ? num[1] : "";
   const type = extractMarketType(bettingTypeName, sport);
   const typeSuffix = type ? ` ${type}` : "";
+  // Use OA's home-name/away-name as outcome names when available and meaningful
+  const oaHome = (homeName || "").trim();
+  const oaAway = (awayName || "").trim();
   if (outcomeCount === 2) {
-    if (name.includes("o/u") || name.includes("mais/menos") || name.includes("over/under"))
+    if (name.includes("o/u") || name.includes("mais/menos") || name.includes("over/under") || name.includes("acima/abaixo")) {
+      // Prefer OA home-name/away-name if they contain mais/menos or over/under
+      if (oaHome && oaAway && (oaHome.toLowerCase().includes("mais") || oaHome.toLowerCase().includes("over") || oaHome.toLowerCase().includes("acima"))) {
+        return [oaHome, oaAway];
+      }
       return val ? [`Mais ${val}${typeSuffix}`, `Menos ${val}${typeSuffix}`] : ["Mais", "Menos"];
+    }
     if (name.includes("ambas") || name.includes("both")) return ["Sim", "Nao"];
     if (name.includes("h/a") || name.includes("1x2") || name.includes("vencedor") || name.includes("moneyline")) {
       return [homeName || "Casa", awayName || "Fora"];
