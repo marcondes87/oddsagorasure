@@ -477,7 +477,7 @@ async function fetchPinnacleEvents() {
     } catch {}
   }
 
-  return allEvents;
+  return allEvents.filter(e => !e.startTime || new Date(e.startTime).getTime() > Date.now());
 }
 
 function extractTeamsFromMatchup(mu, hl) {
@@ -636,9 +636,11 @@ async function fetchBetEsporteEvents() {
       }
     } catch {}
   }
-  // Remove duplicates
+  // Remove duplicates and live events
+  const now = Date.now();
   const seen = new Set();
   return allEvents.filter(e => {
+    if (e.startTime && new Date(e.startTime).getTime() <= now) return false;
     const key = normalizeTeam(e.home) + "|" + normalizeTeam(e.away) + "|" + (e.league || "");
     if (seen.has(key)) return false;
     seen.add(key);
