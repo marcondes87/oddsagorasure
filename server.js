@@ -495,13 +495,16 @@ function extractTeamsFromMatchup(mu, hl) {
     const teamMap = {};
     participants.forEach(p => {
       const lower = (p.name || "").toLowerCase().trim();
-      if (!BAD_PINNACLE_NAMES.has(lower) && !/^\d+$/.test(lower) && !/^\d+\s*-\s*\d+/.test(lower) && !lower.includes(",") && !lower.includes(" - ") && !lower.includes(" x ") && lower.length > 0) {
+      if (!BAD_PINNACLE_NAMES.has(lower) && !/^\d+$/.test(lower) && !/^\d+\s*-\s*\d+/.test(lower) && !lower.includes(",") && !lower.includes(" - ") && !lower.includes(" x ") && !/\((bookings|corners|games)\)/i.test(lower) && lower.length > 0) {
         teamMap[lower] = p.name;
       }
     });
     const uniqueNames = Object.values(teamMap);
     if (uniqueNames.length >= 2) { home = uniqueNames[0]; away = uniqueNames[1]; }
   }
+  // Reject special market types (Bookings, Corners, Games, etc.)
+  if (home && /\((bookings|corners|games)\)/i.test(home)) return null;
+  if (away && /\((bookings|corners|games)\)/i.test(away)) return null;
   return home && away && home.toLowerCase() !== away.toLowerCase() ? { home, away } : null;
 }
 
@@ -795,6 +798,8 @@ function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
 
     // Find ALL matching Pinnacle events, then pick the best one
     const candidates = pinnacleEvents.filter(pe => {
+      // Skip special market events (Bookings, Corners, Games, etc.)
+      if (/\((bookings|corners|games)\)/i.test(pe.home) || /\((bookings|corners|games)\)/i.test(pe.away)) return false;
       const peHome = normalizeTeam(pe.home);
       const peAway = normalizeTeam(pe.away);
       if (!teamsMatch(rowHome, rowAway, peHome, peAway)) return false;
@@ -1021,6 +1026,8 @@ function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
     if (!beHome) continue;
 
     const match = pinnacleEvents.find(pe => {
+      // Skip special market events (Bookings, Corners, Games, etc.)
+      if (/\((bookings|corners|games)\)/i.test(pe.home) || /\((bookings|corners|games)\)/i.test(pe.away)) return false;
       const peHome = normalizeTeam(pe.home);
       const peAway = normalizeTeam(pe.away);
       if (!teamsMatch(beHome, beAway, peHome, peAway)) return false;

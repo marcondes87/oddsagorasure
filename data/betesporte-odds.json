@@ -535,7 +535,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.64,
+        "odd": 1.7,
         "typeId": 1,
         "sportId": 1,
         "home": "Peoria City",
@@ -543,7 +543,7 @@
       },
       {
         "name": "Empate",
-        "odd": 3.8,
+        "odd": 3.75,
         "typeId": 1,
         "sportId": 1,
         "home": "Peoria City",
@@ -551,7 +551,7 @@
       },
       {
         "name": "Fora",
-        "odd": 3.6,
+        "odd": 3.4,
         "typeId": 1,
         "sportId": 1,
         "home": "Peoria City",
@@ -587,33 +587,6 @@
     ]
   },
   {
-    "home": "Houston Rockets",
-    "away": "Brooklyn Nets",
-    "league": "NBA Summer League",
-    "sport": "Basquete",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/2/2945/3963633",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 2.48,
-        "typeId": 219,
-        "sportId": 2,
-        "home": "Houston Rockets",
-        "away": "Brooklyn Nets"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.41,
-        "typeId": 219,
-        "sportId": 2,
-        "home": "Houston Rockets",
-        "away": "Brooklyn Nets"
-      }
-    ]
-  },
-  {
     "home": "Chicago Bulls",
     "away": "LA Lakers",
     "league": "NBA Summer League",
@@ -624,7 +597,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.27,
+        "odd": 2.22,
         "typeId": 219,
         "sportId": 2,
         "home": "Chicago Bulls",
@@ -632,7 +605,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.49,
+        "odd": 1.52,
         "typeId": 219,
         "sportId": 2,
         "home": "Chicago Bulls",
@@ -678,7 +651,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.94,
+        "odd": 1.97,
         "typeId": 219,
         "sportId": 2,
         "home": "Atlanta Hawks",
@@ -686,7 +659,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.68,
+        "odd": 1.66,
         "typeId": 219,
         "sportId": 2,
         "home": "Atlanta Hawks",
@@ -1050,7 +1023,7 @@
     "away": "Poling K / Trotter J K",
     "league": "ATP Challenger Granby, Canada Men Doubles",
     "sport": "Tenis",
-    "startTime": "2026-07-16T20:40:00.000Z",
+    "startTime": "2026-07-16T21:00:00.000Z",
     "market": "Multi",
     "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/5/24259/3991996",
     "outcomes": [
@@ -1077,7 +1050,7 @@
     "away": "Johns G / Milavsky D",
     "league": "ATP Challenger Granby, Canada Men Doubles",
     "sport": "Tenis",
-    "startTime": "2026-07-16T21:50:00.000Z",
+    "startTime": "2026-07-16T22:10:00.000Z",
     "market": "Multi",
     "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/5/24259/3992000",
     "outcomes": [
@@ -1158,7 +1131,7 @@
     "away": "Martinez L D / Sheehy J",
     "league": "ATP Challenger Lincoln (NE), USA Men Doubles",
     "sport": "Tenis",
-    "startTime": "2026-07-16T20:45:00.000Z",
+    "startTime": "2026-07-16T21:00:00.000Z",
     "market": "Multi",
     "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/5/43496/3992026",
     "outcomes": [
@@ -1239,13 +1212,13 @@
     "away": "Almazan Valiente, Izan",
     "league": "ATP Challenger Pozoblanco, Spain Men Singles",
     "sport": "Tenis",
-    "startTime": "2026-07-16T20:45:00.000Z",
+    "startTime": "2026-07-16T21:00:00.000Z",
     "market": "Multi",
     "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/5/23061/3992123",
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.65,
+        "odd": 2.6,
         "typeId": 186,
         "sportId": 5,
         "home": "Palan, Dominik",
@@ -1253,7 +1226,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.27,
+        "odd": 1.28,
         "typeId": 186,
         "sportId": 5,
         "home": "Palan, Dominik",
@@ -1272,7 +1245,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 5.4,
+        "odd": 5.2,
         "typeId": 186,
         "sportId": 23,
         "home": "China",
@@ -1280,7 +1253,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.09,
+        "odd": 1.11,
         "typeId": 186,
         "sportId": 23,
         "home": "China",
@@ -1299,7 +1272,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.34,
+        "odd": 1.35,
         "typeId": 186,
         "sportId": 23,
         "home": "Estados Unidos",
@@ -1307,7 +1280,7 @@
       },
       {
         "name": "Fora",
-        "odd": 2.85,
+        "odd": 2.8,
         "typeId": 186,
         "sportId": 23,
         "home": "Estados Unidos",
@@ -1339,114 +1312,6 @@
         "sportId": 16,
         "home": "Edmonton Elks",
         "away": "British Columbia Lions"
-      }
-    ]
-  },
-  {
-    "home": "Staszczyk, Konrad",
-    "away": "Filbrandt, Tomasz",
-    "league": "TT Elite Series",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015360",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.59,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Staszczyk, Konrad",
-        "away": "Filbrandt, Tomasz"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.99,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Staszczyk, Konrad",
-        "away": "Filbrandt, Tomasz"
-      }
-    ]
-  },
-  {
-    "home": "Rybak, Kazimierz",
-    "away": "Debski, Jerzy",
-    "league": "TT Elite Series",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015362",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 2.8,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Rybak, Kazimierz",
-        "away": "Debski, Jerzy"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.29,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Rybak, Kazimierz",
-        "away": "Debski, Jerzy"
-      }
-    ]
-  },
-  {
-    "home": "Skorski, Michal",
-    "away": "Rolak, Jaroslaw",
-    "league": "TT Elite Series",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015361",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.19,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Skorski, Michal",
-        "away": "Rolak, Jaroslaw"
-      },
-      {
-        "name": "Fora",
-        "odd": 3.45,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Skorski, Michal",
-        "away": "Rolak, Jaroslaw"
-      }
-    ]
-  },
-  {
-    "home": "Adamus, Kacper",
-    "away": "Wojtaszczyk, Wojciech",
-    "league": "TT Elite Series",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:45:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015379",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.81,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Adamus, Kacper",
-        "away": "Wojtaszczyk, Wojciech"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.73,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Adamus, Kacper",
-        "away": "Wojtaszczyk, Wojciech"
       }
     ]
   },
@@ -1488,7 +1353,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.29,
+        "odd": 1.31,
         "typeId": 186,
         "sportId": 20,
         "home": "Skorski, Michal",
@@ -1496,7 +1361,7 @@
       },
       {
         "name": "Fora",
-        "odd": 2.85,
+        "odd": 2.7,
         "typeId": 186,
         "sportId": 20,
         "home": "Skorski, Michal",
@@ -1731,7 +1596,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.27,
+        "odd": 1.25,
         "typeId": 186,
         "sportId": 20,
         "home": "Cyndera, Jakub",
@@ -1739,7 +1604,7 @@
       },
       {
         "name": "Fora",
-        "odd": 2.9,
+        "odd": 3.05,
         "typeId": 186,
         "sportId": 20,
         "home": "Cyndera, Jakub",
@@ -1839,7 +1704,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.14,
+        "odd": 2.04,
         "typeId": 186,
         "sportId": 20,
         "home": "Lukaszewski, Mikolaj",
@@ -1847,7 +1712,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.51,
+        "odd": 1.56,
         "typeId": 186,
         "sportId": 20,
         "home": "Lukaszewski, Mikolaj",
@@ -1910,6 +1775,33 @@
     ]
   },
   {
+    "home": "Staszczyk, Konrad",
+    "away": "Filbrandt, Tomasz",
+    "league": "TT Elite Series",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-16T22:30:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015382",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 1.56,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Staszczyk, Konrad",
+        "away": "Filbrandt, Tomasz"
+      },
+      {
+        "name": "Fora",
+        "odd": 2.04,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Staszczyk, Konrad",
+        "away": "Filbrandt, Tomasz"
+      }
+    ]
+  },
+  {
     "home": "Rybak, Kazimierz",
     "away": "Tkaczyk, Henryk",
     "league": "TT Elite Series",
@@ -1937,6 +1829,33 @@
     ]
   },
   {
+    "home": "Skorski, Michal",
+    "away": "Rolak, Jaroslaw",
+    "league": "TT Elite Series",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-16T22:35:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015392",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 1.19,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Skorski, Michal",
+        "away": "Rolak, Jaroslaw"
+      },
+      {
+        "name": "Fora",
+        "odd": 3.45,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Skorski, Michal",
+        "away": "Rolak, Jaroslaw"
+      }
+    ]
+  },
+  {
     "home": "Staniczek, Adam",
     "away": "Pyrek, Dawid",
     "league": "TT Elite Series",
@@ -1947,7 +1866,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.18,
+        "odd": 2.12,
         "typeId": 186,
         "sportId": 20,
         "home": "Staniczek, Adam",
@@ -1955,7 +1874,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.49,
+        "odd": 1.52,
         "typeId": 186,
         "sportId": 20,
         "home": "Staniczek, Adam",
@@ -2028,7 +1947,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.15,
+        "odd": 1.22,
         "typeId": 186,
         "sportId": 20,
         "home": "Klocek, Kamil",
@@ -2036,7 +1955,7 @@
       },
       {
         "name": "Fora",
-        "odd": 3.7,
+        "odd": 3.2,
         "typeId": 186,
         "sportId": 20,
         "home": "Klocek, Kamil",
@@ -2072,6 +1991,33 @@
     ]
   },
   {
+    "home": "Pelka, Jerzy",
+    "away": "Kaczmarek, Jakub",
+    "league": "TT Elite Series",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-16T23:10:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015394",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 1.3,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Pelka, Jerzy",
+        "away": "Kaczmarek, Jakub"
+      },
+      {
+        "name": "Fora",
+        "odd": 2.8,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Pelka, Jerzy",
+        "away": "Kaczmarek, Jakub"
+      }
+    ]
+  },
+  {
     "home": "Karpiuk, Mateusz",
     "away": "Tkaczyk, Henryk",
     "league": "TT Elite Series",
@@ -2095,6 +2041,87 @@
         "sportId": 20,
         "home": "Karpiuk, Mateusz",
         "away": "Tkaczyk, Henryk"
+      }
+    ]
+  },
+  {
+    "home": "Barton, Aleksander",
+    "away": "Pyrek, Dawid",
+    "league": "TT Elite Series",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-16T23:30:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015397",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 3.3,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Barton, Aleksander",
+        "away": "Pyrek, Dawid"
+      },
+      {
+        "name": "Fora",
+        "odd": 1.21,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Barton, Aleksander",
+        "away": "Pyrek, Dawid"
+      }
+    ]
+  },
+  {
+    "home": "Rybak, Kazimierz",
+    "away": "Debski, Jerzy",
+    "league": "TT Elite Series",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-17T00:10:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015405",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 3,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Rybak, Kazimierz",
+        "away": "Debski, Jerzy"
+      },
+      {
+        "name": "Fora",
+        "odd": 1.25,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Rybak, Kazimierz",
+        "away": "Debski, Jerzy"
+      }
+    ]
+  },
+  {
+    "home": "Karpiuk, Mateusz",
+    "away": "Cyndera, Jakub",
+    "league": "TT Elite Series",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-17T00:35:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18943/4015426",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 2.31,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Karpiuk, Mateusz",
+        "away": "Cyndera, Jakub"
+      },
+      {
+        "name": "Fora",
+        "odd": 1.44,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Karpiuk, Mateusz",
+        "away": "Cyndera, Jakub"
       }
     ]
   },
@@ -2153,87 +2180,6 @@
     ]
   },
   {
-    "home": "Jirout, Vojtech",
-    "away": "Prochazka, Michal",
-    "league": "TT Cup",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:25:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/161/4017130",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.52,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Jirout, Vojtech",
-        "away": "Prochazka, Michal"
-      },
-      {
-        "name": "Fora",
-        "odd": 2.12,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Jirout, Vojtech",
-        "away": "Prochazka, Michal"
-      }
-    ]
-  },
-  {
-    "home": "Zapala, Krzysztof",
-    "away": "Kowalewski, Kamil",
-    "league": "TT Cup",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/161/4016040",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 2.9,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Zapala, Krzysztof",
-        "away": "Kowalewski, Kamil"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.27,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Zapala, Krzysztof",
-        "away": "Kowalewski, Kamil"
-      }
-    ]
-  },
-  {
-    "home": "Klusacek, Patrik",
-    "away": "Jaros, Radim",
-    "league": "TT Cup",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:35:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/161/4017128",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.7,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Klusacek, Patrik",
-        "away": "Jaros, Radim"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.84,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Klusacek, Patrik",
-        "away": "Jaros, Radim"
-      }
-    ]
-  },
-  {
     "home": "Rein, Tomas",
     "away": "Dohnal, Jaroslav",
     "league": "TT Cup",
@@ -2244,7 +2190,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.6,
+        "odd": 2.46,
         "typeId": 186,
         "sportId": 20,
         "home": "Rein, Tomas",
@@ -2252,7 +2198,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.35,
+        "odd": 1.38,
         "typeId": 186,
         "sportId": 20,
         "home": "Rein, Tomas",
@@ -2271,7 +2217,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.8,
+        "odd": 1.83,
         "typeId": 186,
         "sportId": 20,
         "home": "Vonasek, Jan",
@@ -2279,7 +2225,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.74,
+        "odd": 1.71,
         "typeId": 186,
         "sportId": 20,
         "home": "Vonasek, Jan",
@@ -2315,6 +2261,60 @@
     ]
   },
   {
+    "home": "Reska, Vladislav",
+    "away": "Zeman, Karel",
+    "league": "TT Cup",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-16T21:05:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/161/4019876",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 2.17,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Reska, Vladislav",
+        "away": "Zeman, Karel"
+      },
+      {
+        "name": "Fora",
+        "odd": 1.49,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Reska, Vladislav",
+        "away": "Zeman, Karel"
+      }
+    ]
+  },
+  {
+    "home": "Macurak, Michal",
+    "away": "Fojtik, Tomas",
+    "league": "TT Cup",
+    "sport": "Tenis de Mesa",
+    "startTime": "2026-07-16T21:15:00.000Z",
+    "market": "Multi",
+    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/161/4019884",
+    "outcomes": [
+      {
+        "name": "Casa",
+        "odd": 1.81,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Macurak, Michal",
+        "away": "Fojtik, Tomas"
+      },
+      {
+        "name": "Fora",
+        "odd": 1.73,
+        "typeId": 186,
+        "sportId": 20,
+        "home": "Macurak, Michal",
+        "away": "Fojtik, Tomas"
+      }
+    ]
+  },
+  {
     "home": "Brozek, Michal",
     "away": "Jirout, Vojtech",
     "league": "TT Cup",
@@ -2325,7 +2325,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.13,
+        "odd": 2.1,
         "typeId": 186,
         "sportId": 20,
         "home": "Brozek, Michal",
@@ -2333,146 +2333,11 @@
       },
       {
         "name": "Fora",
-        "odd": 1.51,
+        "odd": 1.53,
         "typeId": 186,
         "sportId": 20,
         "home": "Brozek, Michal",
         "away": "Jirout, Vojtech"
-      }
-    ]
-  },
-  {
-    "home": "Milota, Tomas",
-    "away": "Velicka, Lukas",
-    "league": "Czech Liga Pro",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18807/4014391",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 2,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Milota, Tomas",
-        "away": "Velicka, Lukas"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.58,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Milota, Tomas",
-        "away": "Velicka, Lukas"
-      }
-    ]
-  },
-  {
-    "home": "Hruska, Vaclav Senior",
-    "away": "Regner, Milan",
-    "league": "Czech Liga Pro",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18807/4014251",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 2.02,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Hruska, Vaclav Senior",
-        "away": "Regner, Milan"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.57,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Hruska, Vaclav Senior",
-        "away": "Regner, Milan"
-      }
-    ]
-  },
-  {
-    "home": "Hanel, Patrik",
-    "away": "Zurek, Filip",
-    "league": "Czech Liga Pro",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18807/4014371",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.85,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Hanel, Patrik",
-        "away": "Zurek, Filip"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.7,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Hanel, Patrik",
-        "away": "Zurek, Filip"
-      }
-    ]
-  },
-  {
-    "home": "Medek, Josef",
-    "away": "Bilek, Zdenek",
-    "league": "Czech Liga Pro",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18807/4014273",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.23,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Medek, Josef",
-        "away": "Bilek, Zdenek"
-      },
-      {
-        "name": "Fora",
-        "odd": 3.15,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Medek, Josef",
-        "away": "Bilek, Zdenek"
-      }
-    ]
-  },
-  {
-    "home": "Rose, Radek",
-    "away": "Simecek, Jan",
-    "league": "Czech Liga Pro",
-    "sport": "Tenis de Mesa",
-    "startTime": "2026-07-16T20:30:00.000Z",
-    "market": "Multi",
-    "url": "https://betesporte.bet.br/sports/desktop/pre-match-detail/20/18807/4014392",
-    "outcomes": [
-      {
-        "name": "Casa",
-        "odd": 1.72,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Rose, Radek",
-        "away": "Simecek, Jan"
-      },
-      {
-        "name": "Fora",
-        "odd": 1.82,
-        "typeId": 186,
-        "sportId": 20,
-        "home": "Rose, Radek",
-        "away": "Simecek, Jan"
       }
     ]
   },
@@ -2757,7 +2622,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.77,
+        "odd": 1.71,
         "typeId": 186,
         "sportId": 20,
         "home": "Steffan, Jan",
@@ -2765,7 +2630,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.77,
+        "odd": 1.84,
         "typeId": 186,
         "sportId": 20,
         "home": "Steffan, Jan",
@@ -3513,7 +3378,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.01,
+        "odd": 1.02,
         "typeId": 186,
         "sportId": 10,
         "home": "Cruz Gomez, Andy",
@@ -3521,7 +3386,7 @@
       },
       {
         "name": "Fora",
-        "odd": 7,
+        "odd": 6.8,
         "typeId": 186,
         "sportId": 10,
         "home": "Cruz Gomez, Andy",
@@ -4058,7 +3923,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.65,
+        "odd": 2.5,
         "typeId": 186,
         "sportId": 117,
         "home": "Lobo, Felipe",
@@ -4066,7 +3931,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.41,
+        "odd": 1.44,
         "typeId": 186,
         "sportId": 117,
         "home": "Lobo, Felipe",
@@ -4112,7 +3977,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.17,
+        "odd": 1.12,
         "typeId": 186,
         "sportId": 117,
         "home": "Panther, Black",
@@ -4120,7 +3985,7 @@
       },
       {
         "name": "Fora",
-        "odd": 4.2,
+        "odd": 5.2,
         "typeId": 186,
         "sportId": 117,
         "home": "Panther, Black",
@@ -4139,7 +4004,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 2.27,
+        "odd": 2.12,
         "typeId": 186,
         "sportId": 117,
         "home": "Radzuan, Jihin (F)",
@@ -4147,7 +4012,7 @@
       },
       {
         "name": "Fora",
-        "odd": 1.54,
+        "odd": 1.62,
         "typeId": 186,
         "sportId": 117,
         "home": "Radzuan, Jihin (F)",
@@ -4193,7 +4058,7 @@
     "outcomes": [
       {
         "name": "Casa",
-        "odd": 1.22,
+        "odd": 1.12,
         "typeId": 186,
         "sportId": 117,
         "home": "Zakirov, Sanzhar",
@@ -4201,7 +4066,7 @@
       },
       {
         "name": "Fora",
-        "odd": 3.65,
+        "odd": 5.2,
         "typeId": 186,
         "sportId": 117,
         "home": "Zakirov, Sanzhar",
