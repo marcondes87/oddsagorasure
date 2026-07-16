@@ -494,7 +494,7 @@ function extractTeamsFromMatchup(mu, hl) {
     const teamMap = {};
     participants.forEach(p => {
       const lower = (p.name || "").toLowerCase().trim();
-      if (!BAD_PINNACLE_NAMES.has(lower) && !/^\d+$/.test(lower) && !/^\d+\s*-\s*\d+/.test(lower) && !lower.includes(",") && lower.length > 0) {
+      if (!BAD_PINNACLE_NAMES.has(lower) && !/^\d+$/.test(lower) && !/^\d+\s*-\s*\d+/.test(lower) && !lower.includes(",") && !lower.includes(" - ") && !lower.includes(" x ") && lower.length > 0) {
         teamMap[lower] = p.name;
       }
     });
