@@ -791,7 +791,8 @@ function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
     const rowAway = normalizeTeam(team2);
     if (!rowHome) return row;
 
-    const match = pinnacleEvents.find(pe => {
+    // Find ALL matching Pinnacle events, then pick the best one
+    const candidates = pinnacleEvents.filter(pe => {
       const peHome = normalizeTeam(pe.home);
       const peAway = normalizeTeam(pe.away);
       if (!teamsMatch(rowHome, rowAway, peHome, peAway)) return false;
@@ -807,16 +808,27 @@ function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
       return true;
     });
 
-    if (!match) return row;
+    if (candidates.length === 0) return row;
 
-    const pinnacleOutcomes = match.outcomes.filter(o => marketTypeMatch(row.market, o.marketType));
+    // Score candidates: prefer events with real outcome names (not "Selecao")
+    // and with outcomes matching the OA market type
+    const scored = candidates.map(c => {
+      const matchingOutcomes = c.outcomes.filter(o => marketTypeMatch(row.market, o.marketType));
+      const hasRealNames = matchingOutcomes.some(o => o.name && o.name !== "Selecao" && o.name !== "");
+      const score = (hasRealNames ? 100 : 0) + matchingOutcomes.length;
+      return { event: c, outcomes: matchingOutcomes, score };
+    }).filter(s => s.outcomes.length > 0);
 
-    if (pinnacleOutcomes.length === 0) return row;
+    if (scored.length === 0) return row;
+
+    // Sort by score descending, pick the best
+    scored.sort((a, b) => b.score - a.score);
+    const best = scored[0];
 
     matched++;
 
-    const pinFormatted = pinnacleOutcomes.map(o => ({
-      name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: getBookmakerDirectUrl("Pinnacle") || match.url || "", pinnacle: true, marketType: o.marketType
+    const pinFormatted = best.outcomes.map(o => ({
+      name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: getBookmakerDirectUrl("Pinnacle") || best.event.url || "", pinnacle: true, marketType: o.marketType
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], pinFormatted, team1, team2);
 
@@ -829,7 +841,7 @@ function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
       surebet: recalc,
       isSurebet: Boolean(recalc && recalc.profitPercent > 0),
       pinnacleMatch: true,
-      pinnacleEvent: match
+      pinnacleEvent: best.event
     };
   });
 
