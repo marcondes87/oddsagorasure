@@ -1,394 +1,922 @@
 [
   {
-    "id": "10680857",
-    "sport": "Futebol",
-    "league": "Amistoso Interclubes",
-    "country": "Mundo",
-    "event": "Concarneau (Fra)  - Lorient (Fra) ",
-    "market": "1X2",
-    "rawMarket": "1X2",
-    "startsAt": "2026-07-11T09:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/concarneau-Uo57pG95/lorient-jgNAYRGi/#t2Ln4qFk:1X2;2",
-    "bestOdd": 7.37,
-    "outcomes": [
+    "EventID": 10946833,
+    "BettingTypeID": 2,
+    "ScopeID": 2,
+    "DoubleParameter": "1.50",
+    "HandicapTypeID": 0,
+    "Profit": "1.078",
+    "return": "5.8",
+    "DateStart": 1784404800,
+    "odds": [
       {
-        "name": "Concarneau",
-        "bookmaker": "1xBet.br",
-        "odd": 7.37,
-        "url": "https://1xbet.bet.br/en/lobby"
+        "idOutcome": "ae28hx1tkucx4mx0",
+        "ProviderID": 1157,
+        "MaxOdds": 1.65,
+        "AvgOdds": 1.65,
+        "OutcomeResultID": 0
       },
       {
-        "name": "Empate",
-        "bookmaker": "1xBet.br",
-        "odd": 4.9,
-        "url": "https://1xbet.bet.br/en/lobby"
-      },
-      {
-        "name": "Lorient",
-        "bookmaker": "BR4Bet",
-        "odd": 1.69,
-        "url": "https://br4.bet.br/sports"
+        "idOutcome": "ae28hx1tl1gx4mx0",
+        "ProviderID": 933,
+        "MaxOdds": 2.95,
+        "AvgOdds": 2.95,
+        "OutcomeResultID": 0
       }
     ],
-    "surebet": {
-      "impliedProbability": 93.1483,
-      "profitPercent": 7.36,
-      "guaranteedReturn": 1073.56,
-      "guaranteedProfit": 73.56,
-      "stakes": [
-        {
-          "name": "Concarneau",
-          "bookmaker": "1xBet.br",
-          "odd": 7.37,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 145.67,
-          "returnAmount": 1073.56
-        },
-        {
-          "name": "Empate",
-          "bookmaker": "1xBet.br",
-          "odd": 4.9,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 219.09,
-          "returnAmount": 1073.56
-        },
-        {
-          "name": "Lorient",
-          "bookmaker": "BR4Bet",
-          "odd": 1.69,
-          "url": "https://br4.bet.br/sports",
-          "stake": 635.24,
-          "returnAmount": 1073.56
-        }
-      ]
+    "id": 10946833,
+    "name": "Przybysz S. - Skrivers E.",
+    "url": "/mma/h2h/przybysz-sebastian-IidbQWvG/skrivers-edgars-4MH2mKn0/#WMYk4Ng4:over-under;2;1.50;0",
+    "date-start-base": 1784404800,
+    "is-double": false,
+    "tournament-id": 124303,
+    "tournament-name": "Bantamweight - KSW Homens",
+    "tournament-url": "/mma/europe/bantamweight-ksw-homens/",
+    "bettingtypename": "O/U 1.5",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJXTVlrNE5nNCI6eyIyIjpbeyIxLjUwIjp7IjIiOlt7Im9kZHMiOjEuNjQ5OTk5OTk5OTk5OTk5OTExMTgyMTU4MDI5OTg3NDc2NzY2MTA5NDY2NTUyNzM0Mzc1LCJwcm92aWRlciI6MTE1N30seyJvZGRzIjoyLjk1MDAwMDAwMDAwMDAwMDE3NzYzNTY4Mzk0MDAyNTA0NjQ2Nzc4MTA2Njg5NDUzMTI1LCJwcm92aWRlciI6OTMzfV19fV19fQ==/from/sure-bets/"
+      }
+    ],
+    "parse-time": 262,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 4 min ago)",
+    "home-name": "Przybysz S.",
+    "away-name": "Skrivers E.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Men/A7KdKqr4-bVcTVscc.jpeg?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Men/255vPmoL-dUo5giIS.jpeg?260706121625"
+    ],
+    "sport-id": 28,
+    "sport-name": "MMA",
+    "sport-url": "mma/",
+    "sport-url-locale": "/mma/",
+    "home-country-two-chart-name": "pl",
+    "away-country-two-chart-name": "lv",
+    "superTemplate": {
+      "id": 5843,
+      "name": "Bantamweight - Masculino",
+      "url": "bantamweight-homens",
+      "shortUrl": "ban"
     },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - 1X2"
+    "country-id": 6,
+    "country-name": "Europa",
+    "country-url": "/mma/europe/",
+    "two-chart-code": "6",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.65,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/superbet-br/surebet",
+        "class": "logos l933",
+        "coeficient": 2.95,
+        "name": "Superbet.br",
+        "providerID": 933
+      }
+    },
+    "profit": "5.8%",
+    "start-time": "datet t1784404800-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
   },
   {
-    "id": "10952209",
-    "sport": "Basquete",
-    "league": "NBA - Liga de Verão de Las Vegas",
-    "country": "EUA",
-    "event": "Los Angeles Lakers - Oklahoma City Thunder",
-    "market": "Casa/Fora",
-    "rawMarket": "H/A, PR",
-    "startsAt": "2026-07-11T02:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/basketball/h2h/los-angeles-lakers-ngegZ8bg/oklahoma-city-thunder-0fHFHEWD/#xGiE4dnD:home-away;1",
-    "bestOdd": 2.4,
-    "outcomes": [
+    "EventID": 10698427,
+    "BettingTypeID": 2,
+    "ScopeID": 2,
+    "DoubleParameter": "1.50",
+    "HandicapTypeID": 0,
+    "Profit": "1.078",
+    "return": "4.9",
+    "DateStart": 1784403000,
+    "odds": [
       {
-        "name": "Los Angeles Lakers",
-        "bookmaker": "Jogo de Ouro",
-        "odd": 2.4,
-        "url": "https://jogodeouro.bet.br/pt/sports"
+        "idOutcome": "a6flrx1tkucx4mx0",
+        "ProviderID": 1157,
+        "MaxOdds": 1.93,
+        "AvgOdds": 1.93,
+        "OutcomeResultID": 0
       },
       {
-        "name": "Oklahoma City Thunder",
-        "bookmaker": "1xBet.br",
-        "odd": 1.94,
-        "url": "https://1xbet.bet.br/en/lobby"
+        "idOutcome": "a6flrx1tl1gx4mx0",
+        "ProviderID": 933,
+        "MaxOdds": 2.3,
+        "AvgOdds": 2.3,
+        "OutcomeResultID": 0
       }
     ],
-    "surebet": {
-      "impliedProbability": 93.2131,
-      "profitPercent": 7.28,
-      "guaranteedReturn": 1072.81,
-      "guaranteedProfit": 72.81,
-      "stakes": [
-        {
-          "name": "Los Angeles Lakers",
-          "bookmaker": "Jogo de Ouro",
-          "odd": 2.4,
-          "url": "https://jogodeouro.bet.br/pt/sports",
-          "stake": 447,
-          "returnAmount": 1072.81
-        },
-        {
-          "name": "Oklahoma City Thunder",
-          "bookmaker": "1xBet.br",
-          "odd": 1.94,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 553,
-          "returnAmount": 1072.81
-        }
-      ]
+    "id": 10698427,
+    "name": "Zerhouni L. - Kurek B.",
+    "url": "/mma/h2h/kurek-bartosz-IXxh1nFr/zerhouni-laid-lOyofq35/#t295ydNq:over-under;2;1.50;0",
+    "date-start-base": 1784403000,
+    "is-double": false,
+    "tournament-id": 123127,
+    "tournament-name": "Peso Médio - KSW Masculino",
+    "tournament-url": "/mma/europe/peso-medio-ksw-masculino/",
+    "bettingtypename": "O/U 1.5",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJ0Mjk1eWROcSI6eyIyIjpbeyIxLjUwIjp7IjIiOlt7Im9kZHMiOjEuOTI5OTk5OTk5OTk5OTk5OTM3ODI3NTEwNjIwOTkxMjMzNzM2Mjc2NjI2NTg2OTE0MDYyNSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6Mi4yOTk5OTk5OTk5OTk5OTk4MjIzNjQzMTYwNTk5NzQ5NTM1MzIyMTg5MzMxMDU0Njg3NSwicHJvdmlkZXIiOjkzM31dfX1dfX0=/from/sure-bets/"
+      }
+    ],
+    "parse-time": 262,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 4 min ago)",
+    "home-name": "Zerhouni L.",
+    "away-name": "Kurek B.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Men/Ot7hsAq4-dpAiz9br.jpeg?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Men/bagSqQRQ-EcMpWg1p.jpeg?260706121625"
+    ],
+    "sport-id": 28,
+    "sport-name": "MMA",
+    "sport-url": "mma/",
+    "sport-url-locale": "/mma/",
+    "home-country-two-chart-name": "fr",
+    "away-country-two-chart-name": "pl",
+    "superTemplate": {
+      "id": 5847,
+      "name": "Peso Médio - Masculino",
+      "url": "peso-medio-masculino",
+      "shortUrl": "med"
     },
-    "isSurebet": true,
-    "risk": "Verifique odds em Basquete - Casa/Fora"
+    "country-id": 6,
+    "country-name": "Europa",
+    "country-url": "/mma/europe/",
+    "two-chart-code": "6",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.93,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/superbet-br/surebet",
+        "class": "logos l933",
+        "coeficient": 2.3,
+        "name": "Superbet.br",
+        "providerID": 933
+      }
+    },
+    "profit": "4.9%",
+    "start-time": "datet t1784403000-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
   },
   {
-    "id": "9602103",
-    "sport": "Futebol",
-    "league": "Premier League Nacional - Queensland",
-    "country": "Austrália",
-    "event": "Queensland Lions - Eastern Suburbs",
-    "market": "Acima/Abaixo 5.5 gols",
-    "rawMarket": "O/U 5.5",
-    "startsAt": "2026-07-12T07:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;2;5.50;0",
-    "bestOdd": 9,
-    "outcomes": [
+    "EventID": 10952273,
+    "BettingTypeID": 3,
+    "ScopeID": 1,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.052",
+    "return": "4.5",
+    "DateStart": 1784160000,
+    "odds": [
       {
-        "name": "Mais 5.5 gols",
-        "bookmaker": "Betnacional",
-        "odd": 9,
-        "url": "https://betnacional.bet.br/"
+        "idOutcome": "ae7ihx2rrhkx0xsgm1t",
+        "ProviderID": 1157,
+        "MaxOdds": 2.85,
+        "AvgOdds": 2.85,
+        "OutcomeResultID": 0
       },
       {
-        "name": "Menos 5.5 gols",
-        "bookmaker": "Betfair",
-        "odd": 1.2,
-        "url": "https://www.betfair.bet.br/apostas/"
+        "idOutcome": "ae7ihx2rrhkx0xsgm1v",
+        "ProviderID": 1161,
+        "MaxOdds": 1.65,
+        "AvgOdds": 1.65,
+        "OutcomeResultID": 0
       }
     ],
-    "surebet": {
-      "impliedProbability": 94.4444,
-      "profitPercent": 5.88,
-      "guaranteedReturn": 1058.82,
-      "guaranteedProfit": 58.82,
-      "stakes": [
-        {
-          "name": "Mais 5.5 gols",
-          "bookmaker": "Betnacional",
-          "odd": 9,
-          "url": "https://betnacional.bet.br/",
-          "stake": 117.65,
-          "returnAmount": 1058.82
-        },
-        {
-          "name": "Menos 5.5 gols",
-          "bookmaker": "Betfair",
-          "odd": 1.2,
-          "url": "https://www.betfair.bet.br/apostas/",
-          "stake": 882.35,
-          "returnAmount": 1058.82
-        }
-      ]
+    "id": 10952273,
+    "name": "Sacramento Kings - Boston Celtics",
+    "url": "/basketball/h2h/boston-celtics-KYD9hVEm/sacramento-kings-CvwE1OCB/#EDCc7h3m:home-away;1",
+    "date-start-base": 1784160000,
+    "is-double": false,
+    "tournament-id": 96521,
+    "tournament-name": "NBA - Liga de Verão de Las Vegas",
+    "tournament-url": "/basketball/usa/nba-liga-de-verao-de-las-vegas/",
+    "bettingtypename": "H/A, PR",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJFRENjN2gzbSI6eyIzIjpbeyIwLjAwIjp7IjEiOlt7Im9kZHMiOjIuODUwMDAwMDAwMDAwMDAwMDg4ODE3ODQxOTcwMDEyNTIzMjMzODkwNTMzNDQ3MjY1NjI1LCJwcm92aWRlciI6MTE1N30seyJvZGRzIjoxLjY0OTk5OTk5OTk5OTk5OTkxMTE4MjE1ODAyOTk4NzQ3Njc2NjEwOTQ2NjU1MjczNDM3NSwicHJvdmlkZXIiOjExNjF9XX19XX19/from/sure-bets/"
+      }
+    ],
+    "parse-time": 20,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Sacramento Kings",
+    "away-name": "Boston Celtics",
+    "home-participant-image": [
+      "/serve/images/team-logo/Men/QBWK6QRc-UPll9Lyj.png?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/team-logo/Men/MVgCbbj9-0tHj7MWK.png?260706121625"
+    ],
+    "sport-id": 3,
+    "sport-name": "Basquete",
+    "sport-url": "basketball/",
+    "sport-url-locale": "/basketball/",
+    "superTemplate": {
+      "id": "",
+      "name": "",
+      "url": "",
+      "shortUrl": ""
     },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - Acima/Abaixo 5.5 gols"
+    "country-id": 200,
+    "country-name": "EUA",
+    "country-url": "/basketball/usa/",
+    "two-chart-code": "us",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 2.85,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/brasilbet/surebet",
+        "class": "logos l1161",
+        "coeficient": 1.65,
+        "name": "BrasilBet",
+        "providerID": 1161
+      }
+    },
+    "profit": "4.5%",
+    "start-time": "datet t1784160000-6-1-0-0",
+    "homeParticipantTypes": [
+      1
+    ],
+    "awayParticipantTypes": [
+      1
+    ]
   },
   {
-    "id": "9602103",
-    "sport": "Futebol",
-    "league": "Premier League Nacional - Queensland",
-    "country": "Austrália",
-    "event": "Queensland Lions - Eastern Suburbs",
-    "market": "Acima/Abaixo 1.5 gols",
-    "rawMarket": "O/U 1.5",
-    "startsAt": "2026-07-12T07:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;2;1.50;0",
-    "bestOdd": 8.5,
-    "outcomes": [
+    "EventID": 10644169,
+    "BettingTypeID": 2,
+    "ScopeID": 2,
+    "DoubleParameter": "1.50",
+    "HandicapTypeID": 0,
+    "Profit": "1.063",
+    "return": "4.3",
+    "DateStart": 1784395800,
+    "odds": [
       {
-        "name": "Mais 1.5 gols",
-        "bookmaker": "Betnacional",
-        "odd": 1.2,
-        "url": "https://betnacional.bet.br/"
+        "idOutcome": "a4qm9x1tkucx4mx0",
+        "ProviderID": 1157,
+        "MaxOdds": 1.79,
+        "AvgOdds": 1.79,
+        "OutcomeResultID": 0
       },
       {
-        "name": "Menos 1.5 gols",
-        "bookmaker": "Betfair",
-        "odd": 8.5,
-        "url": "https://www.betfair.bet.br/apostas/"
+        "idOutcome": "a4qm9x1tl1gx4mx0",
+        "ProviderID": 933,
+        "MaxOdds": 2.5,
+        "AvgOdds": 2.5,
+        "OutcomeResultID": 0
       }
     ],
-    "surebet": {
-      "impliedProbability": 95.098,
-      "profitPercent": 5.15,
-      "guaranteedReturn": 1051.55,
-      "guaranteedProfit": 51.55,
-      "stakes": [
-        {
-          "name": "Mais 1.5 gols",
-          "bookmaker": "Betnacional",
-          "odd": 1.2,
-          "url": "https://betnacional.bet.br/",
-          "stake": 876.29,
-          "returnAmount": 1051.55
-        },
-        {
-          "name": "Menos 1.5 gols",
-          "bookmaker": "Betfair",
-          "odd": 8.5,
-          "url": "https://www.betfair.bet.br/apostas/",
-          "stake": 123.71,
-          "returnAmount": 1051.55
-        }
-      ]
+    "id": 10644169,
+    "name": "Stabach G. - Gorny P.",
+    "url": "/mma/h2h/gorny-przemyslaw-0A9Tg37G/stabach-grzegorz-jqtsjHXQ/#SplIi79U:over-under;2;1.50;0",
+    "date-start-base": 1784395800,
+    "is-double": false,
+    "tournament-id": 124303,
+    "tournament-name": "Bantamweight - KSW Homens",
+    "tournament-url": "/mma/europe/bantamweight-ksw-homens/",
+    "bettingtypename": "O/U 1.5",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJTcGxJaTc5VSI6eyIyIjpbeyIxLjUwIjp7IjIiOlt7Im9kZHMiOjEuNzkwMDAwMDAwMDAwMDAwMDM1NTI3MTM2Nzg4MDA1MDA5MjkzNTU2MjEzMzc4OTA2MjUsInByb3ZpZGVyIjoxMTU3fSx7Im9kZHMiOjIuNSwicHJvdmlkZXIiOjkzM31dfX1dfX0=/from/sure-bets/"
+      }
+    ],
+    "parse-time": 262,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 4 min ago)",
+    "home-name": "Stabach G.",
+    "away-name": "Gorny P.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Men/f7SrlyMh-2et94ZBo.jpeg?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Men/EF9eL22F-CUkk7KYD.jpeg?260706121625"
+    ],
+    "sport-id": 28,
+    "sport-name": "MMA",
+    "sport-url": "mma/",
+    "sport-url-locale": "/mma/",
+    "home-country-two-chart-name": "pl",
+    "away-country-two-chart-name": "pl",
+    "superTemplate": {
+      "id": 5843,
+      "name": "Bantamweight - Masculino",
+      "url": "bantamweight-homens",
+      "shortUrl": "ban"
     },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - Acima/Abaixo 1.5 gols"
+    "country-id": 6,
+    "country-name": "Europa",
+    "country-url": "/mma/europe/",
+    "two-chart-code": "6",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.79,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/superbet-br/surebet",
+        "class": "logos l933",
+        "coeficient": 2.5,
+        "name": "Superbet.br",
+        "providerID": 933
+      }
+    },
+    "profit": "4.3%",
+    "start-time": "datet t1784395800-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
   },
   {
-    "id": "9602103",
-    "sport": "Futebol",
-    "league": "Premier League Nacional - Queensland",
-    "country": "Austrália",
-    "event": "Queensland Lions - Eastern Suburbs",
-    "market": "1o Tempo - Acima/Abaixo 2.5 gols",
-    "rawMarket": "O/U 2.5, 1º Tempo",
-    "startsAt": "2026-07-12T07:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;3;2.50;0",
-    "bestOdd": 6.5,
-    "outcomes": [
+    "EventID": 11136539,
+    "BettingTypeID": 3,
+    "ScopeID": 2,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.055",
+    "return": "3.9",
+    "DateStart": 1784192400,
+    "odds": [
       {
-        "name": "Mais 2.5 gols",
-        "bookmaker": "Betnacional",
-        "odd": 6.5,
-        "url": "https://betnacional.bet.br/"
+        "idOutcome": "ajrgrx2s5a4x0xstfef",
+        "ProviderID": 1157,
+        "MaxOdds": 1.41,
+        "AvgOdds": 1.41,
+        "OutcomeResultID": 0
       },
       {
-        "name": "Menos 2.5 gols",
-        "bookmaker": "Betfair",
-        "odd": 1.25,
-        "url": "https://www.betfair.bet.br/apostas/"
+        "idOutcome": "ajrgrx2s5a4x0xstfeh",
+        "ProviderID": 935,
+        "MaxOdds": 3.95,
+        "AvgOdds": 3.95,
+        "OutcomeResultID": 0
       }
     ],
-    "surebet": {
-      "impliedProbability": 95.3846,
-      "profitPercent": 4.84,
-      "guaranteedReturn": 1048.39,
-      "guaranteedProfit": 48.39,
-      "stakes": [
-        {
-          "name": "Mais 2.5 gols",
-          "bookmaker": "Betnacional",
-          "odd": 6.5,
-          "url": "https://betnacional.bet.br/",
-          "stake": 161.29,
-          "returnAmount": 1048.39
-        },
-        {
-          "name": "Menos 2.5 gols",
-          "bookmaker": "Betfair",
-          "odd": 1.25,
-          "url": "https://www.betfair.bet.br/apostas/",
-          "stake": 838.71,
-          "returnAmount": 1048.39
-        }
-      ]
+    "id": 11136539,
+    "name": "Zhang J. - Kosaka R.",
+    "url": "/tennis/h2h/kosaka-rira-W0xG57j0/zhang-junhan-4jAN10Xk/#dveikTy2:home-away;2",
+    "date-start-base": 1784192400,
+    "is-double": false,
+    "tournament-id": 141547,
+    "tournament-name": "ITF W15 Luan 5 Mulheres",
+    "tournament-url": "/tennis/china/itf-w15-luan-5-mulheres/",
+    "bettingtypename": "H/A",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJkdmVpa1R5MiI6eyIzIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjEuNDA5OTk5OTk5OTk5OTk5OTIwMDYzOTQyMjI2OTg4NzI5MDg5NDk4NTE5ODk3NDYwOTM3NSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6My45NTAwMDAwMDAwMDAwMDAxNzc2MzU2ODM5NDAwMjUwNDY0Njc3ODEwNjY4OTQ1MzEyNSwicHJvdmlkZXIiOjkzNX1dfX1dfX0=/from/sure-bets/"
+      }
+    ],
+    "parse-time": 20,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Zhang J.",
+    "away-name": "Kosaka R.",
+    "home-participant-image": [
+      "/images/details/tennis-nopic-w.jpg"
+    ],
+    "away-participant-image": [
+      "/images/details/tennis-nopic-w.jpg"
+    ],
+    "sport-id": 2,
+    "sport-name": "Tênis",
+    "sport-url": "tennis/",
+    "sport-url-locale": "/tennis/",
+    "home-country-two-chart-name": "cn",
+    "away-country-two-chart-name": "jp",
+    "superTemplate": {
+      "id": 5734,
+      "name": "ITF Feminino - Simples",
+      "url": "itf-mulheres-simples",
+      "shortUrl": "itf"
     },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - 1o Tempo - Acima/Abaixo 2.5 gols"
+    "country-id": 52,
+    "country-name": "China",
+    "country-url": "/tennis/china/",
+    "two-chart-code": "cn",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.41,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/kto-br/surebet",
+        "class": "logos l935",
+        "coeficient": 3.95,
+        "name": "KTO.br",
+        "providerID": 935
+      }
+    },
+    "profit": "3.9%",
+    "start-time": "datet t1784192400-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
   },
   {
-    "id": "10952209",
-    "sport": "Basquete",
-    "league": "NBA - Liga de Verão de Las Vegas",
-    "country": "EUA",
-    "event": "Los Angeles Lakers - Oklahoma City Thunder",
-    "market": "1X2",
-    "rawMarket": "1X2",
-    "startsAt": "2026-07-11T02:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/basketball/h2h/los-angeles-lakers-ngegZ8bg/oklahoma-city-thunder-0fHFHEWD/#xGiE4dnD:1X2;2",
-    "bestOdd": 15,
-    "outcomes": [
+    "EventID": 11137051,
+    "BettingTypeID": 3,
+    "ScopeID": 2,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.045",
+    "return": "3.9",
+    "DateStart": 1784199600,
+    "odds": [
       {
-        "name": "Los Angeles Lakers",
-        "bookmaker": "Betboom.br",
-        "odd": 2.4,
-        "url": "https://betboom.bet.br/sport"
+        "idOutcome": "ajs0rx2s5a4x0xstgvl",
+        "ProviderID": 935,
+        "MaxOdds": 1.22,
+        "AvgOdds": 1.22,
+        "OutcomeResultID": 0
       },
       {
-        "name": "Empate",
-        "bookmaker": "BrasilBet",
-        "odd": 15,
-        "url": "https://www.brasil.bet.br/sportsbook/"
-      },
-      {
-        "name": "Oklahoma City Thunder",
-        "bookmaker": "1xBet.br",
-        "odd": 2.12,
-        "url": "https://1xbet.bet.br/en/lobby"
+        "idOutcome": "ajs0rx2s5a4x0xstgvn",
+        "ProviderID": 1157,
+        "MaxOdds": 7,
+        "AvgOdds": 7,
+        "OutcomeResultID": 0
       }
     ],
-    "surebet": {
-      "impliedProbability": 95.5031,
-      "profitPercent": 4.71,
-      "guaranteedReturn": 1047.09,
-      "guaranteedProfit": 47.09,
-      "stakes": [
-        {
-          "name": "Los Angeles Lakers",
-          "bookmaker": "Betboom.br",
-          "odd": 2.4,
-          "url": "https://betboom.bet.br/sport",
-          "stake": 436.29,
-          "returnAmount": 1047.09
-        },
-        {
-          "name": "Empate",
-          "bookmaker": "BrasilBet",
-          "odd": 15,
-          "url": "https://www.brasil.bet.br/sportsbook/",
-          "stake": 69.81,
-          "returnAmount": 1047.09
-        },
-        {
-          "name": "Oklahoma City Thunder",
-          "bookmaker": "1xBet.br",
-          "odd": 2.12,
-          "url": "https://1xbet.bet.br/en/lobby",
-          "stake": 493.91,
-          "returnAmount": 1047.09
-        }
-      ]
+    "id": 11137051,
+    "name": "Vogt M. - Longueville R.",
+    "url": "/tennis/h2h/longueville-romane-lnbBgqK8/vogt-marie-UFtfbtIc/#nsu6EvYP:home-away;2",
+    "date-start-base": 1784199600,
+    "is-double": false,
+    "tournament-id": 141627,
+    "tournament-name": "ITF W15 Krsko Mulheres",
+    "tournament-url": "/tennis/slovenia/itf-w15-krsko-mulheres/",
+    "bettingtypename": "H/A",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJuc3U2RXZZUCI6eyIzIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjEuMjE5OTk5OTk5OTk5OTk5OTczMzU0NjQ3NDA4OTk2MjQzMDI5ODMyODM5OTY1ODIwMzEyNSwicHJvdmlkZXIiOjkzNX0seyJvZGRzIjo3LCJwcm92aWRlciI6MTE1N31dfX1dfX0=/from/sure-bets/"
+      }
+    ],
+    "parse-time": 22,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Vogt M.",
+    "away-name": "Longueville R.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Women/QBSQXi5F-dMaa5h86.jpeg?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Women/QF6Kffs4-0z0B51fG.jpeg?260706121625"
+    ],
+    "sport-id": 2,
+    "sport-name": "Tênis",
+    "sport-url": "tennis/",
+    "sport-url-locale": "/tennis/",
+    "home-country-two-chart-name": "de",
+    "away-country-two-chart-name": "be",
+    "superTemplate": {
+      "id": 5734,
+      "name": "ITF Feminino - Simples",
+      "url": "itf-mulheres-simples",
+      "shortUrl": "itf"
     },
-    "isSurebet": true,
-    "risk": "Verifique odds em Basquete - 1X2"
+    "country-id": 172,
+    "country-name": "Eslovênia",
+    "country-url": "/tennis/slovenia/",
+    "two-chart-code": "si",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/kto-br/surebet",
+        "class": "logos l935",
+        "coeficient": 1.22,
+        "name": "KTO.br",
+        "providerID": 935
+      },
+      "1": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 7,
+        "name": "1xBet.br",
+        "providerID": 1157
+      }
+    },
+    "profit": "3.9%",
+    "start-time": "datet t1784199600-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
   },
   {
-    "id": "9602103",
-    "sport": "Futebol",
-    "league": "Premier League Nacional - Queensland",
-    "country": "Austrália",
-    "event": "Queensland Lions - Eastern Suburbs",
-    "market": "1o Tempo - Acima/Abaixo 0.5 gols",
-    "rawMarket": "O/U 0.5, 1º Tempo",
-    "startsAt": "2026-07-12T07:00:00.000Z",
-    "url": "https://www.oddsagora.com.br/football/h2h/eastern-suburbs-615N56jN/queensland-lions-rZJ589gJ/#p2aNuCt4:over-under;3;0.50;0",
-    "bestOdd": 5,
-    "outcomes": [
+    "EventID": 11136149,
+    "BettingTypeID": 3,
+    "ScopeID": 2,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.075",
+    "return": "3.0",
+    "DateStart": 1784194200,
+    "odds": [
       {
-        "name": "Mais 0.5 gols",
-        "bookmaker": "Betnacional",
-        "odd": 1.29,
-        "url": "https://betnacional.bet.br/"
+        "idOutcome": "ajr4lx2s5a4x0xstem3",
+        "ProviderID": 935,
+        "MaxOdds": 5.1,
+        "AvgOdds": 5.1,
+        "OutcomeResultID": 0
       },
       {
-        "name": "Menos 0.5 gols",
-        "bookmaker": "Betfair",
-        "odd": 5,
-        "url": "https://www.betfair.bet.br/apostas/"
+        "idOutcome": "ajr4lx2s5a4x0xstem5",
+        "ProviderID": 1157,
+        "MaxOdds": 1.29,
+        "AvgOdds": 1.29,
+        "OutcomeResultID": 0
       }
     ],
-    "surebet": {
-      "impliedProbability": 97.5194,
-      "profitPercent": 2.54,
-      "guaranteedReturn": 1025.44,
-      "guaranteedProfit": 25.44,
-      "stakes": [
-        {
-          "name": "Mais 0.5 gols",
-          "bookmaker": "Betnacional",
-          "odd": 1.29,
-          "url": "https://betnacional.bet.br/",
-          "stake": 794.91,
-          "returnAmount": 1025.44
-        },
-        {
-          "name": "Menos 0.5 gols",
-          "bookmaker": "Betfair",
-          "odd": 5,
-          "url": "https://www.betfair.bet.br/apostas/",
-          "stake": 205.09,
-          "returnAmount": 1025.44
-        }
-      ]
+    "id": 11136149,
+    "name": "Boulard L. - Mikulskyte J.",
+    "url": "/tennis/h2h/boulard-liv-bs7eRItT/mikulskyte-justina-CAN1jVGF/#4QqQ7Fyo:home-away;2",
+    "date-start-base": 1784194200,
+    "is-double": false,
+    "tournament-id": 141737,
+    "tournament-name": "ITF W75 Vitoria Gasteiz Mulheres",
+    "tournament-url": "/tennis/spain/itf-w75-vitoria-gasteiz-mulheres/",
+    "bettingtypename": "H/A",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyI0UXFRN0Z5byI6eyIzIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjUuMDk5OTk5OTk5OTk5OTk5NjQ0NzI4NjMyMTE5OTQ5OTA3MDY0NDM3ODY2MjEwOTM3NSwicHJvdmlkZXIiOjkzNX0seyJvZGRzIjoxLjI5MDAwMDAwMDAwMDAwMDAzNTUyNzEzNjc4ODAwNTAwOTI5MzU1NjIxMzM3ODkwNjI1LCJwcm92aWRlciI6MTE1N31dfX1dfX0=/from/sure-bets/"
+      }
+    ],
+    "parse-time": 20,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Boulard L.",
+    "away-name": "Mikulskyte J.",
+    "home-participant-image": [
+      "/images/details/tennis-nopic-w.jpg"
+    ],
+    "away-participant-image": [
+      "/images/details/tennis-nopic-w.jpg"
+    ],
+    "sport-id": 2,
+    "sport-name": "Tênis",
+    "sport-url": "tennis/",
+    "sport-url-locale": "/tennis/",
+    "home-country-two-chart-name": "fr",
+    "away-country-two-chart-name": "lt",
+    "superTemplate": {
+      "id": 5734,
+      "name": "ITF Feminino - Simples",
+      "url": "itf-mulheres-simples",
+      "shortUrl": "itf"
     },
-    "isSurebet": true,
-    "risk": "Verifique odds em Futebol - 1o Tempo - Acima/Abaixo 0.5 gols"
+    "country-id": 176,
+    "country-name": "Espanha",
+    "country-url": "/tennis/spain/",
+    "two-chart-code": "es",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/kto-br/surebet",
+        "class": "logos l935",
+        "coeficient": 5.1,
+        "name": "KTO.br",
+        "providerID": 935
+      },
+      "1": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.29,
+        "name": "1xBet.br",
+        "providerID": 1157
+      }
+    },
+    "profit": "3.0%",
+    "start-time": "datet t1784194200-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
+  },
+  {
+    "EventID": 10752015,
+    "BettingTypeID": 2,
+    "ScopeID": 2,
+    "DoubleParameter": "1.50",
+    "HandicapTypeID": 0,
+    "Profit": "1.048",
+    "return": "2.9",
+    "DateStart": 1784394000,
+    "odds": [
+      {
+        "idOutcome": "a840fx1tkucx4mx0",
+        "ProviderID": 1157,
+        "MaxOdds": 1.79,
+        "AvgOdds": 1.79,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "a840fx1tl1gx4mx0",
+        "ProviderID": 933,
+        "MaxOdds": 2.42,
+        "AvgOdds": 2.42,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 10752015,
+    "name": "Stachura O. - Balko M.",
+    "url": "/mma/h2h/balko-mateusz-GrVhoras/stachura-oskar-jaOC4Oxp/#bq9OqTkl:over-under;2;1.50;0",
+    "date-start-base": 1784394000,
+    "is-double": false,
+    "tournament-id": 123125,
+    "tournament-name": "Featherweight - KSW Homens",
+    "tournament-url": "/mma/europe/featherweight-ksw-homens/",
+    "bettingtypename": "O/U 1.5",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJicTlPcVRrbCI6eyIyIjpbeyIxLjUwIjp7IjIiOlt7Im9kZHMiOjEuNzkwMDAwMDAwMDAwMDAwMDM1NTI3MTM2Nzg4MDA1MDA5MjkzNTU2MjEzMzc4OTA2MjUsInByb3ZpZGVyIjoxMTU3fSx7Im9kZHMiOjIuNDE5OTk5OTk5OTk5OTk5OTI4OTQ1NzI2NDIzOTg5OTgxNDEyODg3NTczMjQyMTg3NSwicHJvdmlkZXIiOjkzM31dfX1dfX0=/from/sure-bets/"
+      }
+    ],
+    "parse-time": 262,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 4 min ago)",
+    "home-name": "Stachura O.",
+    "away-name": "Balko M.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Men/AJGV64N9-WMMglPVa.jpeg?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Men/xxclz93b-EoCElxLq.jpeg?260706121625"
+    ],
+    "sport-id": 28,
+    "sport-name": "MMA",
+    "sport-url": "mma/",
+    "sport-url-locale": "/mma/",
+    "home-country-two-chart-name": "pl",
+    "away-country-two-chart-name": "pl",
+    "superTemplate": {
+      "id": 5844,
+      "name": "Peso-Pena - Masculino",
+      "url": "featherweight-homens",
+      "shortUrl": "fea"
+    },
+    "country-id": 6,
+    "country-name": "Europa",
+    "country-url": "/mma/europe/",
+    "two-chart-code": "6",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.79,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/superbet-br/surebet",
+        "class": "logos l933",
+        "coeficient": 2.42,
+        "name": "Superbet.br",
+        "providerID": 933
+      }
+    },
+    "profit": "2.9%",
+    "start-time": "datet t1784394000-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
+  },
+  {
+    "EventID": 11136975,
+    "BettingTypeID": 3,
+    "ScopeID": 2,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.083",
+    "return": "2.1",
+    "DateStart": 1784192400,
+    "odds": [
+      {
+        "idOutcome": "ajrufx2s5a4x0xstgod",
+        "ProviderID": 1157,
+        "MaxOdds": 2.36,
+        "AvgOdds": 2.36,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "ajrufx2s5a4x0xstgof",
+        "ProviderID": 935,
+        "MaxOdds": 1.8,
+        "AvgOdds": 1.8,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 11136975,
+    "name": "Lanik T. - Parizzia N.",
+    "url": "/tennis/h2h/lanik-tomas-dEt28V56/parizzia-nicolas-zPzGK6wK/#EXImLnYr:home-away;2",
+    "date-start-base": 1784192400,
+    "is-double": false,
+    "tournament-id": 141595,
+    "tournament-name": "ITF M15 Nova Gorica Homens",
+    "tournament-url": "/tennis/slovenia/itf-m15-nova-gorica-homens/",
+    "bettingtypename": "H/A",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJFWEltTG5ZciI6eyIzIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjIuMzU5OTk5OTk5OTk5OTk5ODc1NjU1MDIxMjQxOTgyNDY3NDcyNTUzMjUzMTczODI4MTI1LCJwcm92aWRlciI6MTE1N30seyJvZGRzIjoxLjgwMDAwMDAwMDAwMDAwMDA0NDQwODkyMDk4NTAwNjI2MTYxNjk0NTI2NjcyMzYzMjgxMjUsInByb3ZpZGVyIjo5MzV9XX19XX19/from/sure-bets/"
+      }
+    ],
+    "parse-time": 21,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Lanik T.",
+    "away-name": "Parizzia N.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Men/nLVySHN9-0bKjoLgk.jpeg?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Men/WEG5g3M9-8dFXoCEL.jpeg?260706121625"
+    ],
+    "sport-id": 2,
+    "sport-name": "Tênis",
+    "sport-url": "tennis/",
+    "sport-url-locale": "/tennis/",
+    "home-country-two-chart-name": "sk",
+    "away-country-two-chart-name": "ch",
+    "superTemplate": {
+      "id": 5733,
+      "name": "ITF Masculino - Simples",
+      "url": "itf-homens-simples",
+      "shortUrl": "itf"
+    },
+    "country-id": 172,
+    "country-name": "Eslovênia",
+    "country-url": "/tennis/slovenia/",
+    "two-chart-code": "si",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 2.36,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/kto-br/surebet",
+        "class": "logos l935",
+        "coeficient": 1.8,
+        "name": "KTO.br",
+        "providerID": 935
+      }
+    },
+    "profit": "2.1%",
+    "start-time": "datet t1784192400-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
+  },
+  {
+    "EventID": 10098538,
+    "BettingTypeID": 1,
+    "ScopeID": 2,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.041",
+    "return": "1.6",
+    "DateStart": 1784228400,
+    "odds": [
+      {
+        "idOutcome": "9k5raxv464x0xqfg9s",
+        "ProviderID": 429,
+        "MaxOdds": 1.75,
+        "AvgOdds": 1.75,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "9k5raxv498x0x0",
+        "ProviderID": 933,
+        "MaxOdds": 4.1,
+        "AvgOdds": 4.1,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "9k5raxv464x0xqfg9u",
+        "ProviderID": 1157,
+        "MaxOdds": 5.93,
+        "AvgOdds": 5.93,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 10098538,
+    "name": "Atletico FC - San Antonio",
+    "url": "/football/h2h/atletico-fc-IHCcdRIt/san-antonio-GEW1PolH/#dILFHSr7:1X2;2",
+    "date-start-base": 1784228400,
+    "is-double": false,
+    "tournament-id": 92173,
+    "tournament-name": "Série B",
+    "tournament-url": "/football/ecuador/serie-b/",
+    "bettingtypename": "1X2",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJkSUxGSFNyNyI6eyIxIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjEuNzUsInByb3ZpZGVyIjo0Mjl9LHsib2RkcyI6NC4wOTk5OTk5OTk5OTk5OTk2NDQ3Mjg2MzIxMTk5NDk5MDcwNjQ0Mzc4NjYyMTA5Mzc1LCJwcm92aWRlciI6OTMzfSx7Im9kZHMiOjUuOTI5OTk5OTk5OTk5OTk5NzE1NzgyOTA1Njk1OTU5OTI1NjUxNTUwMjkyOTY4NzUsInByb3ZpZGVyIjoxMTU3fV19fV19fQ==/from/sure-bets/"
+      }
+    ],
+    "parse-time": 21,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Atletico FC",
+    "away-name": "San Antonio",
+    "home-participant-image": [
+      "/serve/images/team-logo/Men/GAU9Mxoh-QXFqXJzq.png?260706121625"
+    ],
+    "away-participant-image": [
+      "/serve/images/team-logo/Men/YmMtZTBK-OhqyRP0A.png?260706121625"
+    ],
+    "sport-id": 1,
+    "sport-name": "Futebol",
+    "sport-url": "football/",
+    "sport-url-locale": "/football/",
+    "superTemplate": {
+      "id": "",
+      "name": "",
+      "url": "",
+      "shortUrl": ""
+    },
+    "country-id": 68,
+    "country-name": "Equador",
+    "country-url": "/football/ecuador/",
+    "two-chart-code": "ec",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/betfair/surebet",
+        "class": "logos l429",
+        "coeficient": 1.75,
+        "name": "Betfair",
+        "providerID": 429
+      },
+      "1": {
+        "url": "/bookmakers/superbet-br/surebet",
+        "class": "logos l933",
+        "coeficient": 4.1,
+        "name": "Superbet.br",
+        "providerID": 933
+      },
+      "2": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 5.93,
+        "name": "1xBet.br",
+        "providerID": 1157
+      }
+    },
+    "profit": "1.6%",
+    "start-time": "datet t1784228400-6-1-0-0",
+    "homeParticipantTypes": [
+      1
+    ],
+    "awayParticipantTypes": [
+      1
+    ]
   }
 ]

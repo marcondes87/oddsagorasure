@@ -1,65 +1,72 @@
 const RENDER_URL = process.env.RENDER_URL || "https://arbipower-sb.onrender.com";
 
 async function main() {
-  console.log("Buscando dados do OA...");
-  // Reuse server modules
   const crypto = require("crypto");
   const zlib = require("zlib");
+  const fs = require("fs");
 
+  // Load local cache first (fallback if OA fetch returns fewer)
+  let cacheRows = [];
+  try { cacheRows = JSON.parse(fs.readFileSync("./data/imported-odds.json", "utf8")); } catch {}
+  console.log(`  ${cacheRows.length} surebets no cache local`);
+
+  // Try fresh OA fetch
+  console.log("Buscando dados frescos do OA...");
   const OA_URL = "https://www.oddsagora.com.br/surebets-ajax/";
   const OA_PAGE = "https://www.oddsagora.com.br/sure-bets/";
   const PASSPHRASE = "J*8sQ!p$7aD_fR2yW@gHn*3bVp#sAdLd_k";
   const SALT = "5b9a8f2c3e6d1a4b7c8e9d0f1a2b3c4d";
 
-  // Get cookies
-  const pageResp = await fetch(OA_PAGE, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      "Accept-Language": "pt-BR,pt;q=0.9"
-    }
-  });
-  const setCookie = pageResp.headers.get("set-cookie") || "";
-  const cookieParts = setCookie.split(",").map(s => s.split(";")[0].trim()).filter(Boolean).join("; ");
+  try {
+    const pageResp = await fetch(OA_PAGE, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept-Language": "pt-BR,pt;q=0.9"
+      }
+    });
+    const setCookie = pageResp.headers.get("set-cookie") || "";
+    const cookieParts = setCookie.split(",").map(s => s.split(";")[0].trim()).filter(Boolean).join("; ");
 
-  // Fetch OA API
-  const resp = await fetch(OA_URL, {
-    headers: {
-      "Accept": "*/*",
-      "Referer": OA_PAGE,
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      "Accept-Language": "pt-BR,pt;q=0.9",
-      "Accept-Encoding": "gzip, deflate, br",
-      "Sec-Fetch-Dest": "empty",
-      "Sec-Fetch-Mode": "cors",
-      "Sec-Fetch-Site": "same-origin",
-      ...(cookieParts ? { "Cookie": cookieParts } : {})
+    const resp = await fetch(OA_URL, {
+      headers: {
+        "Accept": "*/*", "Referer": OA_PAGE,
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept-Language": "pt-BR,pt;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-origin",
+        ...(cookieParts ? { "Cookie": cookieParts } : {})
+      }
+    });
+    const text = await resp.text();
+    if (text && text.length >= 20) {
+      const decoded = Buffer.from(text, "base64").toString("utf8");
+      const [encB64, ivStr] = decoded.split(":");
+      const iv = ivStr.length === 32 && /^[0-9a-f]+$/i.test(ivStr) ? Buffer.from(ivStr, "hex") : Buffer.from(ivStr, "base64");
+      const encrypted = Buffer.from(encB64, "base64");
+      const key = crypto.pbkdf2Sync(PASSPHRASE, Buffer.from(SALT, "utf8"), 1000, 32, "sha256");
+      const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
+      let decrypted = decipher.update(encrypted);
+      decrypted = Buffer.concat([decrypted, decipher.final()]);
+      if (decrypted[0] === 0x1f && decrypted[1] === 0x8b) decrypted = zlib.gunzipSync(decrypted);
+      const fresh = JSON.parse(decrypted.toString("utf8")).d?.data || [];
+      console.log(`  ${fresh.length} surebets do OA (fresco)`);
+      if (fresh.length >= cacheRows.length) {
+        cacheRows = fresh;
+        fs.writeFileSync("./data/imported-odds.json", JSON.stringify(fresh, null, 2));
+      } else {
+        console.log(`  Usando cache (${cacheRows.length} > ${fresh.length})`);
+      }
     }
-  });
-  const text = await resp.text();
-  if (!text || text.length < 20) throw new Error(`Resposta curta: ${text.length} chars`);
-
-  // Decrypt
-  const decoded = Buffer.from(text, "base64").toString("utf8");
-  const [encB64, ivStr] = decoded.split(":");
-  const iv = ivStr.length === 32 && /^[0-9a-f]+$/i.test(ivStr) ? Buffer.from(ivStr, "hex") : Buffer.from(ivStr, "base64");
-  const encrypted = Buffer.from(encB64, "base64");
-  const key = crypto.pbkdf2Sync(PASSPHRASE, Buffer.from(SALT, "utf8"), 1000, 32, "sha256");
-  const decipher = crypto.createDecipheriv("aes-256-cbc", key, iv);
-  let decrypted = decipher.update(encrypted);
-  decrypted = Buffer.concat([decrypted, decipher.final()]);
-  if (decrypted[0] === 0x1f && decrypted[1] === 0x8b) {
-    decrypted = zlib.gunzipSync(decrypted);
+  } catch (e) {
+    console.log("  OA fetch error:", e.message, "- usando cache");
   }
-  const parsed = JSON.parse(decrypted.toString("utf8"));
-  const rows = parsed?.d?.data || [];
-  console.log(`  ${rows.length} surebets do OA`);
 
-  if (rows.length) {
-    console.log(`Enviando OA para ${RENDER_URL}/api/ingest-oa ...`);
+  if (cacheRows.length) {
+    console.log(`Enviando OA (${cacheRows.length} surebets) para ${RENDER_URL}/api/ingest-oa ...`);
     const push = await fetch(`${RENDER_URL}/api/ingest-oa`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(rows)
+      body: JSON.stringify(cacheRows)
     });
     const result = await push.json();
     console.log("  OA:", JSON.stringify(result));
@@ -74,7 +81,7 @@ async function main() {
     console.log("Buscando dados frescos da Pinnacle...");
     const events = await Promise.race([
       server.fetchPinnacleEvents(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 45000))
+      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 90000))
     ]);
     if (events.length) {
       pinData = events;

@@ -443,10 +443,11 @@ async function fetchPinnacleEvents() {
       // Try highlighted markets first (fast path, works for some sports)
       let allMarkets = [];
       const marketsResp = await fetch(`${PINNACLE_API_BASE}/sports/${sid}/markets/highlighted/straight`, { headers: PINNACLE_HEADERS });
-      const mktCt = (marketsResp.headers.get("content-type") || "").toLowerCase();
-      if (marketsResp.ok && mktCt.includes("json")) {
-        const m = await marketsResp.json();
-        if (Array.isArray(m)) allMarkets = m;
+      if (marketsResp.ok) {
+        const mktCt = (marketsResp.headers.get("content-type") || "").toLowerCase();
+        if (mktCt.includes("json")) {
+          try { const m = await marketsResp.json(); if (Array.isArray(m)) allMarkets = m; } catch {}
+        }
       }
 
       // If highlighted returned nothing, fetch per-league markets (works for all sports)
@@ -456,7 +457,7 @@ async function fetchPinnacleEvents() {
           if (Array.isArray(leagues)) {
             for (const league of leagues) {
               const lId = league.id || league;
-              await new Promise(r => setTimeout(r, 150));
+              await new Promise(r => setTimeout(r, 20));
               const lResp = await fetch(`${PINNACLE_API_BASE}/leagues/${lId}/markets/straight`, { headers: PINNACLE_HEADERS });
               if (lResp.ok) {
                 const ct = (lResp.headers.get("content-type") || "").toLowerCase();
