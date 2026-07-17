@@ -398,10 +398,20 @@ function extractLastNames(name) {
   return String(name || "").toLowerCase().split(/[\s\/.]+/).filter(s => s.length > 1 && !["the", "de", "do", "da", "dos", "das", "el", "la", "los", "las"].includes(s));
 }
 
+function wordCount(name) {
+  return extractLastNames(name).length;
+}
+
 function teamsMatch(a1, a2, b1, b2) {
   const na1 = normalizeTeam(a1), na2 = normalizeTeam(a2);
   const nb1 = normalizeTeam(b1), nb2 = normalizeTeam(b2);
   if ((na1 === nb1 && na2 === nb2) || (na1 === nb2 && na2 === nb1)) return true;
+
+  // Reject if one side has significantly more words than the other (different teams)
+  const wc = [wordCount(a1), wordCount(a2), wordCount(b1), wordCount(b2)];
+  const homeDiff = wc[0] > 0 && wc[2] > 0 && Math.max(wc[0], wc[2]) >= Math.min(wc[0], wc[2]) * 2;
+  const awayDiff = wc[1] > 0 && wc[3] > 0 && Math.max(wc[1], wc[3]) >= Math.min(wc[1], wc[3]) * 2;
+  if (homeDiff || awayDiff) return false;
 
   const a1parts = extractLastNames(a1), a2parts = extractLastNames(a2);
   const b1parts = extractLastNames(b1), b2parts = extractLastNames(b2);
