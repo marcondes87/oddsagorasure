@@ -382,7 +382,7 @@ function deriveOutcomeNames(bettingTypeId, bettingTypeName, homeName, awayName, 
 const PINNACLE_HEADERS = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
   "Accept": "application/json",
-  "Referer": "https://www.pinnacle.com/en/soccer/"
+  "Referer": "https://www.pinnacle.com/pt-br/"
 };
 
 function americanToDecimal(american) {
@@ -584,7 +584,7 @@ function processPinnacleSport(sid, matchups, hlMap, markets, allEvents) {
       sport: PINNACLE_SPORT_NAMES[sid] || "Esporte",
       startTime: mu.startTime,
       market: marketLabels.join(" + "),
-      url: `https://www.pinnacle.com/en/${slug}/event/${mu.id}`,
+      url: `https://www.pinnacle.com/pt-br/${slug}/event/${mu.id}`,
       outcomes: allOutcomes
     });
   }
