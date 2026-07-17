@@ -543,6 +543,10 @@ function processMarketOutcomes(mu, market, home, away, sid) {
   });
 }
 
+function slugify(s) {
+  return String(s || "").toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+}
+
 function processPinnacleSport(sid, matchups, hlMap, markets, allEvents) {
   const matchupLookup = {};
   matchups.forEach(m => { matchupLookup[m.id] = m; });
@@ -584,7 +588,7 @@ function processPinnacleSport(sid, matchups, hlMap, markets, allEvents) {
       sport: PINNACLE_SPORT_NAMES[sid] || "Esporte",
       startTime: mu.startTime,
       market: marketLabels.join(" + "),
-      url: `https://www.pinnacle.com/pt-br/${slug}/event/${mu.id}`,
+      url: `https://pinnacle.bet.br/sportsbook/standard/${slug}/${slugify(mu.league?.name || "unknown")}/${slugify(teams.home)}-vs-${slugify(teams.away)}/${mu.id}`,
       outcomes: allOutcomes
     });
   }
