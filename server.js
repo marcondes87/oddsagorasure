@@ -1542,7 +1542,13 @@ async function handleApi(req, res) {
 
   if (req.method === "GET" && url.pathname === "/api/surebets") {
     const current = cache;
-    const rows = filterBookmakers(filterRows(current.rows, Object.fromEntries(url.searchParams)));
+    const filtered = filterBookmakers(filterRows(current.rows, Object.fromEntries(url.searchParams)));
+    // Remove surebets where all outcomes are from the same bookmaker (not real surebets)
+    const rows = filtered.filter(r => {
+      if (!r.isSurebet) return true;
+      const books = new Set((r.outcomes || []).map(o => o.bookmaker));
+      return books.size >= 2;
+    });
     return sendJson(res, 200, {
       ...current,
       count: rows.length,
