@@ -24,6 +24,8 @@ const els = {
   pinnacleMatchCount: document.getElementById("pinnacleMatchCount"),
   betesporteCount: document.getElementById("betesporteCount"),
   betesporteMatchCount: document.getElementById("betesporteMatchCount"),
+  stakeCount: document.getElementById("stakeCount"),
+  stakeMatchCount: document.getElementById("stakeMatchCount"),
   pinBeCross: document.getElementById("pinBeCross"),
   scraperCount: document.getElementById("scraperCount"),
   scraperMatchCount: document.getElementById("scraperMatchCount"),
@@ -134,6 +136,8 @@ async function loadData() {
   if (els.pinnacleMatchCount) els.pinnacleMatchCount.textContent = String(data.pinnacleMatched || 0);
   if (els.betesporteCount) els.betesporteCount.textContent = String(data.betesporteCount || 0);
   if (els.betesporteMatchCount) els.betesporteMatchCount.textContent = String(data.betesporteMatched || 0);
+  if (els.stakeCount) els.stakeCount.textContent = String(data.stakeCount || 0);
+  if (els.stakeMatchCount) els.stakeMatchCount.textContent = String(data.stakeMatched || 0);
   if (els.pinBeCross) els.pinBeCross.textContent = String(data.pinBeCross || 0);
   if (els.scraperCount && data.scraped) els.scraperCount.textContent = String(data.scraped.positiveSurebets || 0);
   if (els.scraperMatchCount && data.scraped) els.scraperMatchCount.textContent = String(data.scraped.scrapedMatches || 0);
@@ -206,7 +210,7 @@ function renderCards(rows) {
     const calc = recalcImplicit(outcomes);
 
     return `
-      <article class="card${row.pinnacleMatch ? " has-pinnacle" : ""}${row.betesporteMatch ? " has-betesporte" : ""}${row.pinnacleBetEsporte ? " has-pinbe" : ""}">
+      <article class="card${row.pinnacleMatch ? " has-pinnacle" : ""}${row.betesporteMatch ? " has-betesporte" : ""}${row.stakeMatch ? " has-stake" : ""}${row.pinnacleBetEsporte ? " has-pinbe" : ""}${row.pinnacleStake ? " has-pinstake" : ""}${row.betesporteStake ? " has-bestake" : ""}">
         <div class="card-header">
           <div>
             <div class="event-title">${escapeHtml(row.event)}</div>
@@ -216,6 +220,8 @@ function renderCards(rows) {
               <span class="tag tag-country">${escapeHtml(row.country)}</span>
               <span class="tag tag-league">${escapeHtml(row.league)}</span>
               ${row.pinnacleBetEsporte ? '<span class="tag tag-pinbe">PINNACLE x BETESPORTE</span>' : ""}
+              ${row.pinnacleStake ? '<span class="tag tag-pinstake">PINNACLE x STAKE</span>' : ""}
+              ${row.betesporteStake ? '<span class="tag tag-bestake">BETESPORTE x STAKE</span>' : ""}
               ${row.scrapedSource ? '<span class="tag tag-scraper">SCRAPER</span>' : ""}
             </div>
             <div class="meta-time">${row.startsAt ? new Date(row.startsAt).toLocaleString("pt-BR") : "Horario nao informado"}</div>
@@ -229,11 +235,13 @@ function renderCards(rows) {
           ${scaled.map((outcome) => {
             const isPinnacle = outcome.pinnacle;
             const isBetEsporte = outcome.betesporte;
-            const isExtra = outcome.pinnacle || outcome.betesporte;
+            const isStake = outcome.stake;
+            const isExtra = outcome.pinnacle || outcome.betesporte || outcome.stake;
             return `
-            <div class="outcome${isPinnacle ? " pinnacle-outcome" : ""}${isBetEsporte ? " betesporte-outcome" : ""}">
+            <div class="outcome${isPinnacle ? " pinnacle-outcome" : ""}${isBetEsporte ? " betesporte-outcome" : ""}${isStake ? " stake-outcome" : ""}">
               ${isPinnacle ? '<div class="pinnacle-badge">Pinnacle</div>' : ""}
               ${isBetEsporte ? '<div class="betesporte-badge">BetEsporte</div>' : ""}
+              ${isStake ? '<div class="stake-badge">Stake</div>' : ""}
               <strong class="outcome-name">${escapeHtml(outcome.name || "Selecao")}</strong>
               ${outcome.url ? `
                 <a href="${escapeHtml(outcome.url)}" target="_blank" rel="noopener" class="book-btn" title="Apostar na ${escapeHtml(outcome.bookmaker)}">
@@ -241,7 +249,7 @@ function renderCards(rows) {
                   <span class="book-btn-go">IR</span>
                 </a>
               ` : `
-                <div class="book${isPinnacle ? " pinnacle-book" : ""}${isBetEsporte ? " betesporte-book" : ""}">${escapeHtml(outcome.bookmaker || "Casa")}</div>
+                <div class="book${isPinnacle ? " pinnacle-book" : ""}${isBetEsporte ? " betesporte-book" : ""}${isStake ? " stake-book" : ""}">${escapeHtml(outcome.bookmaker || "Casa")}</div>
               `}
               <div class="odd">${Number(outcome.odd).toFixed(2)}</div>
               <div class="stake">Stake: ${currency.format(outcome.stake || 0)}</div>

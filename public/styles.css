@@ -994,6 +994,55 @@ pre {
   color: #f48fb1;
 }
 
+.stake-row span {
+  font-size: 12px;
+}
+
+.stake-row span {
+  font-size: 12px;
+}
+
+.stake-outcome {
+  background: rgba(76, 175, 80, 0.04);
+  border-left: 3px solid #4caf50;
+}
+
+.stake-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #4caf50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.stake-book {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.tag-pinstake {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+}
+
+.tag-bestake {
+  background: rgba(0, 188, 212, 0.15);
+  color: #4dd0e1;
+}
+
+.has-stake {
+  border-left: 3px solid #4caf50;
+}
+
+.has-pinstake {
+  border-left: 3px solid #ffb74d;
+}
+
+.has-bestake {
+  border-left: 3px solid #4dd0e1;
+}
+
 .pinbe-row span {
   font-size: 12px;
 }

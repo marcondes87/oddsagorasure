@@ -50,12 +50,8 @@ async function main() {
       if (decrypted[0] === 0x1f && decrypted[1] === 0x8b) decrypted = zlib.gunzipSync(decrypted);
       const fresh = JSON.parse(decrypted.toString("utf8")).d?.data || [];
       console.log(`  ${fresh.length} surebets do OA (fresco)`);
-      if (fresh.length >= cacheRows.length) {
-        cacheRows = fresh;
-        fs.writeFileSync("./data/imported-odds.json", JSON.stringify(fresh, null, 2));
-      } else {
-        console.log(`  Usando cache (${cacheRows.length} > ${fresh.length})`);
-      }
+      cacheRows = fresh;
+      fs.writeFileSync("./data/imported-odds.json", JSON.stringify(fresh, null, 2));
     }
   } catch (e) {
     console.log("  OA fetch error:", e.message, "- usando cache");
@@ -141,6 +137,40 @@ async function main() {
     console.log("  BetEsporte:", JSON.stringify(result));
   } else {
     console.log("  BetEsporte: 0 eventos (pulado)");
+  }
+
+  // Fetch fresh Stake data
+  let stakeData;
+  try {
+    const server = require("./server.js");
+    console.log("Buscando dados frescos da Stake...");
+    const events = await Promise.race([
+      server.fetchStakeEvents(),
+      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 45000))
+    ]);
+    if (events.length) {
+      stakeData = events;
+      require("fs").writeFileSync(server.STAKE_FILE, JSON.stringify(stakeData, null, 2));
+      console.log(`  ${stakeData.length} eventos da Stake (fresco)`);
+    }
+  } catch (e) {
+    console.log("  Stake fetch error:", e.message);
+    try {
+      stakeData = require("./data/stake-odds.json");
+      if (Array.isArray(stakeData) && stakeData.length) console.log(`  ${stakeData.length} eventos (cache)`);
+    } catch {}
+  }
+  if (Array.isArray(stakeData) && stakeData.length) {
+    console.log(`Enviando Stake (${stakeData.length} eventos)...`);
+    const push = await fetch(`${RENDER_URL}/api/ingest-stake`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(stakeData)
+    });
+    const result = await push.json();
+    console.log("  Stake:", JSON.stringify(result));
+  } else {
+    console.log("  Stake: 0 eventos (pulado)");
   }
 }
 
