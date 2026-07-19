@@ -1295,6 +1295,10 @@ function crossReferencePinnacleStake(pinnacleEvents, stakeEvents) {
         name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: pinUrl, pinnacle: true
       }));
       const combined = mergeBestOutcomes(seFormatted, pinFormatted, se.home, se.away);
+      // Ensure at least 2 different bookmakers in the result
+      const books = new Set(combined.map(o => o.bookmaker));
+      if (books.size < 2) continue;
+
       const calc = calculateSurebet(combined, 1000);
       comparisons.push({
         id: "pin-stake-" + matched,
@@ -1345,8 +1349,12 @@ function crossReferenceBetEsporteStake(betesporteEvents, stakeEvents) {
 
     if (!match) continue;
 
+    // Filter Stake outcomes: remove draw (only home/away for moneyline comparison)
     const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1 && o.name !== "Empate" && o.name !== "Draw");
-    const beOutcomes = (match.outcomes || []).filter(o => Number(o.odd) > 1);
+    // Filter BetEsporte outcomes: only moneyline typeIds
+    const beOutcomes = (match.outcomes || []).filter(o =>
+      Number(o.odd) > 1 && (o.typeId === 1 || o.typeId === 1601 || o.typeId === 186 || o.typeId === 219 || o.typeId === 251 || o.typeId === 340 || o.typeId === 406)
+    );
 
     if (seOutcomes.length >= 2 && beOutcomes.length >= 2) {
       const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
@@ -1358,6 +1366,10 @@ function crossReferenceBetEsporteStake(betesporteEvents, stakeEvents) {
         name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
       }));
       const combined = mergeBestOutcomes(seFormatted, beFormatted, se.home, se.away);
+      // Ensure at least 2 different bookmakers in the result
+      const books = new Set(combined.map(o => o.bookmaker));
+      if (books.size < 2) continue;
+
       const calc = calculateSurebet(combined, 1000);
       comparisons.push({
         id: "be-stake-" + matched,
