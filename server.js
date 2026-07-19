@@ -67,7 +67,6 @@ let cache = {
   betesporte: [],
   betesporteMatched: 0,
   stake: [],
-  stakeMatched: 0,
   scraped: null
 };
 
@@ -707,7 +706,6 @@ async function fetchStakeEvents() {
         const competitors = fixture.competitors || [];
         if (competitors.length < 2) continue;
 
-        // Fetch odds for this fixture
         let groups = [];
         try {
           const oddsResp = await fetch(`https://odds-data.stake.com/odds/${fixture.slug}`, {
@@ -719,7 +717,6 @@ async function fetchStakeEvents() {
           }
         } catch {}
 
-        // Find 1x2 market
         const outcomes = [];
         for (const group of groups) {
           const markets = group.markets || [];
@@ -752,7 +749,6 @@ async function fetchStakeEvents() {
     } catch {}
   }
 
-  // Remove duplicates and live events
   const now = Date.now();
   const seen = new Set();
   return allEvents.filter(e => {
@@ -852,11 +848,10 @@ function crossReferenceStake(oddsagoraRows, stakeEvents) {
     matched++;
 
     const stakeFormatted = stakeOutcomes.map(o => ({
-      name: o.name, bookmaker: "Stake", odd: o.odd, url: match.url || getBookmakerDirectUrl("Stake") || "", stake: true
+      name: o.name, bookmaker: "Stake", odd: o.odd, url: match.url || getBookmakerDirectUrl("Stake") || "", fromStake: true
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], stakeFormatted, team1, team2);
 
-    // Ensure at least 2 different bookmakers after merge
     const books = new Set(mergedOutcomes.map(o => o.bookmaker));
     if (books.size < 2) return row;
 
@@ -1192,6 +1187,144 @@ function normalizeOddsAgoraPayload(payload) {
   });
 }
 
+function crossReferencePinnacleStake(pinnacleEvents, stakeEvents) {
+  const comparisons = [];
+  let matched = 0;
+
+  for (const se of stakeEvents) {
+    const seHome = normalizeTeam(se.home);
+    const seAway = normalizeTeam(se.away);
+    if (!seHome) continue;
+
+    const match = pinnacleEvents.find(pe => {
+      if (/\((bookings|corners|games)\)/i.test(pe.home) || /\((bookings|corners|games)\)/i.test(pe.away)) return false;
+      const peHome = normalizeTeam(pe.home);
+      const peAway = normalizeTeam(pe.away);
+      if (!teamsMatch(seHome, seAway, peHome, peAway)) return false;
+      if (se.league && pe.league) {
+        const seLeague = normalizeTeam(se.league);
+        const peLeague = normalizeTeam(pe.league);
+        const seWords = new Set(seLeague.split(/\s+/).filter(w => w.length > 2));
+        const peWords = new Set(peLeague.split(/\s+/).filter(w => w.length > 2));
+        let overlap = 0;
+        seWords.forEach(w => { if (peWords.has(w)) overlap++; });
+        if (overlap === 0 && seWords.size > 0 && peWords.size > 0) return false;
+      }
+      return true;
+    });
+
+    if (!match) continue;
+
+    const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1);
+    const pinOutcomes = (match.outcomes || []).filter(o => Number(o.odd) > 1 && o.name && o.name !== "Selecao" && o.name !== "");
+
+    const seMoneyline = seOutcomes.filter(o => o.name !== "Empate" && o.name !== "Draw");
+    const pinMoneyline = pinOutcomes.filter(o => o.marketType === "moneyline");
+
+    if (seMoneyline.length >= 2 && pinMoneyline.length >= 2) {
+      const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
+      const pinUrl = match.url || getBookmakerDirectUrl("Pinnacle") || "";
+      const seFormatted = seMoneyline.slice(0, 3).map(o => ({
+        name: o.name, bookmaker: "Stake", odd: o.odd, url: seUrl, fromStake: true
+      }));
+      const pinFormatted = pinMoneyline.slice(0, 3).map(o => ({
+        name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: pinUrl, pinnacle: true
+      }));
+      const combined = mergeBestOutcomes(seFormatted, pinFormatted, se.home, se.away);
+      const books = new Set(combined.map(o => o.bookmaker));
+      if (books.size < 2) continue;
+
+      const calc = calculateSurebet(combined, 1000);
+      comparisons.push({
+        id: "pin-stake-" + matched,
+        sport: se.sport || match.sport || "Esporte",
+        league: se.league || match.league || "",
+        country: "Multi",
+        event: `${se.home} x ${se.away}`,
+        market: "Moneyline",
+        startsAt: se.startTime || match.startTime || null,
+        url: seUrl || pinUrl,
+        bestOdd: Math.max(...combined.map(o => o.odd)),
+        outcomes: combined,
+        surebet: calc,
+        isSurebet: Boolean(calc && calc.profitPercent > 0),
+        pinnacleStake: true
+      });
+      matched++;
+    }
+  }
+
+  return { rows: comparisons, matched };
+}
+
+function crossReferenceBetEsporteStake(betesporteEvents, stakeEvents) {
+  const comparisons = [];
+  let matched = 0;
+
+  for (const se of stakeEvents) {
+    const seHome = normalizeTeam(se.home);
+    const seAway = normalizeTeam(se.away);
+    if (!seHome) continue;
+
+    const match = betesporteEvents.find(be => {
+      const beHome = normalizeTeam(be.home);
+      const beAway = normalizeTeam(be.away);
+      if (!teamsMatch(seHome, seAway, beHome, beAway)) return false;
+      if (se.league && be.league) {
+        const seLeague = normalizeTeam(se.league);
+        const beLeague = normalizeTeam(be.league);
+        const seWords = new Set(seLeague.split(/\s+/).filter(w => w.length > 2));
+        const beWords = new Set(beLeague.split(/\s+/).filter(w => w.length > 2));
+        let overlap = 0;
+        seWords.forEach(w => { if (beWords.has(w)) overlap++; });
+        if (overlap === 0 && seWords.size > 0 && beWords.size > 0) return false;
+      }
+      return true;
+    });
+
+    if (!match) continue;
+
+    const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1 && o.name !== "Empate" && o.name !== "Draw");
+    const beOutcomes = (match.outcomes || []).filter(o =>
+      Number(o.odd) > 1 && (o.typeId === 1 || o.typeId === 1601 || o.typeId === 186 || o.typeId === 219 || o.typeId === 251 || o.typeId === 340 || o.typeId === 406)
+    );
+
+    if (seOutcomes.length >= 2 && beOutcomes.length >= 2) {
+      const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
+      const beUrl = match.url || getBookmakerDirectUrl("BetEsporte") || "";
+      const seFormatted = seOutcomes.slice(0, 3).map(o => ({
+        name: o.name, bookmaker: "Stake", odd: o.odd, url: seUrl, fromStake: true
+      }));
+      const beFormatted = beOutcomes.slice(0, 3).map(o => ({
+        name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
+      }));
+      const combined = mergeBestOutcomes(seFormatted, beFormatted, se.home, se.away);
+      const books = new Set(combined.map(o => o.bookmaker));
+      if (books.size < 2) continue;
+
+      const calc = calculateSurebet(combined, 1000);
+      comparisons.push({
+        id: "be-stake-" + matched,
+        sport: se.sport || match.sport || "Esporte",
+        league: se.league || match.league || "",
+        country: "Multi",
+        event: `${se.home} x ${se.away}`,
+        market: "Moneyline",
+        startsAt: se.startTime || match.startTime || null,
+        url: seUrl || beUrl,
+        bestOdd: Math.max(...combined.map(o => o.odd)),
+        outcomes: combined,
+        surebet: calc,
+        isSurebet: Boolean(calc && calc.profitPercent > 0),
+        betesporteStake: true
+      });
+      matched++;
+    }
+  }
+
+  return { rows: comparisons, matched };
+}
+
 function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
   const comparisons = [];
   let matched = 0;
@@ -1263,150 +1396,11 @@ function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
   return { rows: comparisons, matched };
 }
 
-function crossReferencePinnacleStake(pinnacleEvents, stakeEvents) {
-  const comparisons = [];
-  let matched = 0;
-
-  for (const se of stakeEvents) {
-    const seHome = normalizeTeam(se.home);
-    const seAway = normalizeTeam(se.away);
-    if (!seHome) continue;
-
-    const match = pinnacleEvents.find(pe => {
-      if (/\((bookings|corners|games)\)/i.test(pe.home) || /\((bookings|corners|games)\)/i.test(pe.away)) return false;
-      const peHome = normalizeTeam(pe.home);
-      const peAway = normalizeTeam(pe.away);
-      if (!teamsMatch(seHome, seAway, peHome, peAway)) return false;
-      if (se.league && pe.league) {
-        const seLeague = normalizeTeam(se.league);
-        const peLeague = normalizeTeam(pe.league);
-        const seWords = new Set(seLeague.split(/\s+/).filter(w => w.length > 2));
-        const peWords = new Set(peLeague.split(/\s+/).filter(w => w.length > 2));
-        let overlap = 0;
-        seWords.forEach(w => { if (peWords.has(w)) overlap++; });
-        if (overlap === 0 && seWords.size > 0 && peWords.size > 0) return false;
-      }
-      return true;
-    });
-
-    if (!match) continue;
-
-    const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1);
-    const pinOutcomes = (match.outcomes || []).filter(o => Number(o.odd) > 1 && o.name && o.name !== "Selecao" && o.name !== "");
-
-    const seMoneyline = seOutcomes.filter(o => o.name !== "Empate" && o.name !== "Draw");
-    const pinMoneyline = pinOutcomes.filter(o => o.marketType === "moneyline");
-
-    if (seMoneyline.length >= 2 && pinMoneyline.length >= 2) {
-      const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
-      const pinUrl = match.url || getBookmakerDirectUrl("Pinnacle") || "";
-      const seFormatted = seMoneyline.slice(0, 3).map(o => ({
-        name: o.name, bookmaker: "Stake", odd: o.odd, url: seUrl, stake: true
-      }));
-      const pinFormatted = pinMoneyline.slice(0, 3).map(o => ({
-        name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: pinUrl, pinnacle: true
-      }));
-      const combined = mergeBestOutcomes(seFormatted, pinFormatted, se.home, se.away);
-      // Ensure at least 2 different bookmakers in the result
-      const books = new Set(combined.map(o => o.bookmaker));
-      if (books.size < 2) continue;
-
-      const calc = calculateSurebet(combined, 1000);
-      comparisons.push({
-        id: "pin-stake-" + matched,
-        sport: se.sport || match.sport || "Esporte",
-        league: se.league || match.league || "",
-        country: "Multi",
-        event: `${se.home} x ${se.away}`,
-        market: "Moneyline",
-        startsAt: se.startTime || match.startTime || null,
-        url: seUrl || pinUrl,
-        bestOdd: Math.max(...combined.map(o => o.odd)),
-        outcomes: combined,
-        surebet: calc,
-        isSurebet: Boolean(calc && calc.profitPercent > 0),
-        pinnacleStake: true
-      });
-      matched++;
-    }
-  }
-
-  return { rows: comparisons, matched };
-}
-
-function crossReferenceBetEsporteStake(betesporteEvents, stakeEvents) {
-  const comparisons = [];
-  let matched = 0;
-
-  for (const se of stakeEvents) {
-    const seHome = normalizeTeam(se.home);
-    const seAway = normalizeTeam(se.away);
-    if (!seHome) continue;
-
-    const match = betesporteEvents.find(be => {
-      const beHome = normalizeTeam(be.home);
-      const beAway = normalizeTeam(be.away);
-      if (!teamsMatch(seHome, seAway, beHome, beAway)) return false;
-      if (se.league && be.league) {
-        const seLeague = normalizeTeam(se.league);
-        const beLeague = normalizeTeam(be.league);
-        const seWords = new Set(seLeague.split(/\s+/).filter(w => w.length > 2));
-        const beWords = new Set(beLeague.split(/\s+/).filter(w => w.length > 2));
-        let overlap = 0;
-        seWords.forEach(w => { if (beWords.has(w)) overlap++; });
-        if (overlap === 0 && seWords.size > 0 && beWords.size > 0) return false;
-      }
-      return true;
-    });
-
-    if (!match) continue;
-
-    // Filter Stake outcomes: remove draw (only home/away for moneyline comparison)
-    const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1 && o.name !== "Empate" && o.name !== "Draw");
-    // Filter BetEsporte outcomes: only moneyline typeIds
-    const beOutcomes = (match.outcomes || []).filter(o =>
-      Number(o.odd) > 1 && (o.typeId === 1 || o.typeId === 1601 || o.typeId === 186 || o.typeId === 219 || o.typeId === 251 || o.typeId === 340 || o.typeId === 406)
-    );
-
-    if (seOutcomes.length >= 2 && beOutcomes.length >= 2) {
-      const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
-      const beUrl = match.url || getBookmakerDirectUrl("BetEsporte") || "";
-      const seFormatted = seOutcomes.slice(0, 3).map(o => ({
-        name: o.name, bookmaker: "Stake", odd: o.odd, url: seUrl, stake: true
-      }));
-      const beFormatted = beOutcomes.slice(0, 3).map(o => ({
-        name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
-      }));
-      const combined = mergeBestOutcomes(seFormatted, beFormatted, se.home, se.away);
-      // Ensure at least 2 different bookmakers in the result
-      const books = new Set(combined.map(o => o.bookmaker));
-      if (books.size < 2) continue;
-
-      const calc = calculateSurebet(combined, 1000);
-      comparisons.push({
-        id: "be-stake-" + matched,
-        sport: se.sport || match.sport || "Esporte",
-        league: se.league || match.league || "",
-        country: "Multi",
-        event: `${se.home} x ${se.away}`,
-        market: "Moneyline",
-        startsAt: se.startTime || match.startTime || null,
-        url: seUrl || beUrl,
-        bestOdd: Math.max(...combined.map(o => o.odd)),
-        outcomes: combined,
-        surebet: calc,
-        isSurebet: Boolean(calc && calc.profitPercent > 0),
-        betesporteStake: true
-      });
-      matched++;
-    }
-  }
-
-  return { rows: comparisons, matched };
-}
-
 function loadCurrentRows() {
-  const imported = readJson(IMPORT_FILE, null);
+  let imported = readJson(IMPORT_FILE, null);
+  if (Array.isArray(imported) && imported.length > 0 && (imported[0]["home-name"] !== undefined || imported[0]["bookmakers-logos-urls"] !== undefined)) {
+    imported = normalizeOddsAgoraPayload({ d: { data: imported } });
+  }
   const hasImport = Array.isArray(imported) && imported.length > 0;
   const base = hasImport ? imported : (cache._rows || []);
   let rows = base.map(normalizeEvent);
@@ -1427,20 +1421,7 @@ function loadCurrentRows() {
     betesporteMatched = result.matched;
   }
 
-  let pinBeCross = 0;
-  if (Array.isArray(pinnacleEvents) && pinnacleEvents.length > 0 && Array.isArray(betesporteEvents) && betesporteEvents.length > 0) {
-    const result = crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents);
-    rows = [...rows, ...result.rows];
-    pinBeCross = result.matched;
-  }
-
   const stakeEvents = readJson(STAKE_FILE, []);
-  let stakeMatched = 0;
-  if (Array.isArray(stakeEvents) && stakeEvents.length > 0) {
-    const result = crossReferenceStake(rows, stakeEvents);
-    rows = result.rows;
-    stakeMatched = result.matched;
-  }
 
   let pinStakeCross = 0;
   if (Array.isArray(pinnacleEvents) && pinnacleEvents.length > 0 && Array.isArray(stakeEvents) && stakeEvents.length > 0) {
@@ -1454,6 +1435,13 @@ function loadCurrentRows() {
     const result = crossReferenceBetEsporteStake(betesporteEvents, stakeEvents);
     rows = [...rows, ...result.rows];
     beStakeCross = result.matched;
+  }
+
+  let pinBeCross = 0;
+  if (Array.isArray(pinnacleEvents) && pinnacleEvents.length > 0 && Array.isArray(betesporteEvents) && betesporteEvents.length > 0) {
+    const result = crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents);
+    rows = [...rows, ...result.rows];
+    pinBeCross = result.matched;
   }
 
   const scrapedData = cache?.scraped || getScrapedData();
@@ -1473,10 +1461,9 @@ function loadCurrentRows() {
     betesporte: betesporteEvents,
     betesporteMatched,
     stake: stakeEvents,
-    stakeMatched,
-    pinBeCross,
     pinStakeCross,
     beStakeCross,
+    pinBeCross,
     scraped: scrapedData
   };
   return cache;
@@ -1558,10 +1545,9 @@ async function handleApi(req, res) {
       betesporteCount: current.betesporte?.length || 0,
       betesporteMatched: current.betesporteMatched || 0,
       stakeCount: current.stake?.length || 0,
-      stakeMatched: current.stakeMatched || 0,
-      pinBeCross: current.pinBeCross || 0,
       pinStakeCross: current.pinStakeCross || 0,
       beStakeCross: current.beStakeCross || 0,
+      pinBeCross: current.pinBeCross || 0,
       scraped: cache.scraped
     });
   }

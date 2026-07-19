@@ -1,3 +1,4 @@
+// V2 - stake-badge removido em 19/07
 const REFRESH_INTERVAL = 60000; // 1 min - deep refresh
 
 const state = {
@@ -26,6 +27,8 @@ const els = {
   betesporteMatchCount: document.getElementById("betesporteMatchCount"),
   stakeCount: document.getElementById("stakeCount"),
   stakeMatchCount: document.getElementById("stakeMatchCount"),
+  pinStakeCross: document.getElementById("pinStakeCross"),
+  beStakeCross: document.getElementById("beStakeCross"),
   pinBeCross: document.getElementById("pinBeCross"),
   scraperCount: document.getElementById("scraperCount"),
   scraperMatchCount: document.getElementById("scraperMatchCount"),
@@ -138,6 +141,8 @@ async function loadData() {
   if (els.betesporteMatchCount) els.betesporteMatchCount.textContent = String(data.betesporteMatched || 0);
   if (els.stakeCount) els.stakeCount.textContent = String(data.stakeCount || 0);
   if (els.stakeMatchCount) els.stakeMatchCount.textContent = String(data.stakeMatched || 0);
+  if (els.pinStakeCross) els.pinStakeCross.textContent = String(data.pinStakeCross || 0);
+  if (els.beStakeCross) els.beStakeCross.textContent = String(data.beStakeCross || 0);
   if (els.pinBeCross) els.pinBeCross.textContent = String(data.pinBeCross || 0);
   if (els.scraperCount && data.scraped) els.scraperCount.textContent = String(data.scraped.positiveSurebets || 0);
   if (els.scraperMatchCount && data.scraped) els.scraperMatchCount.textContent = String(data.scraped.scrapedMatches || 0);
@@ -235,13 +240,12 @@ function renderCards(rows) {
           ${scaled.map((outcome) => {
             const isPinnacle = outcome.pinnacle;
             const isBetEsporte = outcome.betesporte;
-            const isStake = outcome.stake;
-            const isExtra = outcome.pinnacle || outcome.betesporte || outcome.stake;
+            const isStake = outcome.bookmaker === "Stake" && (row.pinnacleStake || row.betesporteStake);
+            const isExtra = outcome.pinnacle || outcome.betesporte || isStake;
             return `
-            <div class="outcome${isPinnacle ? " pinnacle-outcome" : ""}${isBetEsporte ? " betesporte-outcome" : ""}${isStake ? " stake-outcome" : ""}">
+            <div class="outcome${isPinnacle ? " pinnacle-outcome" : ""}${isBetEsporte ? " betesporte-outcome" : ""}">
               ${isPinnacle ? '<div class="pinnacle-badge">Pinnacle</div>' : ""}
               ${isBetEsporte ? '<div class="betesporte-badge">BetEsporte</div>' : ""}
-              ${isStake ? '<div class="stake-badge">Stake</div>' : ""}
               <strong class="outcome-name">${escapeHtml(outcome.name || "Selecao")}</strong>
               ${outcome.url ? `
                 <a href="${escapeHtml(outcome.url)}" target="_blank" rel="noopener" class="book-btn" title="Apostar na ${escapeHtml(outcome.bookmaker)}">
@@ -249,7 +253,7 @@ function renderCards(rows) {
                   <span class="book-btn-go">IR</span>
                 </a>
               ` : `
-                <div class="book${isPinnacle ? " pinnacle-book" : ""}${isBetEsporte ? " betesporte-book" : ""}${isStake ? " stake-book" : ""}">${escapeHtml(outcome.bookmaker || "Casa")}</div>
+                <div class="book${isPinnacle ? " pinnacle-book" : ""}${isBetEsporte ? " betesporte-book" : ""}">${escapeHtml(outcome.bookmaker || "Casa")}</div>
               `}
               <div class="odd">${Number(outcome.odd).toFixed(2)}</div>
               <div class="stake">Stake: ${currency.format(outcome.stake || 0)}</div>

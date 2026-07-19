@@ -984,21 +984,30 @@ pre {
   font-weight: 600;
 }
 
+.tag-pinstake {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+}
+
+.tag-bestake {
+  background: rgba(0, 188, 212, 0.15);
+  color: #4dd0e1;
+}
+
 .tag-pinbe {
   background: rgba(156, 39, 176, 0.15);
   color: #ce93d8;
-}
-
-.tag-scraper {
-  background: rgba(233, 30, 99, 0.15);
-  color: #f48fb1;
 }
 
 .stake-row span {
   font-size: 12px;
 }
 
-.stake-row span {
+.pinstake-row span {
+  font-size: 12px;
+}
+
+.bestake-row span {
   font-size: 12px;
 }
 
@@ -1021,16 +1030,6 @@ pre {
   font-weight: 600;
 }
 
-.tag-pinstake {
-  background: rgba(255, 152, 0, 0.15);
-  color: #ffb74d;
-}
-
-.tag-bestake {
-  background: rgba(0, 188, 212, 0.15);
-  color: #4dd0e1;
-}
-
 .has-stake {
   border-left: 3px solid #4caf50;
 }
@@ -1041,6 +1040,11 @@ pre {
 
 .has-bestake {
   border-left: 3px solid #4dd0e1;
+}
+
+.tag-scraper {
+  background: rgba(233, 30, 99, 0.15);
+  color: #f48fb1;
 }
 
 .pinbe-row span {
