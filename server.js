@@ -801,6 +801,9 @@ function crossReferenceBetEsporte(oddsagoraRows, betesporteEvents) {
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], beFormatted, team1, team2);
 
+    const books = new Set(mergedOutcomes.map(o => o.bookmaker));
+    if (books.size < 2) return row;
+
     const totalStake = row.surebet?.stakes?.reduce((s, st) => s + (st.stake || 0), 0) || 1000;
     const recalc = calculateSurebet(mergedOutcomes, totalStake);
 
@@ -852,6 +855,10 @@ function crossReferenceStake(oddsagoraRows, stakeEvents) {
       name: o.name, bookmaker: "Stake", odd: o.odd, url: match.url || getBookmakerDirectUrl("Stake") || "", stake: true
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], stakeFormatted, team1, team2);
+
+    // Ensure at least 2 different bookmakers after merge
+    const books = new Set(mergedOutcomes.map(o => o.bookmaker));
+    if (books.size < 2) return row;
 
     const totalStake = row.surebet?.stakes?.reduce((s, st) => s + (st.stake || 0), 0) || 1000;
     const recalc = calculateSurebet(mergedOutcomes, totalStake);
@@ -1003,6 +1010,9 @@ function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
       name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: best.event.url || getBookmakerDirectUrl("Pinnacle") || "", pinnacle: true, marketType: o.marketType
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], pinFormatted, team1, team2);
+
+    const books = new Set(mergedOutcomes.map(o => o.bookmaker));
+    if (books.size < 2) return row;
 
     const totalStake = row.surebet?.stakes?.reduce((s, st) => s + (st.stake || 0), 0) || 1000;
     const recalc = calculateSurebet(mergedOutcomes, totalStake);
@@ -1228,6 +1238,8 @@ function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
         name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: pinUrl, pinnacle: true
       }));
       const combined = mergeBestOutcomes(beFormatted, pinFormatted, be.home, be.away);
+      const books = new Set(combined.map(o => o.bookmaker));
+      if (books.size < 2) continue;
       const calc = calculateSurebet(combined, 1000);
       comparisons.push({
         id: "pin-be-" + matched,
