@@ -1,197 +1,19 @@
 [
   {
-    "EventID": 9274213,
-    "BettingTypeID": 2,
-    "ScopeID": 1,
-    "DoubleParameter": "9.00",
-    "HandicapTypeID": 0,
-    "Profit": "1.064",
-    "return": "6.4",
-    "DateStart": 1784503200,
-    "odds": [
-      {
-        "idOutcome": "8r0r5x1tb5sxs4x0",
-        "ProviderID": 943,
-        "MaxOdds": 2.6,
-        "AvgOdds": 2.6,
-        "OutcomeResultID": 0
-      },
-      {
-        "idOutcome": "8r0r5x1tb90xs4x0",
-        "ProviderID": 999,
-        "MaxOdds": 1.8,
-        "AvgOdds": 1.8,
-        "OutcomeResultID": 0
-      }
-    ],
-    "id": 9274213,
-    "name": "New York Yankees - Los Angeles Dodgers",
-    "url": "/baseball/h2h/los-angeles-dodgers-nwPDBpVc/new-york-yankees-SrC4LDIT/#r53xJUnL:over-under;1;9.00;0",
-    "date-start-base": 1784503200,
-    "is-double": false,
-    "tournament-id": 95993,
-    "tournament-name": "MLB",
-    "tournament-url": "/baseball/usa/mlb/",
-    "bettingtypename": "O/U 9, PR",
-    "calculator-link": [
-      {
-        "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyJyNTN4SlVuTCI6eyIyIjpbeyI5LjAwIjp7IjEiOlt7Im9kZHMiOjIuNjAwMDAwMDAwMDAwMDAwMDg4ODE3ODQxOTcwMDEyNTIzMjMzODkwNTMzNDQ3MjY1NjI1LCJwcm92aWRlciI6OTQzfSx7Im9kZHMiOjEuODAwMDAwMDAwMDAwMDAwMDQ0NDA4OTIwOTg1MDA2MjYxNjE2OTQ1MjY2NzIzNjMyODEyNSwicHJvdmlkZXIiOjk5OX1dfX1dfX0=/from/sure-bets/"
-      }
-    ],
-    "parse-time": 3,
-    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
-    "home-name": "New York Yankees",
-    "away-name": "Los Angeles Dodgers",
-    "home-participant-image": [
-      "/serve/images/team-logo/Men/00om48UE-OpJ5uAOg.png?260717101355"
-    ],
-    "away-participant-image": [
-      "/serve/images/team-logo/Men/xhJimV93-xUjXmOIP.png?260717101355"
-    ],
-    "sport-id": 6,
-    "sport-name": "Beisebol",
-    "sport-url": "baseball/",
-    "sport-url-locale": "/baseball/",
-    "superTemplate": {
-      "id": "",
-      "name": "",
-      "url": "",
-      "shortUrl": ""
-    },
-    "country-id": 200,
-    "country-name": "EUA",
-    "country-url": "/baseball/usa/",
-    "two-chart-code": "us",
-    "bookmakers-logos-urls": {
-      "0": {
-        "url": "/bookmakers/betboom-br/surebet",
-        "class": "logos l943",
-        "coeficient": 2.6,
-        "name": "Betboom.br",
-        "providerID": 943
-      },
-      "1": {
-        "url": "/bookmakers/br4bet/surebet",
-        "class": "logos l999",
-        "coeficient": 1.8,
-        "name": "BR4Bet",
-        "providerID": 999
-      }
-    },
-    "profit": "6.4%",
-    "start-time": "datet t1784503200-6-1-0-0",
-    "homeParticipantTypes": [
-      1
-    ],
-    "awayParticipantTypes": [
-      1
-    ]
-  },
-  {
-    "EventID": 9274213,
-    "BettingTypeID": 2,
-    "ScopeID": 1,
-    "DoubleParameter": "8.50",
-    "HandicapTypeID": 0,
-    "Profit": "1.061",
-    "return": "6.1",
-    "DateStart": 1784503200,
-    "odds": [
-      {
-        "idOutcome": "8r0r5x1tb5sxqix0",
-        "ProviderID": 1161,
-        "MaxOdds": 2.2,
-        "AvgOdds": 2.2,
-        "OutcomeResultID": 0
-      },
-      {
-        "idOutcome": "8r0r5x1tb90xqix0",
-        "ProviderID": 999,
-        "MaxOdds": 2.05,
-        "AvgOdds": 2.05,
-        "OutcomeResultID": 0
-      }
-    ],
-    "id": 9274213,
-    "name": "New York Yankees - Los Angeles Dodgers",
-    "url": "/baseball/h2h/los-angeles-dodgers-nwPDBpVc/new-york-yankees-SrC4LDIT/#r53xJUnL:over-under;1;8.50;0",
-    "date-start-base": 1784503200,
-    "is-double": false,
-    "tournament-id": 95993,
-    "tournament-name": "MLB",
-    "tournament-url": "/baseball/usa/mlb/",
-    "bettingtypename": "O/U 8.5, PR",
-    "calculator-link": [
-      {
-        "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyJyNTN4SlVuTCI6eyIyIjpbeyI4LjUwIjp7IjEiOlt7Im9kZHMiOjIuMjAwMDAwMDAwMDAwMDAwMTc3NjM1NjgzOTQwMDI1MDQ2NDY3NzgxMDY2ODk0NTMxMjUsInByb3ZpZGVyIjoxMTYxfSx7Im9kZHMiOjIuMDQ5OTk5OTk5OTk5OTk5ODIyMzY0MzE2MDU5OTc0OTUzNTMyMjE4OTMzMTA1NDY4NzUsInByb3ZpZGVyIjo5OTl9XX19XX19/from/sure-bets/"
-      }
-    ],
-    "parse-time": 23,
-    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
-    "home-name": "New York Yankees",
-    "away-name": "Los Angeles Dodgers",
-    "home-participant-image": [
-      "/serve/images/team-logo/Men/00om48UE-OpJ5uAOg.png?260717101355"
-    ],
-    "away-participant-image": [
-      "/serve/images/team-logo/Men/xhJimV93-xUjXmOIP.png?260717101355"
-    ],
-    "sport-id": 6,
-    "sport-name": "Beisebol",
-    "sport-url": "baseball/",
-    "sport-url-locale": "/baseball/",
-    "superTemplate": {
-      "id": "",
-      "name": "",
-      "url": "",
-      "shortUrl": ""
-    },
-    "country-id": 200,
-    "country-name": "EUA",
-    "country-url": "/baseball/usa/",
-    "two-chart-code": "us",
-    "bookmakers-logos-urls": {
-      "0": {
-        "url": "/bookmakers/brasilbet/surebet",
-        "class": "logos l1161",
-        "coeficient": 2.2,
-        "name": "BrasilBet",
-        "providerID": 1161
-      },
-      "1": {
-        "url": "/bookmakers/br4bet/surebet",
-        "class": "logos l999",
-        "coeficient": 2.05,
-        "name": "BR4Bet",
-        "providerID": 999
-      }
-    },
-    "profit": "6.1%",
-    "start-time": "datet t1784503200-6-1-0-0",
-    "homeParticipantTypes": [
-      1
-    ],
-    "awayParticipantTypes": [
-      1
-    ]
-  },
-  {
     "EventID": 11171969,
     "BettingTypeID": 2,
     "ScopeID": 2,
     "DoubleParameter": "25.50",
     "HandicapTypeID": 2,
-    "Profit": "1.081",
-    "return": "5.2",
-    "DateStart": 1784538000,
+    "Profit": "1.074",
+    "return": "4.5",
+    "DateStart": 1784624400,
     "odds": [
       {
         "idOutcome": "aku41x1tkuex2fmx0",
         "ProviderID": 1157,
-        "MaxOdds": 3.7,
-        "AvgOdds": 3.7,
+        "MaxOdds": 3.62,
+        "AvgOdds": 3.62,
         "OutcomeResultID": 0
       },
       {
@@ -205,7 +27,7 @@
     "id": 11171969,
     "name": "A. Blinkova - Bejlek S.",
     "url": "/tennis/h2h/anna-blinkova-f1PZMn7P/bejlek-sara-jVCKq0LH/#MicpF3Rj:over-under;2;25.50;2",
-    "date-start-base": 1784538000,
+    "date-start-base": 1784624400,
     "is-double": false,
     "tournament-id": 121463,
     "tournament-name": "WTA Aberto de Praga Livesport",
@@ -214,10 +36,10 @@
     "calculator-link": [
       {
         "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyJNaWNwRjNSaiI6eyIyIjp7IjIiOnsiMjUuNTAiOnsiMiI6W3sib2RkcyI6My43MDAwMDAwMDAwMDAwMDAxNzc2MzU2ODM5NDAwMjUwNDY0Njc3ODEwNjY4OTQ1MzEyNSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6MS40Njk5OTk5OTk5OTk5OTk5NzMzNTQ2NDc0MDg5OTYyNDMwMjk4MzI4Mzk5NjU4MjAzMTI1LCJwcm92aWRlciI6NTc0fV19fX19fQ==/from/sure-bets/"
+        "url": "/sure-bets-calculator/eod/eyJNaWNwRjNSaiI6eyIyIjp7IjIiOnsiMjUuNTAiOnsiMiI6W3sib2RkcyI6My42MjAwMDAwMDAwMDAwMDAxMDY1ODE0MTAzNjQwMTUwMjc4ODA2Njg2NDAxMzY3MTg3NSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6MS40Njk5OTk5OTk5OTk5OTk5NzMzNTQ2NDc0MDg5OTYyNDMwMjk4MzI4Mzk5NjU4MjAzMTI1LCJwcm92aWRlciI6NTc0fV19fX19fQ==/from/sure-bets/"
       }
     ],
-    "parse-time": 13,
+    "parse-time": 10,
     "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
     "home-name": "A. Blinkova",
     "away-name": "Bejlek S.",
@@ -247,7 +69,7 @@
       "0": {
         "url": "/bookmakers/1xbet-br/surebet",
         "class": "logos l1157",
-        "coeficient": 3.7,
+        "coeficient": 3.62,
         "name": "1xBet.br",
         "providerID": 1157
       },
@@ -259,8 +81,8 @@
         "providerID": 574
       }
     },
-    "profit": "5.2%",
-    "start-time": "datet t1784538000-6-1-0-0",
+    "profit": "4.5%",
+    "start-time": "datet t1784624400-6-1-0-0",
     "homeParticipantTypes": [
       2
     ],
@@ -269,358 +91,89 @@
     ]
   },
   {
-    "EventID": 11171969,
-    "BettingTypeID": 2,
+    "EventID": 11174489,
+    "BettingTypeID": 3,
     "ScopeID": 2,
-    "DoubleParameter": "26.50",
-    "HandicapTypeID": 2,
-    "Profit": "1.082",
-    "return": "5.1",
-    "DateStart": 1784538000,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.037",
+    "return": "3.7",
+    "DateStart": 1784620800,
     "odds": [
       {
-        "idOutcome": "aku41x1tkuex2iqx0",
-        "ProviderID": 1157,
-        "MaxOdds": 4.4,
-        "AvgOdds": 4.4,
+        "idOutcome": "al0ipx2s5a4x0xt04f3",
+        "ProviderID": 953,
+        "MaxOdds": 4,
+        "AvgOdds": 4,
         "OutcomeResultID": 0
       },
       {
-        "idOutcome": "aku41x1tl1ix2iqx0",
-        "ProviderID": 574,
-        "MaxOdds": 1.38,
-        "AvgOdds": 1.38,
+        "idOutcome": "al0ipx2s5a4x0xt04f7",
+        "ProviderID": 429,
+        "MaxOdds": 1.4,
+        "AvgOdds": 1.4,
         "OutcomeResultID": 0
       }
     ],
-    "id": 11171969,
-    "name": "A. Blinkova - Bejlek S.",
-    "url": "/tennis/h2h/anna-blinkova-f1PZMn7P/bejlek-sara-jVCKq0LH/#MicpF3Rj:over-under;2;26.50;2",
-    "date-start-base": 1784538000,
+    "id": 11174489,
+    "name": "Kawa K. - Badosa P.",
+    "url": "/tennis/h2h/kawa-katarzyna-2kS2AMrn/paula-badosa-Wl76rX3I/#nPD1MKjo:home-away;2",
+    "date-start-base": 1784620800,
     "is-double": false,
-    "tournament-id": 121463,
-    "tournament-name": "WTA Aberto de Praga Livesport",
-    "tournament-url": "/tennis/czech-republic/wta-aberto-de-praga-livesport/",
-    "bettingtypename": "O/U 26.5 Games",
+    "tournament-id": 121467,
+    "tournament-name": "WTA Hamburgo",
+    "tournament-url": "/tennis/germany/wta-hamburgo/",
+    "bettingtypename": "H/A",
     "calculator-link": [
       {
         "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyJNaWNwRjNSaiI6eyIyIjp7IjIiOnsiMjYuNTAiOnsiMiI6W3sib2RkcyI6NC40MDAwMDAwMDAwMDAwMDAzNTUyNzEzNjc4ODAwNTAwOTI5MzU1NjIxMzM3ODkwNjI1LCJwcm92aWRlciI6MTE1N30seyJvZGRzIjoxLjM3OTk5OTk5OTk5OTk5OTg5MzQxODU4OTYzNTk4NDk3MjExOTMzMTM1OTg2MzI4MTI1LCJwcm92aWRlciI6NTc0fV19fX19fQ==/from/sure-bets/"
+        "url": "/sure-bets-calculator/eod/eyJuUEQxTUtqbyI6eyIzIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjQsInByb3ZpZGVyIjo5NTN9LHsib2RkcyI6MS4zOTk5OTk5OTk5OTk5OTk5MTExODIxNTgwMjk5ODc0NzY3NjYxMDk0NjY1NTI3MzQzNzUsInByb3ZpZGVyIjo0Mjl9XX19XX19/from/sure-bets/"
       }
     ],
-    "parse-time": 13,
+    "parse-time": 17,
     "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
-    "home-name": "A. Blinkova",
-    "away-name": "Bejlek S.",
+    "home-name": "Kawa K.",
+    "away-name": "Badosa P.",
     "home-participant-image": [
-      "/serve/images/player-photo/Women/Wfd8mBtm-2HorbhaJ.jpeg?260717101355"
+      "/serve/images/player-photo/Women/nwWbR4RQ-jqX5MBQM.jpeg?260717101355"
     ],
     "away-participant-image": [
-      "/serve/images/player-photo/Women/UTxqhsPQ-rwOqZv05.jpeg?260717101355"
+      "/serve/images/player-photo/Women/hnAukt1b-Imfa8Cul.jpeg?260717101355"
     ],
     "sport-id": 2,
     "sport-name": "Tênis",
     "sport-url": "tennis/",
     "sport-url-locale": "/tennis/",
-    "home-country-two-chart-name": 8,
-    "away-country-two-chart-name": "cz",
+    "home-country-two-chart-name": "pl",
+    "away-country-two-chart-name": "es",
     "superTemplate": {
       "id": 5725,
       "name": "WTA - Simples",
       "url": "wta-simples",
       "shortUrl": "wta"
     },
-    "country-id": 62,
-    "country-name": "República Tcheca",
-    "country-url": "/tennis/czech-republic/",
-    "two-chart-code": "cz",
+    "country-id": 81,
+    "country-name": "Alemanha",
+    "country-url": "/tennis/germany/",
+    "two-chart-code": "de",
     "bookmakers-logos-urls": {
       "0": {
-        "url": "/bookmakers/1xbet-br/surebet",
-        "class": "logos l1157",
-        "coeficient": 4.4,
-        "name": "1xBet.br",
-        "providerID": 1157
+        "url": "/bookmakers/f12/surebet",
+        "class": "logos l953",
+        "coeficient": 4,
+        "name": "F12",
+        "providerID": 953
       },
       "1": {
-        "url": "/bookmakers/betano-br/surebet",
-        "class": "logos l574",
-        "coeficient": 1.38,
-        "name": "Betano.br",
-        "providerID": 574
+        "url": "/bookmakers/betfair/surebet",
+        "class": "logos l429",
+        "coeficient": 1.4,
+        "name": "Betfair",
+        "providerID": 429
       }
     },
-    "profit": "5.1%",
-    "start-time": "datet t1784538000-6-1-0-0",
-    "homeParticipantTypes": [
-      2
-    ],
-    "awayParticipantTypes": [
-      2
-    ]
-  },
-  {
-    "EventID": 9274213,
-    "BettingTypeID": 2,
-    "ScopeID": 1,
-    "DoubleParameter": "8.00",
-    "HandicapTypeID": 0,
-    "Profit": "1.049",
-    "return": "4.9",
-    "DateStart": 1784503200,
-    "odds": [
-      {
-        "idOutcome": "8r0r5x1tb5sxp0x0",
-        "ProviderID": 1161,
-        "MaxOdds": 2.05,
-        "AvgOdds": 2.05,
-        "OutcomeResultID": 0
-      },
-      {
-        "idOutcome": "8r0r5x1tb90xp0x0",
-        "ProviderID": 999,
-        "MaxOdds": 2.15,
-        "AvgOdds": 2.15,
-        "OutcomeResultID": 0
-      }
-    ],
-    "id": 9274213,
-    "name": "New York Yankees - Los Angeles Dodgers",
-    "url": "/baseball/h2h/los-angeles-dodgers-nwPDBpVc/new-york-yankees-SrC4LDIT/#r53xJUnL:over-under;1;8.00;0",
-    "date-start-base": 1784503200,
-    "is-double": false,
-    "tournament-id": 95993,
-    "tournament-name": "MLB",
-    "tournament-url": "/baseball/usa/mlb/",
-    "bettingtypename": "O/U 8, PR",
-    "calculator-link": [
-      {
-        "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyJyNTN4SlVuTCI6eyIyIjpbeyI4LjAwIjp7IjEiOlt7Im9kZHMiOjIuMDQ5OTk5OTk5OTk5OTk5ODIyMzY0MzE2MDU5OTc0OTUzNTMyMjE4OTMzMTA1NDY4NzUsInByb3ZpZGVyIjoxMTYxfSx7Im9kZHMiOjIuMTQ5OTk5OTk5OTk5OTk5OTExMTgyMTU4MDI5OTg3NDc2NzY2MTA5NDY2NTUyNzM0Mzc1LCJwcm92aWRlciI6OTk5fV19fV19fQ==/from/sure-bets/"
-      }
-    ],
-    "parse-time": 23,
-    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
-    "home-name": "New York Yankees",
-    "away-name": "Los Angeles Dodgers",
-    "home-participant-image": [
-      "/serve/images/team-logo/Men/00om48UE-OpJ5uAOg.png?260717101355"
-    ],
-    "away-participant-image": [
-      "/serve/images/team-logo/Men/xhJimV93-xUjXmOIP.png?260717101355"
-    ],
-    "sport-id": 6,
-    "sport-name": "Beisebol",
-    "sport-url": "baseball/",
-    "sport-url-locale": "/baseball/",
-    "superTemplate": {
-      "id": "",
-      "name": "",
-      "url": "",
-      "shortUrl": ""
-    },
-    "country-id": 200,
-    "country-name": "EUA",
-    "country-url": "/baseball/usa/",
-    "two-chart-code": "us",
-    "bookmakers-logos-urls": {
-      "0": {
-        "url": "/bookmakers/brasilbet/surebet",
-        "class": "logos l1161",
-        "coeficient": 2.05,
-        "name": "BrasilBet",
-        "providerID": 1161
-      },
-      "1": {
-        "url": "/bookmakers/br4bet/surebet",
-        "class": "logos l999",
-        "coeficient": 2.15,
-        "name": "BR4Bet",
-        "providerID": 999
-      }
-    },
-    "profit": "4.9%",
-    "start-time": "datet t1784503200-6-1-0-0",
-    "homeParticipantTypes": [
-      1
-    ],
-    "awayParticipantTypes": [
-      1
-    ]
-  },
-  {
-    "EventID": 9274213,
-    "BettingTypeID": 2,
-    "ScopeID": 3,
-    "DoubleParameter": "4.50",
-    "HandicapTypeID": 0,
-    "Profit": "1.048",
-    "return": "4.8",
-    "DateStart": 1784503200,
-    "odds": [
-      {
-        "idOutcome": "8r0r5x1tumsxe2x0",
-        "ProviderID": 1049,
-        "MaxOdds": 2.2,
-        "AvgOdds": 2.2,
-        "OutcomeResultID": 0
-      },
-      {
-        "idOutcome": "8r0r5x1tuq0xe2x0",
-        "ProviderID": 995,
-        "MaxOdds": 2,
-        "AvgOdds": 2,
-        "OutcomeResultID": 0
-      }
-    ],
-    "id": 9274213,
-    "name": "New York Yankees - Los Angeles Dodgers",
-    "url": "/baseball/h2h/los-angeles-dodgers-nwPDBpVc/new-york-yankees-SrC4LDIT/#r53xJUnL:over-under;3;4.50;0",
-    "date-start-base": 1784503200,
-    "is-double": false,
-    "tournament-id": 95993,
-    "tournament-name": "MLB",
-    "tournament-url": "/baseball/usa/mlb/",
-    "bettingtypename": "O/U 4.5, 1º TempoEntradas",
-    "calculator-link": [
-      {
-        "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyJyNTN4SlVuTCI6eyIyIjpbeyI0LjUwIjp7IjMiOlt7Im9kZHMiOjIuMjAwMDAwMDAwMDAwMDAwMTc3NjM1NjgzOTQwMDI1MDQ2NDY3NzgxMDY2ODk0NTMxMjUsInByb3ZpZGVyIjoxMDQ5fSx7Im9kZHMiOjIsInByb3ZpZGVyIjo5OTV9XX19XX19/from/sure-bets/"
-      }
-    ],
-    "parse-time": 45,
-    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
-    "home-name": "New York Yankees",
-    "away-name": "Los Angeles Dodgers",
-    "home-participant-image": [
-      "/serve/images/team-logo/Men/00om48UE-OpJ5uAOg.png?260717101355"
-    ],
-    "away-participant-image": [
-      "/serve/images/team-logo/Men/xhJimV93-xUjXmOIP.png?260717101355"
-    ],
-    "sport-id": 6,
-    "sport-name": "Beisebol",
-    "sport-url": "baseball/",
-    "sport-url-locale": "/baseball/",
-    "superTemplate": {
-      "id": "",
-      "name": "",
-      "url": "",
-      "shortUrl": ""
-    },
-    "country-id": 200,
-    "country-name": "EUA",
-    "country-url": "/baseball/usa/",
-    "two-chart-code": "us",
-    "bookmakers-logos-urls": {
-      "0": {
-        "url": "/bookmakers/lotogreen/surebet",
-        "class": "logos l1049",
-        "coeficient": 2.2,
-        "name": "Lotogreen",
-        "providerID": 1049
-      },
-      "1": {
-        "url": "/bookmakers/betnacional/surebet",
-        "class": "logos l995",
-        "coeficient": 2,
-        "name": "Betnacional",
-        "providerID": 995
-      }
-    },
-    "profit": "4.8%",
-    "start-time": "datet t1784503200-6-1-0-0",
-    "homeParticipantTypes": [
-      1
-    ],
-    "awayParticipantTypes": [
-      1
-    ]
-  },
-  {
-    "EventID": 11171861,
-    "BettingTypeID": 2,
-    "ScopeID": 13,
-    "DoubleParameter": "9.50",
-    "HandicapTypeID": 2,
-    "Profit": "1.045",
-    "return": "3.6",
-    "DateStart": 1784538000,
-    "odds": [
-      {
-        "idOutcome": "aku0lx210buxtmx0",
-        "ProviderID": 933,
-        "MaxOdds": 1.92,
-        "AvgOdds": 1.92,
-        "OutcomeResultID": 0
-      },
-      {
-        "idOutcome": "aku0lx210f2xtmx0",
-        "ProviderID": 574,
-        "MaxOdds": 2.25,
-        "AvgOdds": 2.25,
-        "OutcomeResultID": 0
-      }
-    ],
-    "id": 11171861,
-    "name": "Baez S. - M. Kecmanovic",
-    "url": "/tennis/h2h/baez-sebastian-dd8jLjtO/miomir-kecmanovic-MTQ5CPOR/#2kcMNLe3:over-under;13;9.50;2",
-    "date-start-base": 1784538000,
-    "is-double": false,
-    "tournament-id": 122085,
-    "tournament-name": "ATP Kitzbühel",
-    "tournament-url": "/tennis/austria/atp-kitzbuhel/",
-    "bettingtypename": "O/U 9.5 Games, 2º Set",
-    "calculator-link": [
-      {
-        "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyIya2NNTkxlMyI6eyIyIjp7IjIiOnsiOS41MCI6eyIxMyI6W3sib2RkcyI6MS45MTk5OTk5OTk5OTk5OTk5Mjg5NDU3MjY0MjM5ODk5ODE0MTI4ODc1NzMyNDIxODc1LCJwcm92aWRlciI6OTMzfSx7Im9kZHMiOjIuMjUsInByb3ZpZGVyIjo1NzR9XX19fX19/from/sure-bets/"
-      }
-    ],
-    "parse-time": 13,
-    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
-    "home-name": "Baez S.",
-    "away-name": "M. Kecmanovic",
-    "home-participant-image": [
-      "/serve/images/player-photo/Men/0xyvBeRQ-hI8rc03T.jpeg?260717101355"
-    ],
-    "away-participant-image": [
-      "/serve/images/player-photo/Men/rHtmwTKh-vmtNCDo1.jpeg?260717101355"
-    ],
-    "sport-id": 2,
-    "sport-name": "Tênis",
-    "sport-url": "tennis/",
-    "sport-url-locale": "/tennis/",
-    "home-country-two-chart-name": "ar",
-    "away-country-two-chart-name": "rs",
-    "superTemplate": {
-      "id": 5724,
-      "name": "ATP - Simples",
-      "url": "atp-simples",
-      "shortUrl": "atp"
-    },
-    "country-id": 25,
-    "country-name": "Áustria",
-    "country-url": "/tennis/austria/",
-    "two-chart-code": "at",
-    "bookmakers-logos-urls": {
-      "0": {
-        "url": "/bookmakers/superbet-br/surebet",
-        "class": "logos l933",
-        "coeficient": 1.92,
-        "name": "Superbet.br",
-        "providerID": 933
-      },
-      "1": {
-        "url": "/bookmakers/betano-br/surebet",
-        "class": "logos l574",
-        "coeficient": 2.25,
-        "name": "Betano.br",
-        "providerID": 574
-      }
-    },
-    "profit": "3.6%",
-    "start-time": "datet t1784538000-6-1-0-0",
+    "profit": "3.7%",
+    "start-time": "datet t1784620800-6-1-0-0",
     "homeParticipantTypes": [
       2
     ],
@@ -636,7 +189,7 @@
     "HandicapTypeID": 2,
     "Profit": "1.061",
     "return": "3.6",
-    "DateStart": 1784538000,
+    "DateStart": 1784624400,
     "odds": [
       {
         "idOutcome": "aku41x1tkuex2cix0",
@@ -656,7 +209,7 @@
     "id": 11171969,
     "name": "A. Blinkova - Bejlek S.",
     "url": "/tennis/h2h/anna-blinkova-f1PZMn7P/bejlek-sara-jVCKq0LH/#MicpF3Rj:over-under;2;24.50;2",
-    "date-start-base": 1784538000,
+    "date-start-base": 1784624400,
     "is-double": false,
     "tournament-id": 121463,
     "tournament-name": "WTA Aberto de Praga Livesport",
@@ -668,7 +221,7 @@
         "url": "/sure-bets-calculator/eod/eyJNaWNwRjNSaiI6eyIyIjp7IjIiOnsiMjQuNTAiOnsiMiI6W3sib2RkcyI6My4xMjAwMDAwMDAwMDAwMDAxMDY1ODE0MTAzNjQwMTUwMjc4ODA2Njg2NDAxMzY3MTg3NSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6MS41NTAwMDAwMDAwMDAwMDAwNDQ0MDg5MjA5ODUwMDYyNjE2MTY5NDUyNjY3MjM2MzI4MTI1LCJwcm92aWRlciI6NTc0fV19fX19fQ==/from/sure-bets/"
       }
     ],
-    "parse-time": 13,
+    "parse-time": 10,
     "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
     "home-name": "A. Blinkova",
     "away-name": "Bejlek S.",
@@ -711,7 +264,7 @@
       }
     },
     "profit": "3.6%",
-    "start-time": "datet t1784538000-6-1-0-0",
+    "start-time": "datet t1784624400-6-1-0-0",
     "homeParticipantTypes": [
       2
     ],
@@ -725,15 +278,15 @@
     "ScopeID": 2,
     "DoubleParameter": "23.50",
     "HandicapTypeID": 2,
-    "Profit": "1.057",
-    "return": "3.3",
-    "DateStart": 1784538000,
+    "Profit": "1.056",
+    "return": "3.2",
+    "DateStart": 1784624400,
     "odds": [
       {
         "idOutcome": "aku41x1tkuex29ex0",
         "ProviderID": 1157,
-        "MaxOdds": 2.85,
-        "AvgOdds": 2.85,
+        "MaxOdds": 2.84,
+        "AvgOdds": 2.84,
         "OutcomeResultID": 0
       },
       {
@@ -747,7 +300,7 @@
     "id": 11171969,
     "name": "A. Blinkova - Bejlek S.",
     "url": "/tennis/h2h/anna-blinkova-f1PZMn7P/bejlek-sara-jVCKq0LH/#MicpF3Rj:over-under;2;23.50;2",
-    "date-start-base": 1784538000,
+    "date-start-base": 1784624400,
     "is-double": false,
     "tournament-id": 121463,
     "tournament-name": "WTA Aberto de Praga Livesport",
@@ -756,10 +309,10 @@
     "calculator-link": [
       {
         "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyJNaWNwRjNSaiI6eyIyIjp7IjIiOnsiMjMuNTAiOnsiMiI6W3sib2RkcyI6Mi44NTAwMDAwMDAwMDAwMDAwODg4MTc4NDE5NzAwMTI1MjMyMzM4OTA1MzM0NDcyNjU2MjUsInByb3ZpZGVyIjoxMTU3fSx7Im9kZHMiOjEuNjIwMDAwMDAwMDAwMDAwMTA2NTgxNDEwMzY0MDE1MDI3ODgwNjY4NjQwMTM2NzE4NzUsInByb3ZpZGVyIjo1NzR9XX19fX19/from/sure-bets/"
+        "url": "/sure-bets-calculator/eod/eyJNaWNwRjNSaiI6eyIyIjp7IjIiOnsiMjMuNTAiOnsiMiI6W3sib2RkcyI6Mi44Mzk5OTk5OTk5OTk5OTk4NTc4OTE0NTI4NDc5Nzk5NjI4MjU3NzUxNDY0ODQzNzUsInByb3ZpZGVyIjoxMTU3fSx7Im9kZHMiOjEuNjIwMDAwMDAwMDAwMDAwMTA2NTgxNDEwMzY0MDE1MDI3ODgwNjY4NjQwMTM2NzE4NzUsInByb3ZpZGVyIjo1NzR9XX19fX19/from/sure-bets/"
       }
     ],
-    "parse-time": 13,
+    "parse-time": 10,
     "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
     "home-name": "A. Blinkova",
     "away-name": "Bejlek S.",
@@ -789,7 +342,7 @@
       "0": {
         "url": "/bookmakers/1xbet-br/surebet",
         "class": "logos l1157",
-        "coeficient": 2.85,
+        "coeficient": 2.84,
         "name": "1xBet.br",
         "providerID": 1157
       },
@@ -801,8 +354,8 @@
         "providerID": 574
       }
     },
-    "profit": "3.3%",
-    "start-time": "datet t1784538000-6-1-0-0",
+    "profit": "3.2%",
+    "start-time": "datet t1784624400-6-1-0-0",
     "homeParticipantTypes": [
       2
     ],
@@ -811,54 +364,61 @@
     ]
   },
   {
-    "EventID": 11162323,
-    "BettingTypeID": 2,
+    "EventID": 10688093,
+    "BettingTypeID": 1,
     "ScopeID": 2,
-    "DoubleParameter": "2.00",
+    "DoubleParameter": "0.00",
     "HandicapTypeID": 0,
-    "Profit": "1.052",
-    "return": "2.6",
-    "DateStart": 1784736000,
+    "Profit": "1.040",
+    "return": "3.1",
+    "DateStart": 1785092400,
     "odds": [
       {
-        "idOutcome": "akkmjx1tkucx68x0",
-        "ProviderID": 1157,
-        "MaxOdds": 1.67,
-        "AvgOdds": 1.67,
+        "idOutcome": "a65itxv464x0xrtqdr",
+        "ProviderID": 1161,
+        "MaxOdds": 3.35,
+        "AvgOdds": 3.35,
         "OutcomeResultID": 0
       },
       {
-        "idOutcome": "akkmjx1tl1gx68x0",
-        "ProviderID": 1091,
-        "MaxOdds": 2.66,
-        "AvgOdds": 2.66,
+        "idOutcome": "a65itxv498x0x0",
+        "ProviderID": 429,
+        "MaxOdds": 3.25,
+        "AvgOdds": 3.25,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "a65itxv464x0xrtqdt",
+        "ProviderID": 935,
+        "MaxOdds": 2.75,
+        "AvgOdds": 2.75,
         "OutcomeResultID": 0
       }
     ],
-    "id": 11162323,
-    "name": "Neftci Baku (Aze)  - Din. Minsk (Blr) ",
-    "url": "/football/h2h/din-minsk-Wtzu8xF1/neftci-baku-d0eNnarc/#0OyZEj8b:over-under;2;2.00;0",
-    "date-start-base": 1784736000,
+    "id": 10688093,
+    "name": "Inter Bogotá - América de Cali",
+    "url": "/football/h2h/america-de-cali-Oh9HQv4e/inter-bogota-KK2QOIY7/#KOAQRoC4:1X2;2",
+    "date-start-base": 1785092400,
     "is-double": false,
-    "tournament-id": 105807,
-    "tournament-name": "Liga Conferência",
-    "tournament-url": "/football/europe/liga-conferencia/",
-    "bettingtypename": "O/U 2",
+    "tournament-id": 92809,
+    "tournament-name": "Primeira A",
+    "tournament-url": "/football/colombia/primera-a/",
+    "bettingtypename": "1X2",
     "calculator-link": [
       {
         "text": "Clique aqui para calcular apostas",
-        "url": "/sure-bets-calculator/eod/eyIwT3laRWo4YiI6eyIyIjpbeyIyLjAwIjp7IjIiOlt7Im9kZHMiOjEuNjY5OTk5OTk5OTk5OTk5OTI4OTQ1NzI2NDIzOTg5OTgxNDEyODg3NTczMjQyMTg3NSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6Mi42NjAwMDAwMDAwMDAwMDAxNDIxMDg1NDcxNTIwMjAwMzcxNzQyMjQ4NTM1MTU2MjUsInByb3ZpZGVyIjoxMDkxfV19fV19fQ==/from/sure-bets/"
+        "url": "/sure-bets-calculator/eod/eyJLT0FRUm9DNCI6eyIxIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjMuMzUwMDAwMDAwMDAwMDAwMDg4ODE3ODQxOTcwMDEyNTIzMjMzODkwNTMzNDQ3MjY1NjI1LCJwcm92aWRlciI6MTE2MX0seyJvZGRzIjozLjI1LCJwcm92aWRlciI6NDI5fSx7Im9kZHMiOjIuNzUsInByb3ZpZGVyIjo5MzV9XX19XX19/from/sure-bets/"
       }
     ],
-    "parse-time": 203,
-    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 3 min ago)",
-    "home-name": "Neftci Baku",
-    "away-name": "Din. Minsk",
+    "parse-time": 17,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Inter Bogotá",
+    "away-name": "América de Cali",
     "home-participant-image": [
-      "/serve/images/team-logo/Men/AcH7IeTc-C4C6wm62.png?260717101355"
+      "/serve/images/team-logo/Men/4MN6O4CK-nouesssi.png?260717101355"
     ],
     "away-participant-image": [
-      "/serve/images/team-logo/Men/AViVOM9K-xUKWlpRC.png?260717101355"
+      "/serve/images/team-logo/Men/Ampwqyl9-hSZHTo4B.png?260717101355"
     ],
     "sport-id": 1,
     "sport-name": "Futebol",
@@ -870,33 +430,507 @@
       "url": "",
       "shortUrl": ""
     },
-    "country-id": 6,
-    "country-name": "Europa",
-    "country-url": "/football/europe/",
-    "two-chart-code": "6",
+    "country-id": 53,
+    "country-name": "Colômbia",
+    "country-url": "/football/colombia/",
+    "two-chart-code": "co",
     "bookmakers-logos-urls": {
       "0": {
-        "url": "/bookmakers/1xbet-br/surebet",
-        "class": "logos l1157",
-        "coeficient": 1.67,
-        "name": "1xBet.br",
-        "providerID": 1157
+        "url": "/bookmakers/brasilbet/surebet",
+        "class": "logos l1161",
+        "coeficient": 3.35,
+        "name": "BrasilBet",
+        "providerID": 1161
       },
       "1": {
-        "url": "/bookmakers/jogo-de-ouro/surebet",
-        "class": "logos l1091",
-        "coeficient": 2.66,
-        "name": "Jogo de Ouro",
-        "providerID": 1091
+        "url": "/bookmakers/betfair/surebet",
+        "class": "logos l429",
+        "coeficient": 3.25,
+        "name": "Betfair",
+        "providerID": 429
+      },
+      "2": {
+        "url": "/bookmakers/kto-br/surebet",
+        "class": "logos l935",
+        "coeficient": 2.75,
+        "name": "KTO.br",
+        "providerID": 935
       }
     },
-    "profit": "2.6%",
-    "start-time": "datet t1784736000-6-1-0-0",
+    "profit": "3.1%",
+    "start-time": "datet t1785092400-6-1-0-0",
     "homeParticipantTypes": [
       1
     ],
     "awayParticipantTypes": [
       1
+    ]
+  },
+  {
+    "EventID": 10480323,
+    "BettingTypeID": 1,
+    "ScopeID": 2,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.071",
+    "return": "2.7",
+    "DateStart": 1785063600,
+    "odds": [
+      {
+        "idOutcome": "9vqm3xv464x0xrdngl",
+        "ProviderID": 429,
+        "MaxOdds": 2.4,
+        "AvgOdds": 2.4,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "9vqm3xv498x0x0",
+        "ProviderID": 1157,
+        "MaxOdds": 33,
+        "AvgOdds": 33,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "9vqm3xv464x0xrdngn",
+        "ProviderID": 1157,
+        "MaxOdds": 1.9,
+        "AvgOdds": 1.9,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 10480323,
+    "name": "Tszyu T. - Spence Jr. E.",
+    "url": "/boxing/h2h/spence-errol-AelkDlxH/tszyu-tim-zNi9cuVn/#rLbkzZom:1X2;2",
+    "date-start-base": 1785063600,
+    "is-double": false,
+    "tournament-id": 125365,
+    "tournament-name": "Peso Médio-Ligeiro - Disputas diversas Masculino",
+    "tournament-url": "/boxing/world/peso-medio-ligeiro-disputas-diversas-masculino/",
+    "bettingtypename": "1X2",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJyTGJrelpvbSI6eyIxIjpbeyIwLjAwIjp7IjIiOlt7Im9kZHMiOjIuMzk5OTk5OTk5OTk5OTk5OTExMTgyMTU4MDI5OTg3NDc2NzY2MTA5NDY2NTUyNzM0Mzc1LCJwcm92aWRlciI6NDI5fSx7Im9kZHMiOjMzLCJwcm92aWRlciI6MTE1N30seyJvZGRzIjoxLjg5OTk5OTk5OTk5OTk5OTkxMTE4MjE1ODAyOTk4NzQ3Njc2NjEwOTQ2NjU1MjczNDM3NSwicHJvdmlkZXIiOjExNTd9XX19XX19/from/sure-bets/"
+      }
+    ],
+    "parse-time": 9,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Tszyu T.",
+    "away-name": "Spence Jr. E.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Men/boAX3EM9-rHv7h74C.jpeg?260717101355"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Men/6PRjk3pL-xKTS3xeh.jpeg?260717101355"
+    ],
+    "sport-id": 16,
+    "sport-name": "Boxe",
+    "sport-url": "boxing/",
+    "sport-url-locale": "/boxing/",
+    "home-country-two-chart-name": "au",
+    "away-country-two-chart-name": "us",
+    "superTemplate": {
+      "id": 5768,
+      "name": "Médio-Ligeiro - Masculino",
+      "url": "peso-medio-ligeiro-masculino",
+      "shortUrl": "mle"
+    },
+    "country-id": 8,
+    "country-name": "Mundo",
+    "country-url": "/boxing/world/",
+    "two-chart-code": "8",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/betfair/surebet",
+        "class": "logos l429",
+        "coeficient": 2.4,
+        "name": "Betfair",
+        "providerID": 429
+      },
+      "1": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 33,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "2": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.9,
+        "name": "1xBet.br",
+        "providerID": 1157
+      }
+    },
+    "profit": "2.7%",
+    "start-time": "datet t1785063600-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
+  },
+  {
+    "EventID": 11172173,
+    "BettingTypeID": 2,
+    "ScopeID": 2,
+    "DoubleParameter": "23.50",
+    "HandicapTypeID": 2,
+    "Profit": "1.050",
+    "return": "2.6",
+    "DateStart": 1784565000,
+    "odds": [
+      {
+        "idOutcome": "akuadx1tkuex29ex0",
+        "ProviderID": 1157,
+        "MaxOdds": 2.96,
+        "AvgOdds": 2.96,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "akuadx1tl1ix29ex0",
+        "ProviderID": 933,
+        "MaxOdds": 1.57,
+        "AvgOdds": 1.57,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 11172173,
+    "name": "Gorgodze E. - Mintegi Del Olmo A.",
+    "url": "/tennis/h2h/gorgodze-ekaterine-vPEmPARA/mintegi-del-olmo-ane-zm1m9Ic9/#KzDN15RF:over-under;2;23.50;2",
+    "date-start-base": 1784565000,
+    "is-double": false,
+    "tournament-id": 141693,
+    "tournament-name": "Palermo Challenger Mulheres",
+    "tournament-url": "/tennis/italy/palermo-challenger-mulheres/",
+    "bettingtypename": "O/U 23.5 Games",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJLekROMTVSRiI6eyIyIjp7IjIiOnsiMjMuNTAiOnsiMiI6W3sib2RkcyI6Mi45NTk5OTk5OTk5OTk5OTk5NjQ0NzI4NjMyMTE5OTQ5OTA3MDY0NDM3ODY2MjEwOTM3NSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6MS41NzAwMDAwMDAwMDAwMDAwNjIxNzI0ODkzNzkwMDg3NjYyNjM3MjMzNzM0MTMwODU5Mzc1LCJwcm92aWRlciI6OTMzfV19fX19fQ==/from/sure-bets/"
+      }
+    ],
+    "parse-time": 10,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Gorgodze E.",
+    "away-name": "Mintegi Del Olmo A.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Women/Mw3kuz4F-jiJHwiud.jpeg?260717101355"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Women/vitbwdbs-zRim8JAQ.jpeg?260717101355"
+    ],
+    "sport-id": 2,
+    "sport-name": "Tênis",
+    "sport-url": "tennis/",
+    "sport-url-locale": "/tennis/",
+    "home-country-two-chart-name": "ge",
+    "away-country-two-chart-name": "es",
+    "superTemplate": {
+      "id": 5730,
+      "name": "Challenger Feminino - Simples",
+      "url": "challenger-mulheres-simples",
+      "shortUrl": "cha"
+    },
+    "country-id": 98,
+    "country-name": "Itália",
+    "country-url": "/tennis/italy/",
+    "two-chart-code": "it",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 2.96,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/superbet-br/surebet",
+        "class": "logos l933",
+        "coeficient": 1.57,
+        "name": "Superbet.br",
+        "providerID": 933
+      }
+    },
+    "profit": "2.6%",
+    "start-time": "datet t1784565000-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
+  },
+  {
+    "EventID": 11174489,
+    "BettingTypeID": 3,
+    "ScopeID": 12,
+    "DoubleParameter": "0.00",
+    "HandicapTypeID": 0,
+    "Profit": "1.036",
+    "return": "2.6",
+    "DateStart": 1784620800,
+    "odds": [
+      {
+        "idOutcome": "al0ipx2v6v4x0xt04f3",
+        "ProviderID": 953,
+        "MaxOdds": 3.4,
+        "AvgOdds": 3.4,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "al0ipx2v6v4x0xt04f7",
+        "ProviderID": 1157,
+        "MaxOdds": 1.47,
+        "AvgOdds": 1.47,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 11174489,
+    "name": "Kawa K. - Badosa P.",
+    "url": "/tennis/h2h/kawa-katarzyna-2kS2AMrn/paula-badosa-Wl76rX3I/#nPD1MKjo:home-away;12",
+    "date-start-base": 1784620800,
+    "is-double": false,
+    "tournament-id": 121467,
+    "tournament-name": "WTA Hamburgo",
+    "tournament-url": "/tennis/germany/wta-hamburgo/",
+    "bettingtypename": "H/A, 1º Set",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJuUEQxTUtqbyI6eyIzIjpbeyIwLjAwIjp7IjEyIjpbeyJvZGRzIjozLjM5OTk5OTk5OTk5OTk5OTkxMTE4MjE1ODAyOTk4NzQ3Njc2NjEwOTQ2NjU1MjczNDM3NSwicHJvdmlkZXIiOjk1M30seyJvZGRzIjoxLjQ2OTk5OTk5OTk5OTk5OTk3MzM1NDY0NzQwODk5NjI0MzAyOTgzMjgzOTk2NTgyMDMxMjUsInByb3ZpZGVyIjoxMTU3fV19fV19fQ==/from/sure-bets/"
+      }
+    ],
+    "parse-time": 10,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Kawa K.",
+    "away-name": "Badosa P.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Women/nwWbR4RQ-jqX5MBQM.jpeg?260717101355"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Women/hnAukt1b-Imfa8Cul.jpeg?260717101355"
+    ],
+    "sport-id": 2,
+    "sport-name": "Tênis",
+    "sport-url": "tennis/",
+    "sport-url-locale": "/tennis/",
+    "home-country-two-chart-name": "pl",
+    "away-country-two-chart-name": "es",
+    "superTemplate": {
+      "id": 5725,
+      "name": "WTA - Simples",
+      "url": "wta-simples",
+      "shortUrl": "wta"
+    },
+    "country-id": 81,
+    "country-name": "Alemanha",
+    "country-url": "/tennis/germany/",
+    "two-chart-code": "de",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/f12/surebet",
+        "class": "logos l953",
+        "coeficient": 3.4,
+        "name": "F12",
+        "providerID": 953
+      },
+      "1": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.47,
+        "name": "1xBet.br",
+        "providerID": 1157
+      }
+    },
+    "profit": "2.6%",
+    "start-time": "datet t1784620800-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
+    ]
+  },
+  {
+    "EventID": 10486279,
+    "BettingTypeID": 2,
+    "ScopeID": 2,
+    "DoubleParameter": "21.50",
+    "HandicapTypeID": 0,
+    "Profit": "1.043",
+    "return": "2.5",
+    "DateStart": 1784715300,
+    "odds": [
+      {
+        "idOutcome": "a00g7x1tkucx236x0",
+        "ProviderID": 943,
+        "MaxOdds": 1.83,
+        "AvgOdds": 1.83,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "a00g7x1tl1gx236x0",
+        "ProviderID": 1157,
+        "MaxOdds": 2.33,
+        "AvgOdds": 2.33,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 10486279,
+    "name": "Itália F - Austrália F",
+    "url": "/water-polo/h2h/australia-KMPaybuU/italia-6Tjo5rPj/#jNZYVqBD:over-under;2;21.50;0",
+    "date-start-base": 1784715300,
+    "is-double": false,
+    "tournament-id": 130555,
+    "tournament-name": "Copa do Mundo Feminina",
+    "tournament-url": "/water-polo/world/copa-do-mundo-feminina/",
+    "bettingtypename": "O/U 21.5",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJqTlpZVnFCRCI6eyIyIjpbeyIyMS41MCI6eyIyIjpbeyJvZGRzIjoxLjgzMDAwMDAwMDAwMDAwMDA3MTA1NDI3MzU3NjAxMDAxODU4NzExMjQyNjc1NzgxMjUsInByb3ZpZGVyIjo5NDN9LHsib2RkcyI6Mi4zMzAwMDAwMDAwMDAwMDAwNzEwNTQyNzM1NzYwMTAwMTg1ODcxMTI0MjY3NTc4MTI1LCJwcm92aWRlciI6MTE1N31dfX1dfX0=/from/sure-bets/"
+      }
+    ],
+    "parse-time": 10,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Itália F",
+    "away-name": "Austrália F",
+    "home-participant-image": [
+      "/serve/images/team-logo/Women/Ovyye8iQ-KlAt1sqc.png?260717101355"
+    ],
+    "away-participant-image": [
+      "/serve/images/team-logo/Women/bgatFRQt-nR6SBSXe.png?260717101355"
+    ],
+    "sport-id": 22,
+    "sport-name": "Polo Aquático",
+    "sport-url": "water-polo/",
+    "sport-url-locale": "/water-polo/",
+    "superTemplate": {
+      "id": "",
+      "name": "",
+      "url": "",
+      "shortUrl": ""
+    },
+    "country-id": 8,
+    "country-name": "Mundo",
+    "country-url": "/water-polo/world/",
+    "two-chart-code": "8",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/betboom-br/surebet",
+        "class": "logos l943",
+        "coeficient": 1.83,
+        "name": "Betboom.br",
+        "providerID": 943
+      },
+      "1": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 2.33,
+        "name": "1xBet.br",
+        "providerID": 1157
+      }
+    },
+    "profit": "2.5%",
+    "start-time": "datet t1784715300-6-1-0-0",
+    "homeParticipantTypes": [
+      17
+    ],
+    "awayParticipantTypes": [
+      17
+    ]
+  },
+  {
+    "EventID": 11172729,
+    "BettingTypeID": 2,
+    "ScopeID": 12,
+    "DoubleParameter": "8.50",
+    "HandicapTypeID": 2,
+    "Profit": "1.068",
+    "return": "2.3",
+    "DateStart": 1784572200,
+    "odds": [
+      {
+        "idOutcome": "akurpx20mjexqix0",
+        "ProviderID": 1157,
+        "MaxOdds": 1.63,
+        "AvgOdds": 1.63,
+        "OutcomeResultID": 0
+      },
+      {
+        "idOutcome": "akurpx20mmixqix0",
+        "ProviderID": 1161,
+        "MaxOdds": 2.75,
+        "AvgOdds": 2.75,
+        "OutcomeResultID": 0
+      }
+    ],
+    "id": 11172729,
+    "name": "Bicknell B. - Walton A.",
+    "url": "/tennis/h2h/bicknell-blaise-0AnSaqQc/walton-adam-jNRjAU1U/#fT3TJWY1:over-under;12;8.50;2",
+    "date-start-base": 1784572200,
+    "is-double": false,
+    "tournament-id": 141703,
+    "tournament-name": "Bloomfield Hills Challenger Homens",
+    "tournament-url": "/tennis/usa/bloomfield-hills-challenger-homens/",
+    "bettingtypename": "O/U 8.5 Games, 1º Set",
+    "calculator-link": [
+      {
+        "text": "Clique aqui para calcular apostas",
+        "url": "/sure-bets-calculator/eod/eyJmVDNUSldZMSI6eyIyIjp7IjIiOnsiOC41MCI6eyIxMiI6W3sib2RkcyI6MS42Mjk5OTk5OTk5OTk5OTk4OTM0MTg1ODk2MzU5ODQ5NzIxMTkzMzEzNTk4NjMyODEyNSwicHJvdmlkZXIiOjExNTd9LHsib2RkcyI6Mi43NSwicHJvdmlkZXIiOjExNjF9XX19fX19/from/sure-bets/"
+      }
+    ],
+    "parse-time": 9,
+    "fresh-odds": "ODDS MAIS RECENTES(Last sure bet update: 0 min ago)",
+    "home-name": "Bicknell B.",
+    "away-name": "Walton A.",
+    "home-participant-image": [
+      "/serve/images/player-photo/Men/YR27ePcs-hKeU4FkA.jpeg?260717101355"
+    ],
+    "away-participant-image": [
+      "/serve/images/player-photo/Men/KOtF9ys4-QF4WmU97.jpeg?260717101355"
+    ],
+    "sport-id": 2,
+    "sport-name": "Tênis",
+    "sport-url": "tennis/",
+    "sport-url-locale": "/tennis/",
+    "home-country-two-chart-name": "jm",
+    "away-country-two-chart-name": "au",
+    "superTemplate": {
+      "id": 5729,
+      "name": "Challenger Masculino - Simples",
+      "url": "challenger-homens-simples",
+      "shortUrl": "cha"
+    },
+    "country-id": 200,
+    "country-name": "EUA",
+    "country-url": "/tennis/usa/",
+    "two-chart-code": "us",
+    "bookmakers-logos-urls": {
+      "0": {
+        "url": "/bookmakers/1xbet-br/surebet",
+        "class": "logos l1157",
+        "coeficient": 1.63,
+        "name": "1xBet.br",
+        "providerID": 1157
+      },
+      "1": {
+        "url": "/bookmakers/brasilbet/surebet",
+        "class": "logos l1161",
+        "coeficient": 2.75,
+        "name": "BrasilBet",
+        "providerID": 1161
+      }
+    },
+    "profit": "2.3%",
+    "start-time": "datet t1784572200-6-1-0-0",
+    "homeParticipantTypes": [
+      2
+    ],
+    "awayParticipantTypes": [
+      2
     ]
   }
 ]

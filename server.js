@@ -793,7 +793,7 @@ function crossReferenceBetEsporte(oddsagoraRows, betesporteEvents) {
     matched++;
 
     const beFormatted = betOutcomes.map(o => ({
-      name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: match.url || getBookmakerDirectUrl("BetEsporte") || "", betesporte: true
+      name: resolveBetEsporteName(o.name, match.home, match.away), bookmaker: "BetEsporte", odd: o.odd, url: match.url || getBookmakerDirectUrl("BetEsporte") || "", betesporte: true
     }));
     const mergedOutcomes = mergeBestOutcomes(row.outcomes || [], beFormatted, team1, team2);
 
@@ -1218,7 +1218,7 @@ function crossReferencePinnacleStake(pinnacleEvents, stakeEvents) {
     const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1);
     const pinOutcomes = (match.outcomes || []).filter(o => Number(o.odd) > 1 && o.name && o.name !== "Selecao" && o.name !== "");
 
-    const seMoneyline = seOutcomes.filter(o => o.name !== "Empate" && o.name !== "Draw");
+    const seMoneyline = seOutcomes;
     const pinMoneyline = pinOutcomes.filter(o => o.marketType === "moneyline");
 
     if (seMoneyline.length >= 2 && pinMoneyline.length >= 2) {
@@ -1284,20 +1284,20 @@ function crossReferenceBetEsporteStake(betesporteEvents, stakeEvents) {
 
     if (!match) continue;
 
-    const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1 && o.name !== "Empate" && o.name !== "Draw");
-    const beOutcomes = (match.outcomes || []).filter(o =>
-      Number(o.odd) > 1 && (o.typeId === 1 || o.typeId === 1601 || o.typeId === 186 || o.typeId === 219 || o.typeId === 251 || o.typeId === 340 || o.typeId === 406)
-    );
+    const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1);
+      const beOutcomes = (match.outcomes || []).filter(o =>
+        Number(o.odd) > 1 && (o.typeId === 1 || o.typeId === 1601 || o.typeId === 186 || o.typeId === 219 || o.typeId === 251 || o.typeId === 340 || o.typeId === 406)
+      );
 
-    if (seOutcomes.length >= 2 && beOutcomes.length >= 2) {
-      const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
-      const beUrl = match.url || getBookmakerDirectUrl("BetEsporte") || "";
-      const seFormatted = seOutcomes.slice(0, 3).map(o => ({
-        name: o.name, bookmaker: "Stake", odd: o.odd, url: seUrl, fromStake: true
-      }));
-      const beFormatted = beOutcomes.slice(0, 3).map(o => ({
-        name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
-      }));
+      if (seOutcomes.length >= 2 && beOutcomes.length >= 2) {
+        const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
+        const beUrl = match.url || getBookmakerDirectUrl("BetEsporte") || "";
+        const seFormatted = seOutcomes.slice(0, 3).map(o => ({
+          name: o.name, bookmaker: "Stake", odd: o.odd, url: seUrl, fromStake: true
+        }));
+        const beFormatted = beOutcomes.slice(0, 3).map(o => ({
+          name: resolveBetEsporteName(o.name, match.home, match.away), bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
+        }));
       const combined = mergeBestOutcomes(seFormatted, beFormatted, se.home, se.away);
       const books = new Set(combined.map(o => o.bookmaker));
       if (books.size < 2) continue;
@@ -1323,6 +1323,13 @@ function crossReferenceBetEsporteStake(betesporteEvents, stakeEvents) {
   }
 
   return { rows: comparisons, matched };
+}
+
+function resolveBetEsporteName(name, home, away) {
+  const n = (name || "").toLowerCase();
+  if (n === "casa" || n === "home" || n === "1") return home;
+  if (n === "fora" || n === "away" || n === "2") return away;
+  return name;
 }
 
 function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
@@ -1365,7 +1372,7 @@ function crossReferencePinnacleBetEsporte(pinnacleEvents, betesporteEvents) {
       const beUrl = be.url || getBookmakerDirectUrl("BetEsporte") || "";
       const pinUrl = match.url || getBookmakerDirectUrl("Pinnacle") || "";
       const beFormatted = beMoneylines.slice(0, Math.min(beMoneylines.length, 3)).map(o => ({
-        name: o.name, bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
+        name: resolveBetEsporteName(o.name, be.home, be.away), bookmaker: "BetEsporte", odd: o.odd, url: beUrl, betesporte: true
       }));
       const pinFormatted = pinMoneylines.slice(0, Math.min(pinMoneylines.length, 3)).map(o => ({
         name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: pinUrl, pinnacle: true

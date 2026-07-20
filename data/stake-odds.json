@@ -1,27 +1,534 @@
 [
   {
-    "home": "Ottawa Redblacks",
-    "away": "Winnipeg Blue Bombers",
-    "league": "CFL",
-    "category": "Canada",
-    "sport": "Futebol Americano",
-    "startTime": "2026-07-19T23:00:00.000Z",
+    "home": "Jwaaya FC",
+    "away": "AL Ahed",
+    "league": "Premier League",
+    "category": "Lebanon",
+    "sport": "Futebol",
+    "startTime": "2026-07-20T14:30:00.000Z",
     "market": "Multi",
-    "url": "https://stake.com/sports/american-football/46720870-ottawa-redblacks-winnipeg-blue-bombers",
+    "url": "https://stake.com/sports/soccer/46730814-jwaaya-fc-al-ahed-fc",
     "outcomes": [
       {
-        "name": "Ottawa Redblacks",
-        "odd": 2.9,
+        "name": "Jwaaya FC",
+        "odd": 2.46,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 21,
+        "odd": 3.05,
         "bookmaker": "Stake"
       },
       {
+        "name": "AL Ahed",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Jwaaya FC",
+        "odd": 2.46,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.05,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "AL Ahed",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Jwaaya FC",
+        "odd": 2.46,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.05,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "AL Ahed",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "FK Jelgava",
+    "away": "FK Rigas Futbola Skola",
+    "league": "Virsliga",
+    "category": "Latvia",
+    "sport": "Futebol",
+    "startTime": "2026-07-20T15:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/soccer/46683982-fs-jelgava-fc-rfs",
+    "outcomes": [
+      {
+        "name": "FK Jelgava",
+        "odd": 7.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 5.2,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Rigas Futbola Skola",
+        "odd": 1.26,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Jelgava",
+        "odd": 7.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 5.2,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Rigas Futbola Skola",
+        "odd": 1.26,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Jelgava",
+        "odd": 7.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 5.2,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Rigas Futbola Skola",
+        "odd": 1.26,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Turun Palloseura",
+    "away": "Tampereen Ilves",
+    "league": "Veikkausliiga",
+    "category": "Finland",
+    "sport": "Futebol",
+    "startTime": "2026-07-20T15:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/soccer/46629100-turun-palloseura-tampereen-ilves",
+    "outcomes": [
+      {
+        "name": "Turun Palloseura",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.45,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Tampereen Ilves",
+        "odd": 2.36,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Turun Palloseura",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.45,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Tampereen Ilves",
+        "odd": 2.36,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Turun Palloseura",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.45,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Tampereen Ilves",
+        "odd": 2.36,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "CS Corvinul 1921 Hunedoara",
+    "away": "FK Csikszereda Miercurea Ciuc",
+    "league": "Liga I",
+    "category": "Romania",
+    "sport": "Futebol",
+    "startTime": "2026-07-20T15:30:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/soccer/46680757-fc-corvinul-hunedoara-1921-afk-csikszereda-miercurea-ciuc",
+    "outcomes": [
+      {
+        "name": "CS Corvinul 1921 Hunedoara",
+        "odd": 2.14,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.15,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Csikszereda Miercurea Ciuc",
+        "odd": 3.15,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "CS Corvinul 1921 Hunedoara",
+        "odd": 2.14,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.15,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Csikszereda Miercurea Ciuc",
+        "odd": 3.15,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "CS Corvinul 1921 Hunedoara",
+        "odd": 2.14,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.15,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Csikszereda Miercurea Ciuc",
+        "odd": 3.15,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "KPV Kokkola",
+    "away": "Rovaniemen Palloseura",
+    "league": "Ykkonen",
+    "category": "Finland",
+    "sport": "Futebol",
+    "startTime": "2026-07-20T15:30:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/soccer/46727607-kpv-kokkola-rovaniemen-palloseura",
+    "outcomes": [
+      {
+        "name": "KPV Kokkola",
+        "odd": 8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 5.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Rovaniemen Palloseura",
+        "odd": 1.21,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "KPV Kokkola",
+        "odd": 8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 5.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Rovaniemen Palloseura",
+        "odd": 1.21,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "KPV Kokkola",
+        "odd": 8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 5.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Rovaniemen Palloseura",
+        "odd": 1.21,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "FK Suduva Marijampole",
+    "away": "FC Hegelmann Litauen Kaunas",
+    "league": "A Lyga",
+    "category": "Lithuania",
+    "sport": "Futebol",
+    "startTime": "2026-07-20T15:45:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/soccer/46629096-fk-suduva-marijampole-fc-hegelmann-kaunas",
+    "outcomes": [
+      {
+        "name": "FK Suduva Marijampole",
+        "odd": 1.54,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.55,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FC Hegelmann Litauen Kaunas",
+        "odd": 5.4,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Suduva Marijampole",
+        "odd": 1.54,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.55,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FC Hegelmann Litauen Kaunas",
+        "odd": 5.4,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FK Suduva Marijampole",
+        "odd": 1.54,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.55,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FC Hegelmann Litauen Kaunas",
+        "odd": 5.4,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "IFK Mariehamn",
+    "away": "FC Lahti",
+    "league": "Veikkausliiga",
+    "category": "Finland",
+    "sport": "Futebol",
+    "startTime": "2026-07-20T16:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/soccer/46629099-ifk-mariehamn-fc-lahti",
+    "outcomes": [
+      {
+        "name": "IFK Mariehamn",
+        "odd": 4.9,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.95,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FC Lahti",
+        "odd": 1.56,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "IFK Mariehamn",
+        "odd": 4.9,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.95,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FC Lahti",
+        "odd": 1.56,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "IFK Mariehamn",
+        "odd": 4.9,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 3.95,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "FC Lahti",
+        "odd": 1.56,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Saskatchewan Roughriders",
+    "away": "Edmonton Elks",
+    "league": "CFL",
+    "category": "Canada",
+    "sport": "Futebol Americano",
+    "startTime": "2026-07-24T01:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/american-football/46739600-saskatchewan-roughriders-edmonton-elks",
+    "outcomes": [
+      {
+        "name": "Saskatchewan Roughriders",
+        "odd": 1.53,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Edmonton Elks",
+        "odd": 2.65,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Winnipeg Blue Bombers",
+    "away": "Calgary Stampeders",
+    "league": "CFL",
+    "category": "Canada",
+    "sport": "Futebol Americano",
+    "startTime": "2026-07-25T00:30:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/american-football/46739599-winnipeg-blue-bombers-calgary-stampeders",
+    "outcomes": [
+      {
         "name": "Winnipeg Blue Bombers",
-        "odd": 1.45,
+        "odd": 1.99,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 19,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Calgary Stampeders",
+        "odd": 1.91,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "British Columbia Lions",
+    "away": "Toronto Argonauts",
+    "league": "CFL",
+    "category": "Canada",
+    "sport": "Futebol Americano",
+    "startTime": "2026-07-25T23:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/american-football/46739610-british-columbia-lions-toronto-argonauts",
+    "outcomes": [
+      {
+        "name": "British Columbia Lions",
+        "odd": 2.47,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Toronto Argonauts",
+        "odd": 1.6,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Montreal Alouettes",
+    "away": "Hamilton Tiger-Cats",
+    "league": "CFL",
+    "category": "Canada",
+    "sport": "Futebol Americano",
+    "startTime": "2026-07-26T23:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/american-football/46739604-montreal-alouettes-hamilton-tiger-cats",
+    "outcomes": [
+      {
+        "name": "Montreal Alouettes",
+        "odd": 1.17,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 28,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Hamilton Tiger-Cats",
+        "odd": 5.4,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Finland",
+    "away": "Switzerland",
+    "league": "U20 Friendly Games",
+    "category": "International",
+    "sport": "Hockey",
+    "startTime": "2026-07-20T12:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/ice-hockey/46727618-finland-switzerland",
+    "outcomes": [
+      {
+        "name": "Finland",
+        "odd": 1.35,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 5.25,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Switzerland",
+        "odd": 5.75,
         "bookmaker": "Stake"
       }
     ]
@@ -38,17 +545,44 @@
     "outcomes": [
       {
         "name": "Skycity Stampede",
-        "odd": 1.47,
+        "odd": 1.32,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 4.9,
+        "odd": 6.6,
         "bookmaker": "Stake"
       },
       {
         "name": "West Auckland Admirals",
+        "odd": 5.6,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Botany Swarm",
+    "away": "Canterbury Red Devils",
+    "league": "NZIHL",
+    "category": "New Zealand",
+    "sport": "Hockey",
+    "startTime": "2026-07-25T04:45:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/ice-hockey/46739101-botany-swarm-canterbury-red-devils",
+    "outcomes": [
+      {
+        "name": "Botany Swarm",
+        "odd": 2.46,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
         "odd": 4.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Canterbury Red Devils",
+        "odd": 2.11,
         "bookmaker": "Stake"
       }
     ]
@@ -243,568 +777,58 @@
     ]
   },
   {
-    "home": "Neftekhimik Nizhnekamsk",
-    "away": "Shanghai Dragons",
-    "league": "KHL",
-    "category": "Russia",
-    "sport": "Hockey",
-    "startTime": "2026-09-06T13:00:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/ice-hockey/46686337-neftekhimik-nizhnekamsk-shanghai-dragons",
-    "outcomes": [
-      {
-        "name": "Neftekhimik Nizhnekamsk",
-        "odd": 1.85,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 4.2,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Shanghai Dragons",
-        "odd": 3.2,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "HC Litvinov",
-    "away": "HC Kometa Brno",
-    "league": "Extraliga",
-    "category": "Czech Republic",
-    "sport": "Hockey",
-    "startTime": "2026-09-16T15:30:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/ice-hockey/46712024-hc-litvinov-hc-kometa-brno",
-    "outcomes": [
-      {
-        "name": "HC Litvinov",
-        "odd": 3.6,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 4.5,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "HC Kometa Brno",
-        "odd": 1.7,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Italy",
-    "away": "Kosovo",
-    "league": "U20 EHF Championship, Tour 1",
+    "home": "Korea Republic U20",
+    "away": "Kuwait U20",
+    "league": "U20 Asian Championship",
     "category": "International",
     "sport": "Handebol",
-    "startTime": "2026-07-19T14:00:00.000Z",
+    "startTime": "2026-07-20T12:00:00.000Z",
     "market": "Multi",
-    "url": "https://stake.com/sports/handball/46737327-italy-kosovo",
+    "url": "https://stake.com/sports/handball/46727623-korea-republic-u20-kuwait-u20",
     "outcomes": [
       {
-        "name": "Italy",
+        "name": "Korea Republic U20",
         "odd": 1.55,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 8,
+        "odd": 7.5,
         "bookmaker": "Stake"
       },
       {
-        "name": "Kosovo",
-        "odd": 2.95,
+        "name": "Kuwait U20",
+        "odd": 2.75,
         "bookmaker": "Stake"
       },
       {
-        "name": "Italy",
+        "name": "Korea Republic U20",
         "odd": 1.55,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 8,
+        "odd": 7.5,
         "bookmaker": "Stake"
       },
       {
-        "name": "Kosovo",
-        "odd": 2.95,
+        "name": "Kuwait U20",
+        "odd": 2.75,
         "bookmaker": "Stake"
       },
       {
-        "name": "Italy",
+        "name": "Korea Republic U20",
         "odd": 1.55,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 8,
+        "odd": 7.5,
         "bookmaker": "Stake"
       },
       {
-        "name": "Kosovo",
-        "odd": 2.95,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Switzerland",
-    "away": "Spain",
-    "league": "U20 EHF Euro",
-    "category": "International",
-    "sport": "Handebol",
-    "startTime": "2026-07-19T14:00:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/handball/46737190-switzerland-spain",
-    "outcomes": [
-      {
-        "name": "Switzerland",
-        "odd": 3.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 9.8,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Spain",
-        "odd": 1.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Switzerland",
-        "odd": 3.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 9.8,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Spain",
-        "odd": 1.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Switzerland",
-        "odd": 3.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 9.8,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Spain",
-        "odd": 1.4,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Denmark",
-    "away": "Slovenia",
-    "league": "U20 EHF Euro",
-    "category": "International",
-    "sport": "Handebol",
-    "startTime": "2026-07-19T14:00:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/handball/46737195-denmark-slovenia",
-    "outcomes": [
-      {
-        "name": "Denmark",
-        "odd": 1.44,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 9.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Slovenia",
-        "odd": 3.2,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Denmark",
-        "odd": 1.44,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 9.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Slovenia",
-        "odd": 3.2,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Denmark",
-        "odd": 1.44,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 9.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Slovenia",
-        "odd": 3.2,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Sweden",
-    "away": "Hungary",
-    "league": "U20 EHF Euro",
-    "category": "International",
-    "sport": "Handebol",
-    "startTime": "2026-07-19T16:30:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/handball/46737196-sweden-hungary",
-    "outcomes": [
-      {
-        "name": "Sweden",
-        "odd": 1.21,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 12,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Hungary",
-        "odd": 5,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Sweden",
-        "odd": 1.21,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 12,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Hungary",
-        "odd": 5,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Sweden",
-        "odd": 1.21,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 12,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Hungary",
-        "odd": 5,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Whitehaven R.L.F.C.",
-    "away": "Goole Vikings",
-    "league": "RFL Championship",
-    "category": "Rugby League",
-    "sport": "Rugby",
-    "startTime": "2026-07-19T12:30:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/rugby/46736092-whitehaven-r-l-f-c-goole-vikings",
-    "outcomes": [
-      {
-        "name": "Whitehaven R.L.F.C.",
-        "odd": 1.36,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 24,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Goole Vikings",
-        "odd": 3.35,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Whitehaven R.L.F.C.",
-        "odd": 1.36,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 24,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Goole Vikings",
-        "odd": 3.35,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Whitehaven R.L.F.C.",
-        "odd": 1.36,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 24,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Goole Vikings",
-        "odd": 3.35,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Boland Cavaliers",
-    "away": "Blue Bulls",
-    "league": "Currie Cup",
-    "category": "Rugby Union",
-    "sport": "Rugby",
-    "startTime": "2026-07-19T13:05:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/rugby/46724549-boland-cavaliers-blue-bulls",
-    "outcomes": [
-      {
-        "name": "Boland Cavaliers",
-        "odd": 1.61,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 22,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Blue Bulls",
-        "odd": 2.37,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Boland Cavaliers",
-        "odd": 1.61,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 22,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Blue Bulls",
-        "odd": 2.37,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Boland Cavaliers",
-        "odd": 1.61,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 22,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Blue Bulls",
-        "odd": 2.37,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Castleford Tigers",
-    "away": "Leeds Rhinos",
-    "league": "Super League",
-    "category": "Rugby League",
-    "sport": "Rugby",
-    "startTime": "2026-07-19T14:00:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/rugby/46657030-castleford-tigers-leeds-rhinos",
-    "outcomes": [
-      {
-        "name": "Castleford Tigers",
-        "odd": 7.6,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 40,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Leeds Rhinos",
-        "odd": 1.08,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Castleford Tigers",
-        "odd": 7.6,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 40,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Leeds Rhinos",
-        "odd": 1.08,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Castleford Tigers",
-        "odd": 7.6,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 40,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Leeds Rhinos",
-        "odd": 1.08,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Dewsbury Rams",
-    "away": "Halifax Panthers",
-    "league": "RFL Championship",
-    "category": "Rugby League",
-    "sport": "Rugby",
-    "startTime": "2026-07-19T14:00:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/rugby/46736094-dewsbury-rams-halifax-panthers",
-    "outcomes": [
-      {
-        "name": "Dewsbury Rams",
-        "odd": 1.69,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 22,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Halifax Panthers",
-        "odd": 2.26,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Dewsbury Rams",
-        "odd": 1.69,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 22,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Halifax Panthers",
-        "odd": 2.26,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Dewsbury Rams",
-        "odd": 1.69,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 22,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Halifax Panthers",
-        "odd": 2.26,
-        "bookmaker": "Stake"
-      }
-    ]
-  },
-  {
-    "home": "Swinton Lions",
-    "away": "Doncaster RLFC",
-    "league": "RFL Championship",
-    "category": "Rugby League",
-    "sport": "Rugby",
-    "startTime": "2026-07-19T14:00:00.000Z",
-    "market": "Multi",
-    "url": "https://stake.com/sports/rugby/46726614-swinton-lions-doncaster-rlfc",
-    "outcomes": [
-      {
-        "name": "Swinton Lions",
-        "odd": 9.8,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 45,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Doncaster RLFC",
-        "odd": 1.05,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Swinton Lions",
-        "odd": 9.8,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 45,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Doncaster RLFC",
-        "odd": 1.05,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Swinton Lions",
-        "odd": 9.8,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 45,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Doncaster RLFC",
-        "odd": 1.05,
+        "name": "Kuwait U20",
+        "odd": 2.75,
         "bookmaker": "Stake"
       }
     ]
@@ -821,37 +845,235 @@
     "outcomes": [
       {
         "name": "Parramatta Eels",
-        "odd": 5,
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 27,
+        "odd": 30,
         "bookmaker": "Stake"
       },
       {
         "name": "Penrith Panthers",
-        "odd": 1.18,
+        "odd": 1.14,
         "bookmaker": "Stake"
       },
       {
         "name": "Parramatta Eels",
-        "odd": 5,
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 27,
+        "odd": 30,
         "bookmaker": "Stake"
       },
       {
         "name": "Penrith Panthers",
-        "odd": 1.18,
+        "odd": 1.14,
         "bookmaker": "Stake"
       },
       {
         "name": "Parramatta Eels",
-        "odd": 5,
+        "odd": 6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 30,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Penrith Panthers",
+        "odd": 1.14,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Hull FC",
+    "away": "Hull Kingston Rovers",
+    "league": "Super League",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-23T19:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46657037-hull-fc-hull-kingston-rovers",
+    "outcomes": [
+      {
+        "name": "Hull FC",
+        "odd": 2.95,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 22,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Hull Kingston Rovers",
+        "odd": 1.44,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Hull FC",
+        "odd": 2.95,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 22,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Hull Kingston Rovers",
+        "odd": 1.44,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Hull FC",
+        "odd": 2.95,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 22,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Hull Kingston Rovers",
+        "odd": 1.44,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Newcastle Knights",
+    "away": "Sydney Roosters",
+    "league": "NRL",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-24T08:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46523364-newcastle-knights-sydney-roosters",
+    "outcomes": [
+      {
+        "name": "Newcastle Knights",
+        "odd": 2.23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Sydney Roosters",
+        "odd": 1.72,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Newcastle Knights",
+        "odd": 2.23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Sydney Roosters",
+        "odd": 1.72,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Newcastle Knights",
+        "odd": 2.23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Sydney Roosters",
+        "odd": 1.72,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "South Sydney Rabbitohs",
+    "away": "Melbourne Storm",
+    "league": "NRL",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-24T10:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46523841-south-sydney-rabbitohs-melbourne-storm",
+    "outcomes": [
+      {
+        "name": "South Sydney Rabbitohs",
+        "odd": 1.53,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 22,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Melbourne Storm",
+        "odd": 2.65,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "South Sydney Rabbitohs",
+        "odd": 1.53,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 22,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Melbourne Storm",
+        "odd": 2.65,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "South Sydney Rabbitohs",
+        "odd": 1.53,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 22,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Melbourne Storm",
+        "odd": 2.65,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Wigan Warriors",
+    "away": "St Helens",
+    "league": "Super League",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-24T19:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46656967-wigan-warriors-st-helens",
+    "outcomes": [
+      {
+        "name": "Wigan Warriors",
+        "odd": 1.23,
         "bookmaker": "Stake"
       },
       {
@@ -860,179 +1082,551 @@
         "bookmaker": "Stake"
       },
       {
-        "name": "Penrith Panthers",
+        "name": "St Helens",
+        "odd": 4.3,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Wigan Warriors",
+        "odd": 1.23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 27,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "St Helens",
+        "odd": 4.3,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Wigan Warriors",
+        "odd": 1.23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 27,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "St Helens",
+        "odd": 4.3,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Wakefield Trinity",
+    "away": "Castleford Tigers",
+    "league": "Super League",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-24T19:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46656966-wakefield-trinity-castleford-tigers",
+    "outcomes": [
+      {
+        "name": "Wakefield Trinity",
+        "odd": 1.14,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 30,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Castleford Tigers",
+        "odd": 5.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Wakefield Trinity",
+        "odd": 1.14,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 30,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Castleford Tigers",
+        "odd": 5.8,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Wakefield Trinity",
+        "odd": 1.14,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 30,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Castleford Tigers",
+        "odd": 5.8,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Canberra Raiders",
+    "away": "Wests Tigers",
+    "league": "NRL",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-25T05:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46525188-canberra-raiders-wests-tigers",
+    "outcomes": [
+      {
+        "name": "Canberra Raiders",
         "odd": 1.18,
         "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 30,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Wests Tigers",
+        "odd": 5,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Canberra Raiders",
+        "odd": 1.18,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 30,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Wests Tigers",
+        "odd": 5,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Canberra Raiders",
+        "odd": 1.18,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 30,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Wests Tigers",
+        "odd": 5,
+        "bookmaker": "Stake"
       }
     ]
   },
   {
-    "home": "CER Atlantico Erechim",
-    "away": "Cascavel FC",
+    "home": "Canterbury Bulldogs",
+    "away": "New Zealand Warriors",
+    "league": "NRL",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-25T07:30:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46525517-canterbury-bankstown-bulldogs-new-zealand-warriors",
+    "outcomes": [
+      {
+        "name": "Canterbury Bulldogs",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "New Zealand Warriors",
+        "odd": 1.55,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Canterbury Bulldogs",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "New Zealand Warriors",
+        "odd": 1.55,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Canterbury Bulldogs",
+        "odd": 2.6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "New Zealand Warriors",
+        "odd": 1.55,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "North Queensland Cowboys",
+    "away": "Brisbane Broncos",
+    "league": "NRL",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-25T09:35:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46525984-north-queensland-cowboys-brisbane-broncos",
+    "outcomes": [
+      {
+        "name": "North Queensland Cowboys",
+        "odd": 2.09,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Brisbane Broncos",
+        "odd": 1.82,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "North Queensland Cowboys",
+        "odd": 2.09,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Brisbane Broncos",
+        "odd": 1.82,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "North Queensland Cowboys",
+        "odd": 2.09,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 20,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Brisbane Broncos",
+        "odd": 1.82,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "York City Knights",
+    "away": "Huddersfield Giants",
+    "league": "Super League",
+    "category": "Rugby League",
+    "sport": "Rugby",
+    "startTime": "2026-07-25T14:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/rugby/46656965-york-knights-huddersfield-giants",
+    "outcomes": [
+      {
+        "name": "York City Knights",
+        "odd": 1.37,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Huddersfield Giants",
+        "odd": 3.25,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "York City Knights",
+        "odd": 1.37,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Huddersfield Giants",
+        "odd": 3.25,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "York City Knights",
+        "odd": 1.37,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 23,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Huddersfield Giants",
+        "odd": 3.25,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "Camioneros",
+    "away": "America Del Sud",
+    "league": "Primera Division",
+    "category": "Argentina",
+    "sport": "Futsal",
+    "startTime": "2026-07-20T23:00:00.000Z",
+    "market": "Multi",
+    "url": "https://stake.com/sports/futsal/46727721-camioneros-america-del-sud",
+    "outcomes": [
+      {
+        "name": "Camioneros",
+        "odd": 2.9,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 4.3,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "America Del Sud",
+        "odd": 1.93,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Camioneros",
+        "odd": 2.9,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 4.3,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "America Del Sud",
+        "odd": 1.93,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Camioneros",
+        "odd": 2.9,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 4.3,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "America Del Sud",
+        "odd": 1.93,
+        "bookmaker": "Stake"
+      }
+    ]
+  },
+  {
+    "home": "ADC Intelli",
+    "away": "Carlos Barbosa",
     "league": "Liga Futsal",
     "category": "Brazil",
     "sport": "Futsal",
-    "startTime": "2026-07-19T14:00:00.000Z",
+    "startTime": "2026-07-20T23:30:00.000Z",
     "market": "Multi",
-    "url": "https://stake.com/sports/futsal/46685359-cer-atlantico-erechim-rs-cascavel-futsal-pr",
+    "url": "https://stake.com/sports/futsal/46685360-santo-andre-intelli-sp-carlos-barbosa",
     "outcomes": [
       {
-        "name": "CER Atlantico Erechim",
-        "odd": 1.23,
+        "name": "ADC Intelli",
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 6.4,
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
-        "name": "Cascavel FC",
-        "odd": 7.6,
+        "name": "Carlos Barbosa",
+        "odd": 1.31,
         "bookmaker": "Stake"
       },
       {
-        "name": "CER Atlantico Erechim",
-        "odd": 1.23,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 6.4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Cascavel FC",
-        "odd": 7.6,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "CER Atlantico Erechim",
-        "odd": 1.23,
+        "name": "ADC Intelli",
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 6.4,
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
-        "name": "Cascavel FC",
-        "odd": 7.6,
+        "name": "Carlos Barbosa",
+        "odd": 1.31,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "ADC Intelli",
+        "odd": 6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Carlos Barbosa",
+        "odd": 1.31,
         "bookmaker": "Stake"
       }
     ]
   },
   {
-    "home": "ACMF Campo Mourao",
-    "away": "Sorocaba Futsal",
-    "league": "Liga Futsal",
-    "category": "Brazil",
+    "home": "Kimberley AC",
+    "away": "Hebraica",
+    "league": "Primera Division",
+    "category": "Argentina",
     "sport": "Futsal",
-    "startTime": "2026-07-19T14:00:00.000Z",
+    "startTime": "2026-07-20T23:30:00.000Z",
     "market": "Multi",
-    "url": "https://stake.com/sports/futsal/46730506-campo-mourao-pr-magnus-sorocaba-sp",
+    "url": "https://stake.com/sports/futsal/46727722-kimberley-ac-hebraica",
     "outcomes": [
       {
-        "name": "ACMF Campo Mourao",
-        "odd": 2.95,
+        "name": "Kimberley AC",
+        "odd": 1.34,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 4.5,
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
-        "name": "Sorocaba Futsal",
-        "odd": 1.85,
+        "name": "Hebraica",
+        "odd": 5.4,
         "bookmaker": "Stake"
       },
       {
-        "name": "ACMF Campo Mourao",
-        "odd": 2.95,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 4.5,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Sorocaba Futsal",
-        "odd": 1.85,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "ACMF Campo Mourao",
-        "odd": 2.95,
+        "name": "Kimberley AC",
+        "odd": 1.34,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 4.5,
+        "odd": 6,
         "bookmaker": "Stake"
       },
       {
-        "name": "Sorocaba Futsal",
-        "odd": 1.85,
+        "name": "Hebraica",
+        "odd": 5.4,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Kimberley AC",
+        "odd": 1.34,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 6,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Hebraica",
+        "odd": 5.4,
         "bookmaker": "Stake"
       }
     ]
   },
   {
-    "home": "Shonan Bellmare",
-    "away": "Volk Bullet Kitakyushu",
-    "league": "F. League",
-    "category": "Japan",
+    "home": "Estrella de Boedo",
+    "away": "Racing Club",
+    "league": "Primera Division",
+    "category": "Argentina",
     "sport": "Futsal",
-    "startTime": "2026-07-20T05:00:00.000Z",
+    "startTime": "2026-07-21T00:30:00.000Z",
     "market": "Multi",
-    "url": "https://stake.com/sports/futsal/46726646-shonan-bellmare-volk-bullet-kitakyushu",
+    "url": "https://stake.com/sports/futsal/46727720-estrella-de-boedo-racing-club",
     "outcomes": [
       {
-        "name": "Shonan Bellmare",
-        "odd": 2.35,
+        "name": "Estrella de Boedo",
+        "odd": 2.95,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 4,
+        "odd": 4.4,
         "bookmaker": "Stake"
       },
       {
-        "name": "Volk Bullet Kitakyushu",
-        "odd": 2.35,
+        "name": "Racing Club",
+        "odd": 1.88,
         "bookmaker": "Stake"
       },
       {
-        "name": "Shonan Bellmare",
-        "odd": 2.35,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Draw",
-        "odd": 4,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Volk Bullet Kitakyushu",
-        "odd": 2.35,
-        "bookmaker": "Stake"
-      },
-      {
-        "name": "Shonan Bellmare",
-        "odd": 2.35,
+        "name": "Estrella de Boedo",
+        "odd": 2.95,
         "bookmaker": "Stake"
       },
       {
         "name": "Draw",
-        "odd": 4,
+        "odd": 4.4,
         "bookmaker": "Stake"
       },
       {
-        "name": "Volk Bullet Kitakyushu",
-        "odd": 2.35,
+        "name": "Racing Club",
+        "odd": 1.88,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Estrella de Boedo",
+        "odd": 2.95,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Draw",
+        "odd": 4.4,
+        "bookmaker": "Stake"
+      },
+      {
+        "name": "Racing Club",
+        "odd": 1.88,
         "bookmaker": "Stake"
       }
     ]
