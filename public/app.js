@@ -27,6 +27,7 @@ const els = {
   betesporteMatchCount: document.getElementById("betesporteMatchCount"),
   stakeCount: document.getElementById("stakeCount"),
   stakeMatchCount: document.getElementById("stakeMatchCount"),
+  oaStakeCross: document.getElementById("oaStakeCross"),
   pinStakeCross: document.getElementById("pinStakeCross"),
   beStakeCross: document.getElementById("beStakeCross"),
   pinBeCross: document.getElementById("pinBeCross"),
@@ -141,6 +142,7 @@ async function loadData() {
   if (els.betesporteMatchCount) els.betesporteMatchCount.textContent = String(data.betesporteMatched || 0);
   if (els.stakeCount) els.stakeCount.textContent = String(data.stakeCount || 0);
   if (els.stakeMatchCount) els.stakeMatchCount.textContent = String(data.stakeMatched || 0);
+  if (els.oaStakeCross) els.oaStakeCross.textContent = String(data.oaStakeCross || 0);
   if (els.pinStakeCross) els.pinStakeCross.textContent = String(data.pinStakeCross || 0);
   if (els.beStakeCross) els.beStakeCross.textContent = String(data.beStakeCross || 0);
   if (els.pinBeCross) els.pinBeCross.textContent = String(data.pinBeCross || 0);

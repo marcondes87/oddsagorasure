@@ -1430,6 +1430,13 @@ function loadCurrentRows() {
 
   const stakeEvents = readJson(STAKE_FILE, []);
 
+  let oaStakeCross = 0;
+  if (Array.isArray(rows) && rows.length > 0 && Array.isArray(stakeEvents) && stakeEvents.length > 0) {
+    const result = crossReferenceStake(rows, stakeEvents);
+    rows = result.rows;
+    oaStakeCross = result.matched;
+  }
+
   let pinStakeCross = 0;
   if (Array.isArray(pinnacleEvents) && pinnacleEvents.length > 0 && Array.isArray(stakeEvents) && stakeEvents.length > 0) {
     const result = crossReferencePinnacleStake(pinnacleEvents, stakeEvents);
@@ -1468,6 +1475,7 @@ function loadCurrentRows() {
     betesporte: betesporteEvents,
     betesporteMatched,
     stake: stakeEvents,
+    oaStakeCross,
     pinStakeCross,
     beStakeCross,
     pinBeCross,
@@ -1552,6 +1560,7 @@ async function handleApi(req, res) {
       betesporteCount: current.betesporte?.length || 0,
       betesporteMatched: current.betesporteMatched || 0,
       stakeCount: current.stake?.length || 0,
+      oaStakeCross: current.oaStakeCross || 0,
       pinStakeCross: current.pinStakeCross || 0,
       beStakeCross: current.beStakeCross || 0,
       pinBeCross: current.pinBeCross || 0,
