@@ -24,6 +24,10 @@ async function main() {
         "Accept-Language": "pt-BR,pt;q=0.9"
       }
     });
+    const html = await pageResp.text();
+    // Extract CSRF token from page meta
+    const csrfMatch = html.match(/name="csrf-token" content="([^"]+)"/);
+    const csrfToken = csrfMatch ? csrfMatch[1] : "";
     const setCookie = pageResp.headers.get("set-cookie") || "";
     const cookieParts = setCookie.split(",").map(s => s.split(";")[0].trim()).filter(Boolean).join("; ");
     // OA now requires age_verified=1 cookie
@@ -36,6 +40,8 @@ async function main() {
         "Accept-Language": "pt-BR,pt;q=0.9",
         "Accept-Encoding": "gzip, deflate, br",
         "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-origin",
+        "X-Requested-With": "XMLHttpRequest",
+        ...(csrfToken ? { "X-CSRF-TOKEN": csrfToken } : {}),
         ...(fullCookie ? { "Cookie": fullCookie } : {})
       }
     });
