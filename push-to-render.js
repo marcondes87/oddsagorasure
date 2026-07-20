@@ -26,6 +26,8 @@ async function main() {
     });
     const setCookie = pageResp.headers.get("set-cookie") || "";
     const cookieParts = setCookie.split(",").map(s => s.split(";")[0].trim()).filter(Boolean).join("; ");
+    // OA now requires age_verified=1 cookie
+    const fullCookie = cookieParts ? cookieParts + "; age_verified=1" : "age_verified=1";
 
     const resp = await fetch(OA_URL, {
       headers: {
@@ -34,7 +36,7 @@ async function main() {
         "Accept-Language": "pt-BR,pt;q=0.9",
         "Accept-Encoding": "gzip, deflate, br",
         "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-origin",
-        ...(cookieParts ? { "Cookie": cookieParts } : {})
+        ...(fullCookie ? { "Cookie": fullCookie } : {})
       }
     });
     const text = await resp.text();
