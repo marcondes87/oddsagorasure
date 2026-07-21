@@ -51,11 +51,8 @@ const BETESPORTE_SPORT_NAMES = {
 const STAKE_SPORT_NAMES = {
   soccer: "Futebol", basketball: "Basquete", tennis: "Tenis",
   mma: "MMA", baseball: "Baseball", boxing: "Boxe",
-  volleyball: "Volei", "american-football": "Futebol Americano",
-  "ice-hockey": "Hockey", handball: "Handebol",
-  "table-tennis": "Tenis de Mesa", darts: "Dardos",
-  rugby: "Rugby", cricket: "Cricket", badminton: "Badminton",
-  futsal: "Futsal", snooker: "Snooker"
+  "american-football": "Futebol Americano",
+  "ice-hockey": "Hockey", handball: "Handebol"
 };
 
 let cache = {

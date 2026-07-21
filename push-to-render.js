@@ -157,7 +157,7 @@ async function main() {
     console.log("Buscando dados frescos da Stake...");
     const events = await Promise.race([
       server.fetchStakeEvents(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 45000))
+      new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 90000))
     ]);
     if (events.length) {
       stakeData = events;
