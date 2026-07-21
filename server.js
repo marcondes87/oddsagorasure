@@ -444,7 +444,12 @@ function teamsMatch(a1, a2, b1, b2) {
   let matches = 0;
   aNames.forEach(n => { if (bNames.has(n)) matches++; });
   const minRequired = Math.min(aNames.size, bNames.size);
-  return matches >= Math.max(2, minRequired - 1);
+  if (matches < Math.max(2, minRequired - 1)) return false;
+
+  // Each team from A must match at least one team from B (prevents false cross-matches)
+  const a1Match = a1parts.some(t => b1parts.includes(t) || b2parts.includes(t));
+  const a2Match = a2parts.some(t => b1parts.includes(t) || b2parts.includes(t));
+  return a1Match && a2Match;
 }
 
 function extractTeams(eventName) {
