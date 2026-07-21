@@ -21,7 +21,8 @@ async function main() {
     const pageResp = await fetch(OA_PAGE, {
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept-Language": "pt-BR,pt;q=0.9"
+        "Accept-Language": "pt-BR,pt;q=0.9",
+        "Cookie": "age_verified=1"
       }
     });
     const html = await pageResp.text();
@@ -30,7 +31,6 @@ async function main() {
     const csrfToken = csrfMatch ? csrfMatch[1] : "";
     const setCookie = pageResp.headers.get("set-cookie") || "";
     const cookieParts = setCookie.split(",").map(s => s.split(";")[0].trim()).filter(Boolean).join("; ");
-    // OA now requires age_verified=1 cookie
     const fullCookie = cookieParts ? cookieParts + "; age_verified=1" : "age_verified=1";
 
     const resp = await fetch(OA_URL, {
@@ -49,6 +49,7 @@ async function main() {
     if (text && text.length >= 20) {
       const decoded = Buffer.from(text, "base64").toString("utf8");
       const [encB64, ivStr] = decoded.split(":");
+      if (!ivStr) { console.log("  OA: resposta sem separador ':' - pulando"); throw new Error("no iv"); }
       const iv = ivStr.length === 32 && /^[0-9a-f]+$/i.test(ivStr) ? Buffer.from(ivStr, "hex") : Buffer.from(ivStr, "base64");
       const encrypted = Buffer.from(encB64, "base64");
       const key = crypto.pbkdf2Sync(PASSPHRASE, Buffer.from(SALT, "utf8"), 1000, 32, "sha256");
@@ -87,11 +88,13 @@ async function main() {
       server.fetchPinnacleEvents(),
       new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 90000))
     ]);
-    if (events.length) {
+    if (events && events.length) {
       pinData = events;
       server.ensureDataDir();
       require("fs").writeFileSync(server.PINNACLE_FILE, JSON.stringify(pinData, null, 2));
       console.log(`  ${pinData.length} eventos da Pinnacle (fresco)`);
+    } else {
+      throw new Error("API retornou 0 eventos");
     }
   } catch (e) {
     console.log("  Pinnacle fetch error:", e.message);

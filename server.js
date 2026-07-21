@@ -475,7 +475,11 @@ async function fetchPinnacleEvents() {
         fetch(`${PINNACLE_API_BASE}/sports/${sid}/matchups`, { headers: PINNACLE_HEADERS }),
         fetch(`${PINNACLE_API_BASE}/sports/${sid}/leagues?all=false`, { headers: PINNACLE_HEADERS })
       ]);
-      if (!matchupsResp.ok) continue;
+      if (!matchupsResp.ok) {
+        const body = await matchupsResp.text().catch(() => "");
+        if (body.includes("MAINTENANCE")) throw new Error("Pinnacle API em manutencao");
+        continue;
+      }
       const matchups = await matchupsResp.json();
       if (!Array.isArray(matchups) || matchups.length === 0) continue;
 
