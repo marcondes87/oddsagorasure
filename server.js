@@ -769,6 +769,7 @@ async function fetchStakeEvents() {
 function crossReferenceBetEsporte(oddsagoraRows, betesporteEvents) {
   let matched = 0;
   const enhanced = oddsagoraRows.map(row => {
+    if (isPeriodMarket(row.market)) return row;
     const [team1, team2] = extractTeams(row.event || "");
     const rowHome = normalizeTeam(team1);
     const rowAway = normalizeTeam(team2);
@@ -822,9 +823,14 @@ function crossReferenceBetEsporte(oddsagoraRows, betesporteEvents) {
   return { rows: enhanced, matched };
 }
 
+function isPeriodMarket(market) {
+  return /1[o°º]?\s*tempo|2[o°º]?\s*tempo|primeiro tempo|segundo tempo|first half|second half|1st half|2nd half/i.test(String(market || ""));
+}
+
 function crossReferenceStake(oddsagoraRows, stakeEvents) {
   let matched = 0;
   const enhanced = oddsagoraRows.map(row => {
+    if (isPeriodMarket(row.market)) return row;
     const [team1, team2] = extractTeams(row.event || "");
     const rowHome = normalizeTeam(team1);
     const rowAway = normalizeTeam(team2);
@@ -964,6 +970,7 @@ function mergeBestOutcomes(primaryOutcomes, secondaryOutcomes, homeTeam, awayTea
 function crossReferencePinnacle(oddsagoraRows, pinnacleEvents) {
   let matched = 0;
   const enhanced = oddsagoraRows.map(row => {
+    if (isPeriodMarket(row.market)) return row;
     const [team1, team2] = extractTeams(row.event || "");
     const rowHome = normalizeTeam(team1);
     const rowAway = normalizeTeam(team2);
