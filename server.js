@@ -443,9 +443,9 @@ function teamsMatch(a1, a2, b1, b2) {
   const minRequired = Math.min(aNames.size, bNames.size);
   if (matches < Math.max(2, minRequired - 1)) return false;
 
-  // Each team from A must match at least one team from B (prevents false cross-matches)
-  const a1Match = a1parts.some(t => b1parts.includes(t) || b2parts.includes(t));
-  const a2Match = a2parts.some(t => b1parts.includes(t) || b2parts.includes(t));
+  // Each team from A must match at least one team from B with a token >= 3 chars (prevents false cross-matches)
+  const a1Match = a1parts.some(t => t.length >= 3 && (b1parts.includes(t) || b2parts.includes(t)));
+  const a2Match = a2parts.some(t => t.length >= 3 && (b1parts.includes(t) || b2parts.includes(t)));
   return a1Match && a2Match;
 }
 
