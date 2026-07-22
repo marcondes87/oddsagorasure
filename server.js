@@ -728,10 +728,13 @@ async function fetchStakeEvents() {
           const markets = group.markets || [];
           for (const marketGroup of markets) {
             for (const market of marketGroup) {
-              if (market.name === "1x2" && market.status === "active") {
-                for (const outcome of (market.outcomes || [])) {
-                  if (outcome.active && outcome.odds > 1) {
-                    outcomes.push({ name: outcome.name, odd: outcome.odds, bookmaker: "Stake" });
+              if (market.status === "active") {
+                const mType = market.name === "1x2" ? "moneyline" : market.name === "handicap" ? "spread" : market.name === "totals" || market.name === "over_under" ? "total" : market.name;
+                if (market.name === "1x2" || mType === "spread" || mType === "total") {
+                  for (const outcome of (market.outcomes || [])) {
+                    if (outcome.active && outcome.odds > 1) {
+                      outcomes.push({ name: outcome.name, odd: outcome.odds, bookmaker: "Stake", marketType: mType });
+                    }
                   }
                 }
               }
@@ -1231,7 +1234,7 @@ function crossReferencePinnacleStake(pinnacleEvents, stakeEvents) {
     const seOutcomes = (se.outcomes || []).filter(o => Number(o.odd) > 1);
     const pinOutcomes = (match.outcomes || []).filter(o => Number(o.odd) > 1 && o.name && o.name !== "Selecao" && o.name !== "");
 
-    const seMoneyline = seOutcomes;
+    const seMoneyline = seOutcomes.filter(o => !o.marketType || o.marketType === "moneyline");
     const pinMoneyline = pinOutcomes.filter(o => o.marketType === "moneyline");
 
     if (seMoneyline.length >= 2 && pinMoneyline.length >= 2) {
@@ -1245,25 +1248,64 @@ function crossReferencePinnacleStake(pinnacleEvents, stakeEvents) {
       }));
       const combined = mergeBestOutcomes(seFormatted, pinFormatted, se.home, se.away);
       const books = new Set(combined.map(o => o.bookmaker));
-      if (books.size < 2) continue;
+      if (books.size >= 2) {
+        const calc = calculateSurebet(combined, 1000);
+        if (calc && calc.profitPercent > 0) {
+          comparisons.push({
+            id: "pin-stake-" + matched,
+            sport: se.sport || match.sport || "Esporte",
+            league: se.league || match.league || "",
+            country: "Multi",
+            event: `${se.home} x ${se.away}`,
+            market: "Moneyline",
+            startsAt: se.startTime || match.startTime || null,
+            url: seUrl || pinUrl,
+            bestOdd: Math.max(...combined.map(o => o.odd)),
+            outcomes: combined,
+            surebet: calc,
+            isSurebet: true,
+            pinnacleStake: true
+          });
+          matched++;
+        }
+      }
+    }
 
-      const calc = calculateSurebet(combined, 1000);
-      comparisons.push({
-        id: "pin-stake-" + matched,
-        sport: se.sport || match.sport || "Esporte",
-        league: se.league || match.league || "",
-        country: "Multi",
-        event: `${se.home} x ${se.away}`,
-        market: "Moneyline",
-        startsAt: se.startTime || match.startTime || null,
-        url: seUrl || pinUrl,
-        bestOdd: Math.max(...combined.map(o => o.odd)),
-        outcomes: combined,
-        surebet: calc,
-        isSurebet: Boolean(calc && calc.profitPercent > 0),
-        pinnacleStake: true
-      });
-      matched++;
+    // Totals (Over/Under)
+    const seTotals = seOutcomes.filter(o => o.marketType === "total");
+    const pinTotals = pinOutcomes.filter(o => o.marketType === "total");
+    if (seTotals.length >= 2 && pinTotals.length >= 2) {
+      const seUrl = se.url || getBookmakerDirectUrl("Stake") || "";
+      const pinUrl = match.url || getBookmakerDirectUrl("Pinnacle") || "";
+      const seFormatted = seTotals.map(o => ({
+        name: o.name, bookmaker: "Stake", odd: o.odd, url: seUrl, fromStake: true, marketType: "total"
+      }));
+      const pinFormatted = pinTotals.map(o => ({
+        name: o.name, bookmaker: "Pinnacle", odd: o.odd, url: pinUrl, pinnacle: true, marketType: "total"
+      }));
+      const combined = mergeBestOutcomes(seFormatted, pinFormatted, se.home, se.away);
+      const books = new Set(combined.map(o => o.bookmaker));
+      if (books.size >= 2) {
+        const calc = calculateSurebet(combined, 1000);
+        if (calc && calc.profitPercent > 0) {
+          comparisons.push({
+            id: "pin-stake-totals-" + matched,
+            sport: se.sport || match.sport || "Esporte",
+            league: se.league || match.league || "",
+            country: "Multi",
+            event: `${se.home} x ${se.away}`,
+            market: "Total de Gols (Over/Under)",
+            startsAt: se.startTime || match.startTime || null,
+            url: seUrl || pinUrl,
+            bestOdd: Math.max(...combined.map(o => o.odd)),
+            outcomes: combined,
+            surebet: calc,
+            isSurebet: true,
+            pinnacleStake: true
+          });
+          matched++;
+        }
+      }
     }
   }
 
